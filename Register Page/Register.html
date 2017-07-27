@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/css" href="Register.css" />
+    <script type="text/javascript" src="../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Register.js"></script>
+    <script type="text/javascript" src="school.js"></script>
+</head>
+<body>
+    <div class="bkground">
+        <div class="color1" id="color1"></div>
+        <div class="color2" id="color2"></div>
+        <div class="color4" id="color4"></div>
+        <div class="color3"></div>
+        <div class="color5"></div>
+        <div class="color6"></div>
+        <div class="color2"></div>
+        <div class="color7"></div>
+        <div class="color3"></div>
+        <div class="color4"></div>
+        <div class="color0"></div>
+        <div class="color1"></div>
+        <div class="color6"></div>
+        <div class="color5"></div>
+        <div class="color1"></div>
+        <div class="color7"></div>
+        <div class="color3"></div>
+        <div class="color2"></div>
+        <div class="color7"></div>
+        <div class="color4"></div>
+    </div>
+    <div id="log-info">
+        <form>
+            <!--action=“” 该处为发送表单至某处 method="post" -->
+            <div id="head">
+                <span id="D" class="title">注</span>
+                <img id="logo" src="../Pic/LOGO.png" />
+                <span id="L" class="title">册</span>
+            </div>
+            <p id="reusername">请输入您的用户名</p>
+            <div id="usernamecontain">
+                <input id="username" name="username" tabindex="1" placeholder="输入用户名" class="user-name" type="text" value="">
+            </div>
+            <p id="repassword">请输入您的密码</p>
+            <div id="passwordcontain">
+                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
+            </div>
+            <p id="repasswordagain">请再输入您的密码</p>
+            <div id="password-againcontain">
+                <input id="password-again" name="password-again" tabindex="3" placeholder="输入密码" class="pass-word-again" type="password" value="" autocomplete="off">
+            </div>
+            <p id="reemail">请输入您的邮箱</p>
+            <div id="emailcontain">
+                <input id="email" name="email" tabindex="4" placeholder="输入邮箱" class="email" type="email" value="">
+            </div>
+
+
+            <center id="schoolcontain">
+                <label for='schoolName'>学校名称：</label><input type="text" id="school" tabindex="6" placeholder="请点击选择学校" readonly />
+                <div id="proSchool" class="provinceSchool">
+                    <div class="title"><span>请选择学校</span></div>
+                    <div class="proSelect">
+                        <select></select>
+                        <span>如没找到选择项，请选择其他手动填写</span>
+                        <input type="text" />
+                    </div>
+                    <div class="schoolList">
+                        <ul></ul>
+                    </div>
+                    <div class="button">
+                        <input type="button" flag='0' value="取消" />                        
+                        <input type="button" flag='1' value="确定"/>
+                    </div>
+                </div>
+            </center>
+            <p id="recontact">请输入您的联系方式</p>
+            <div id="contactcontain">
+                <input id="contact" name="contact" tabindex="5" placeholder="联系方式(QQ/TEL)" class="contact" type="text" value="" />
+            </div>
+            <div id="submitcontain">
+                <input id="submit" tabindex="6" type="submit" value="提    交" />
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,446 @@
+﻿body {
+    background-color:white;
+    margin:0px;
+    overflow:hidden;
+
+}
+.bkground {
+    border:0px;
+    margin:0px;
+}
+div[class^= "color"] {
+    height:40px;
+    margin:0px;
+    position:relative;
+    
+}
+#log-info {
+    height:720px;
+    width:540px;
+    position:fixed;
+    left:0px;
+    top:0px;
+    border-radius:3%;
+    background-color:rgba(155, 151, 151, 0.68);
+}
+#usernamecontain {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    left: 20px;
+    background-color: white;
+    top: 177px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+#username {
+    position: absolute;
+    /* margin-left: 50px; */
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 30px;
+    outline: none;
+    width: 500px;
+    font-size: 23px;
+    border-radius: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+#passwordcontain{
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    left: 20px;
+    top: 259px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 22px;
+}
+#password {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    /* margin-left: 50px; */
+    font-size: 24px;
+    border-radius: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+#emailcontain {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    left: 20px;
+    top: 427px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 22px;
+}
+#email {
+    position: absolute;
+    /* margin-left: 50px; */
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 30px;
+    outline: none;
+    width: 500px;
+    font-size: 24px;
+    border-radius: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+#submitcontain {
+    position: absolute;
+    top: 640px;
+    left: 110px;
+    border-radius: 39px;
+    overflow: hidden;
+}
+
+#submit {
+    height: 60px;
+    width: 320px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgb(161, 28, 28);
+    font-size: 34px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    cursor: pointer;
+}
+span.check-font-color:nth-child(odd) {
+    color:red;
+}
+span.check-font-color:nth-child(even) {
+    color:green;
+}
+ul li {
+    list-style: none;
+}
+
+#schoolName {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    padding: 0 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.provinceSchool {
+    display: none;
+    position: absolute;
+    width: 580px;
+    background-color: white;
+    height: auto;
+    border: 1px solid #72B9D7;
+}
+
+.provinceSchool .title {
+    width: 100%;
+    height: 30px;
+    background: #72B9D7;
+    cursor: move;
+}
+
+.provinceSchool .title span {
+    margin-left: 10px;
+    font-weight: 600;
+    color: #FFF;
+    line-height: 30px;
+}
+
+.provinceSchool .proSelect {
+width: 550px;
+text-align: center;
+padding: 15px 0;
+}
+
+.provinceSchool .proSelect select {
+    width: 136px;
+}
+
+.provinceSchool .proSelect span {
+    padding-left: 10px;
+}
+
+.provinceSchool .proSelect input {
+    display: none;
+}
+
+.provinceSchool .schoolList {
+    width: 550px;
+    height: 180px;
+    padding: 10px 0;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+
+.provinceSchool .schoolList ul {
+    width: 510px;
+    clear: both;
+}
+
+.provinceSchool .schoolList ul span.entertext {
+    display: block;
+    height: 180px;
+    font: normal 16px/180px 'microsoft yahei';
+    color: #999;
+}
+p[id^='re']
+{
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bolder;
+	color: rgba(0, 0, 0, 0.74);
+}
+.provinceSchool .schoolList ul li {
+    float: left;
+    text-align: center;
+    width: 160px;
+    margin: 5px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    background: #fafafa;
+    border-radius: 3px;
+}
+
+.provinceSchool .schoolList ul li.DoubleWidthLi {
+    overflow: hidden;
+}
+
+.provinceSchool .schoolList ul li:hover {
+    background: #72B9D7;
+    color: #fff;
+}
+
+.provinceSchool .button {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.provinceSchool .button input[type='button']{
+    float: right;
+    height: 30px;
+    margin-right: 15px;
+    padding: 2px 15px;
+    background: #72B9D7;
+    border: none;
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+    .provinceSchool .button input[type='button']:hover {
+        background: #2e90bd;
+    }
+/*<form id="fm1" action="/account/login?ref=toolbar" method="post">
+
+                    <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value="">
+                    
+                    <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
+                   
+                    
+						
+						
+							<div class="error-mess" style="display:none;">
+								<span class="error-icon"></span><span id="error-message"></span>
+							</div>
+						
+					
+					
+                    <div class="row forget-password">
+                    	<span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        	<input type="checkbox" name="rememberMe" id="rememberMe" value="true" class="auto-login" tabindex="4">
+                        	<label for="rememberMe">下次自动登录</label>
+                        </span>
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 forget tracking-ad" data-mod="popu_26">
+                        	<a href="/account/fpwd?action=forgotpassword&amp;service=http%3A%2F%2Fblog.csdn.net%2Fcyp18408251336%2Farticle%2Fdetails%2F52738924" tabindex="5">忘记密码</a>
+                        </span>
+                    </div>
+                    <!-- 该参数可以理解成每个需要登录的用户都有一个流水号。只有有了webflow发放的有效的流水号，用户才可以说明是已经进入了webflow流程。否则，没有流水号的情况下，webflow会认为用户还没有进入webflow流程，从而会重新进入一次webflow流程，从而会重新出现登录界面。 -->
+					<input type="hidden" name="lt" value="LT-548606-Egebf2qdVzc4CeJkJKcGllgTCnRTgd">
+			 		<input type="hidden" name="execution" value="e1s1"> 
+					<input type="hidden" name="_eventId" value="submit"> 
+					<input class="logging" accesskey="l" value="登 录" tabindex="6" type="button"> 
+                    
+                  </form>*/
+p#reusername {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    display: block;
+    width: 540px;
+    top: 117px;
+}
+
+p#repassword {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    display: block;
+    width: 540px;
+    top: 200px;
+}
+
+p#repasswordagain {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    display: block;
+    width: 540px;
+    top: 285px;
+}
+
+p#reemail {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    display: block;
+    width: 540px;
+    top: 369px;
+}
+
+p#recontact {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    display: block;
+    width: 540px;
+    top: 90px;
+}
+
+div#password-againcontain {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    left: 20px;
+    top: 343px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+input#password-again {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    /* margin-left: 50px; */
+    font-size: 24px;
+    border-radius: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+center#schoolcontain {
+    top: 476px;
+    left: 167px;
+    position: absolute;
+}
+
+p#recontact {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    display: block;
+    width: 540px;
+    top: 495px;
+}
+
+div#contactcontain {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    left: 20px;
+    top: 556px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+input#contact {
+    position: absolute;
+    height: 30px;
+    width: 500px;
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    /* margin-left: 50px; */
+    font-size: 24px;
+    border-radius: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+input#school {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 28px;
+}
+
+div#proSchool {
+    z-index: 99;
+}
+div#head {
+    height: 139px;
+    position: absolute;
+    left: 194px;
+    top: 9px;
+}
+
+img#logo {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    opacity: .9;
+    left: 23px;
+    transform-origin:50% 50%;
+    animation-name: myrotate;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+@keyframes myrotate{
+    from{
+    transform:rotate(0deg);
+    }
+    to {
+    transform:rotate(360deg);
+    }
+}
+
+span#D {
+    position: absolute;
+    left: -57px;
+    top: 22px;
+    font-size: 52px;
+    color: cornsilk;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+span#L {
+    position: absolute;
+    left: 154px;
+    top: 22px;
+    color: cornsilk;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    font-size: 52px;
+}
