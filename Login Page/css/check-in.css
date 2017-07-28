@@ -1,0 +1,192 @@
+﻿body {
+    background-color:white;
+    margin:0px;
+    overflow:hidden;
+
+}
+@keyframes myrotate{
+    from{
+    transform:rotate(0deg);
+    }
+    to {
+    transform:rotate(360deg);
+    }
+}
+
+div#head {
+    position: absolute;
+    left: 340px;
+    top: 10px;
+}
+@font-face {
+ font-family: 'Chinese-Nfont';
+ src: url('../../Font/LSSST-1498.ttf');
+} 
+.bkground {
+    border:0px;
+    margin:0px;
+}
+div[class^= "color"] {
+    height:40px;
+    margin:0px;
+    position:relative;
+    
+}
+#log-info {
+    height:520px;
+    width:840px;
+    position:fixed;
+    border-radius:10%;
+    background-color:rgba(155, 151, 151, 0.68);
+}
+#usernamecontain {
+    position: absolute;
+    height: 52px;
+    width: 600px;
+    left: 120px;
+    background-color: white;
+    top: 135px;
+    border-radius: 22px;
+}
+#username {
+    position: absolute;
+    /* margin-left: 50px; */
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 52px;
+    outline: none;
+    width: 500px;
+    font-size: 35px;
+    border-radius: 0%;
+    left: 50px;
+    top: 0px;
+    text-align: center;
+}
+#passwordcontain{
+    position: absolute;
+    height: 52px;
+    width: 600px;
+    left: 120px;
+    top: 215px;
+    background-color: white;
+    border-radius: 22px;
+}
+#password {
+    position: absolute;
+    height: 52px;
+    width: 500px;
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    /* margin-left: 50px; */
+    font-size: 35px;
+    border-radius: 0%;
+    left: 50px;
+    top: 0px;
+    text-align: center;
+}
+#check {
+    position: absolute;
+    left: 161px;
+    top: 287px;
+}
+#remmember {
+    height: 16px;
+    width: 16px;
+}
+#remLB {
+    font-size: 26px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.74);
+}
+#linkPSW {
+    position: absolute;
+    left: 564px;
+    top: 287px;
+}
+
+#forgetPSW {
+    font-size: 26px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.74);
+    text-decoration: none;
+}
+
+#submitcontain {
+    position: absolute;
+    top: 348px;
+    left: 260px;
+    border-radius: 39px;
+    overflow: hidden;
+}
+
+#submit {
+    height: 60px;
+    width: 320px;
+    border: 0px;
+    padding: 0px;
+    background-color: white;
+    background-color: rgba(192, 12, 12, 0.92);
+    font-size: 34px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.86);
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    cursor: pointer;
+}
+span.check-font-color:nth-child(odd) {
+    color:red;
+}
+span.check-font-color:nth-child(even) {
+    color:green;
+}
+img#logo {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    opacity: .9;
+    left: 23px;
+    transform-origin:50% 50%;
+    animation-name: myrotate;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+span#D {
+    position: absolute;
+    left: -64px;
+    top: 10px;
+    font-size: 74px;
+    font-weight: bold;
+    color: cornsilk;
+    font-family: Chinese-Nfont;
+}
+
+span#L {
+    position: absolute;
+    left: 154px;
+    top: 10px;
+    font-weight: bold;
+    color: cornsilk;
+    font-family: Chinese-Nfont;
+    font-size: 74px;
+}
+hr#cut-line {
+    position: absolute;
+    width: 738px;
+    left: 50px;
+    top: 422px;
+    background-color: black;
+    border-color: rgb(87, 84, 84);
+}
+
+img#login-QQ:hover {
+    cursor: pointer;
+}
+
+img#login-QQ {
+    width: 61px;
+    position: absolute;
+    top: 444px;
+    left: 329px;
+}

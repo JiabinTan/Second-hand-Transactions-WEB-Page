@@ -4,6 +4,10 @@
     overflow:hidden;
 
 }
+@font-face {
+ font-family: 'Chinese-Nfont';
+ src: url('../../Font/LSSST-1498.ttf');
+} 
 .bkground {
     border:0px;
     margin:0px;
@@ -78,7 +82,7 @@ div[class^= "color"] {
     width: 500px;
     left: 20px;
     top: 427px;
-    overflow: hidden;
+    overflow: visible;
     background-color: white;
     border-radius: 22px;
 }
@@ -247,37 +251,7 @@ p[id^='re']
     .provinceSchool .button input[type='button']:hover {
         background: #2e90bd;
     }
-/*<form id="fm1" action="/account/login?ref=toolbar" method="post">
 
-                    <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value="">
-                    
-                    <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
-                   
-                    
-						
-						
-							<div class="error-mess" style="display:none;">
-								<span class="error-icon"></span><span id="error-message"></span>
-							</div>
-						
-					
-					
-                    <div class="row forget-password">
-                    	<span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        	<input type="checkbox" name="rememberMe" id="rememberMe" value="true" class="auto-login" tabindex="4">
-                        	<label for="rememberMe">下次自动登录</label>
-                        </span>
-                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 forget tracking-ad" data-mod="popu_26">
-                        	<a href="/account/fpwd?action=forgotpassword&amp;service=http%3A%2F%2Fblog.csdn.net%2Fcyp18408251336%2Farticle%2Fdetails%2F52738924" tabindex="5">忘记密码</a>
-                        </span>
-                    </div>
-                    <!-- 该参数可以理解成每个需要登录的用户都有一个流水号。只有有了webflow发放的有效的流水号，用户才可以说明是已经进入了webflow流程。否则，没有流水号的情况下，webflow会认为用户还没有进入webflow流程，从而会重新进入一次webflow流程，从而会重新出现登录界面。 -->
-					<input type="hidden" name="lt" value="LT-548606-Egebf2qdVzc4CeJkJKcGllgTCnRTgd">
-			 		<input type="hidden" name="execution" value="e1s1"> 
-					<input type="hidden" name="_eventId" value="submit"> 
-					<input class="logging" accesskey="l" value="登 录" tabindex="6" type="button"> 
-                    
-                  </form>*/
 p#reusername {
     position: absolute;
     left: 0px;
@@ -429,18 +403,159 @@ img#logo {
 
 span#D {
     position: absolute;
-    left: -57px;
-    top: 22px;
-    font-size: 52px;
+    left: -64px;
+    top: 10px;
+    font-size: 74px;
+    font-weight: bold;
     color: cornsilk;
-    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    font-family: Chinese-Nfont;
 }
 
 span#L {
     position: absolute;
     left: 154px;
-    top: 22px;
+    top: 10px;
+    font-weight: bold;
     color: cornsilk;
-    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-    font-size: 52px;
+    font-family: Chinese-Nfont;
+    font-size: 74px;
+}
+img#usernamepass {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 4px;
+    top: 3px;
+    visibility: hidden;
+}
+
+img#usernamewrong {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 3px;
+    top: 2px;
+    visibility: hidden;
+}
+
+img#passwordwrong {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 3px;
+    top: 2px;
+    visibility: hidden;
+}
+
+img#passwordpass {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 4px;
+    top: 3px;
+    visibility: hidden;
+}
+
+img#password-againwrong {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 3px;
+    top: 2px;
+    visibility: hidden;
+}
+
+img#password-againpass {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 4px;
+    top: 3px;
+    visibility: hidden;
+}
+
+img#emailwrong {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 3px;
+    top: 2px;
+    visibility: hidden;
+}
+
+img#emailpass {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 4px;
+    top: 3px;
+    visibility: hidden;
+}
+
+img#schoolwrong {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: -34px;
+    top: -3px;
+    visibility: hidden;
+}
+
+img#schoolpass {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: -33px;
+    top: -2px;
+    visibility:hidden;
+}
+
+img#contactwrong {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 3px;
+    top: 2px;
+    visibility: hidden;
+}
+
+img#contactpass {
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    left: 4px;
+    top: 3px;
+    visibility: hidden;
+}
+.TextRed:-moz-placeholder{
+    color:red;
+}
+.TextRed:-ms-input-placeholder{
+    color:red;
+}
+.TextRed::-moz-placeholder{
+    color:red;
+}
+.TextRed::-webkit-input-placeholder{
+    color:red;
+}
+.emaillist p:hover {
+    background-color:#999;
+}
+div#emaillist {
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    width: inherit;
+    z-index: 6;
+    background-color: white;
+    top: 30px;
+    overflow: auto;
+    max-height: 240px;
+}
+
+.emaillist p {
+    height: 24px;
+    margin: 0px;
+    border-radius: 22px;
 }

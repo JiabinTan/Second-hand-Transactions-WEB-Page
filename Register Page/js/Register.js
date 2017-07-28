@@ -44,4 +44,13 @@ $(document).ready(
                 else
                     $("#remmember").prop("checked", true);
             });
+	window.onresize=function()
+	{
+		$("#log-info").css(
+            {
+                "left": String(window.innerWidth / 2 - 270) + "px",
+                "top":String(window.innerHeight/2-360)+"px"
+            }
+            );
+	}
     });

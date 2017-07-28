@@ -3,10 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>用户注册</title>
-    <link rel="stylesheet" type="text/css" href="Register.css" />
+    <link rel="stylesheet" type="text/css" href="css/Register.css" />
     <script type="text/javascript" src="../jquery-3.2.1/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="Register.js"></script>
-    <script type="text/javascript" src="school.js"></script>
+    <script type="text/javascript" src="js/Register.js"></script>
+    <script type="text/javascript" src="js/school.js"></script>
+    <script type="text/javascript" src="js/JudgeAc.js"></script>
 </head>
 <body>
     <div class="bkground">
@@ -41,24 +42,34 @@
             </div>
             <p id="reusername">请输入您的用户名</p>
             <div id="usernamecontain">
-                <input id="username" name="username" tabindex="1" placeholder="输入用户名" class="user-name" type="text" value="">
+                <img src="../Pic/warning.png" id="usernamewrong" />
+                <img src="../Pic/pass.png" id="usernamepass">
+                <input id="username" name="username" tabindex="1" placeholder="输入用户名" class="user-name" type="text" value="" flag="0">
             </div>
-            <p id="repassword">请输入您的密码</p>
+            <p id="repassword">请输入您的密码(必须以字母开头)</p>
             <div id="passwordcontain">
-                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
+                <img src="../Pic/warning.png" id="passwordwrong"/>
+                <img src="../Pic/pass.png" id="passwordpass" />
+                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off" flag="0"/>
             </div>
             <p id="repasswordagain">请再输入您的密码</p>
             <div id="password-againcontain">
-                <input id="password-again" name="password-again" tabindex="3" placeholder="输入密码" class="pass-word-again" type="password" value="" autocomplete="off">
+                <img src="../Pic/warning.png" id="password-againwrong" />
+                <img src="../Pic/pass.png" id="password-againpass" />
+                <input id="password-again" name="password-again" tabindex="3" placeholder="输入密码" class="pass-word-again" type="password" value="" autocomplete="off" flag="0"/>
             </div>
             <p id="reemail">请输入您的邮箱</p>
             <div id="emailcontain">
-                <input id="email" name="email" tabindex="4" placeholder="输入邮箱" class="email" type="email" value="">
+                <img src="../Pic/warning.png" id="emailwrong" />
+                <img src="../Pic/pass.png" id="emailpass" />
+                <input id="email" name="email" tabindex="4" placeholder="输入邮箱" class="email" type="text" value="" autocomplete="on" flag="0"/>
+                <div id="emaillist" class="emaillist">
+                </div>
             </div>
-
-
             <center id="schoolcontain">
-                <label for='schoolName'>学校名称：</label><input type="text" id="school" tabindex="6" placeholder="请点击选择学校" readonly />
+                <img src="../Pic/warning.png" id="schoolwrong" />
+                <img src="../Pic/pass.png" id="schoolpass" />
+                <label for='schoolName'>学校名称：</label><input type="text" id="school" tabindex="4" placeholder="请点击选择学校" readonly flag="0" />
                 <div id="proSchool" class="provinceSchool">
                     <div class="title"><span>请选择学校</span></div>
                     <div class="proSelect">
@@ -77,7 +88,9 @@
             </center>
             <p id="recontact">请输入您的联系方式</p>
             <div id="contactcontain">
-                <input id="contact" name="contact" tabindex="5" placeholder="联系方式(QQ/TEL)" class="contact" type="text" value="" />
+                <img src="../Pic/warning.png" id="contactwrong" />
+                <img src="../Pic/pass.png" id="contactpass" />
+                <input id="contact" name="contact" tabindex="5" placeholder="联系方式(QQ/TEL)" class="contact" type="text" value="" flag="0"/>
             </div>
             <div id="submitcontain">
                 <input id="submit" tabindex="6" type="submit" value="提    交" />
