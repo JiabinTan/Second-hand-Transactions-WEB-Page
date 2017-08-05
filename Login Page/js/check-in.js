@@ -48,4 +48,12 @@ $(document).ready(
                 else
                     $("#remmember").prop("checked", true);
             });
+        window.onresize = function () {
+            $("#log-info").css(
+                {
+                    "left": String(window.innerWidth / 2 - 420) + "px",
+                    "top": String(window.innerHeight / 2 - 260) + "px"
+                }
+                );
+        }
     });
