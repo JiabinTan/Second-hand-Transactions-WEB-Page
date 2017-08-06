@@ -1,33 +1,52 @@
-﻿$(function () {
+﻿var state = 0;
+var isclick=false;
+$(function () {
     $("div.top-bar").css(
         {
-            "width":String(window.innerWidth)+"px"
+            "width":String(document.body.offsetWidth)+"px"
     });
     $("div.search-bar").css(
         {
-            "left": String(window.innerWidth/2-243) + "px"
+            "left": String(document.body.offsetWidth/2-243) + "px"
         });
 
     $("div.foot").css(
         {
-            "width": String(window.innerWidth) + "px",
+            "width": String(document.body.offsetWidth) + "px",
             "left": "10px",
-            "top": String(window.innerHeight - $("div.foot").height()) + "px"
+        });
+    $("div.ex-requires").css(
+        {
+            "left": String(document.body.offsetWidth / 2 -110) + "px"
+        });
+    $("a.qq").css(
+        {
+            "top": String(window.innerHeight / 2 + 90) + "px",
+            "left": String(document.body.offsetWidth-47.29) + "px"
         });
     window.onresize = function () {
+        $("div.ex-requires").css(
+        {
+            "left": String(document.body.offsetWidth / 2 - 145) + "px"
+        });
+        $("a.qq").css(
+        {
+            "left": String(document.body.offsetWidth-47.29) + "px",
+            "top": String(window.innerHeight / 2 + 90) + "px"
+        });
         $("div.top-bar").css(
            {
-               "width": String(window.innerWidth) + "px"
+               "width": String(document.body.offsetWidth) + "px"
            }
            );
         $("div.search-bar").css(
             {
-                "left": String(window.innerWidth / 2 - 243) + "px"
+                "left": String(document.body.offsetWidth / 2 - 243) + "px"
             }
             );
         $("div.foot").css(
             {
-                "width": String(window.innerWidth) + "px",
+                "width": String(document.body.offsetWidth) + "px",
                 "left":"0px",
                 "top": String(window.innerHeight - $("div.foot").height()) + "px"
             }
@@ -113,4 +132,57 @@
                 $("input.search-content").attr("placeholder", "输入你寻找的卖家的用户名");
             }
         });
+    $(".collection-amount").mouseenter(function(){
+        $(".collection-amount img").addClass("imgenter").removeClass("origin");
+    });
+    $(".collection-amount").mouseleave(function () {
+        if (!isclick) {
+            $(".collection-amount img").removeClass("imgenter").addClass("origin");
+        }
+        isclick = false;
+    });
+    $(".dec-price").mouseenter(function () {
+        $(".dec-price img").addClass("imgenter").removeClass("origin");
+    });
+    $(".dec-price").mouseleave(function () {
+        if (!isclick) {
+            $(".dec-price img").removeClass("imgenter").addClass("origin");
+        }
+        isclick = false;
+    });
+    $(".collection-amount").click(function () {
+        if (1 == state)
+        {
+            $(".dec-price img").removeClass("imgenter").removeClass("imgclick").addClass("origin");
+            $(".dec-price").css({
+                "background-color": "white",
+                "color": "black"
+            });
+        }
+        state = 0;
+        $(".collection-amount img").addClass("imgclick").removeClass("imgenter").removeClass("origin");
+        $(".collection-amount").css({
+            "background-color": "#e99009",
+            "color": "white",
+            "cursor": "pointer"
+        });
+        isclick = true;
+    });
+    $(".dec-price").click(function () {
+        if (0 == state) {
+            $(".collection-amount img").removeClass("imgenter").removeClass("imgclick").addClass("origin");
+            $(".collection-amount").css({
+                "background-color": "white",
+                "color": "black"
+            });
+        }
+        state = 1;
+        $(".dec-price img").addClass("imgclick").removeClass("imgenter").removeClass("origin");
+        $(".dec-price").css({
+            "background-color": "#e99009",
+            "color": "white",
+            "cursor": "pointer"
+        });
+        isclick = true;
+    });
 })

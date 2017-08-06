@@ -74,7 +74,7 @@ body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial,
 .nav-ul li a span{
 	display: block;
 	margin-top: 60px;
-	perspective: ;
+    left: -5px;
 	position: relative;
 	z-index: 1;
 }
@@ -94,7 +94,7 @@ body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial,
 }
 .top-bar {
     height: 40px;
-    position: fixed;
+    position: relative;
     left: 0px;
     top: 0px;
     display: block;
@@ -141,7 +141,7 @@ body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial,
 }
 .search-box {
     width: inherit;
-    height: 155px;
+    height: 77px;
     top: 40px;
     position: absolute;
     background-color: aliceblue;
@@ -160,6 +160,7 @@ body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial,
     height: 40px;
     position: absolute;
     width: 486px;
+    top: 0px;
     border-radius: 12px;
     background-color: aliceblue;
     left: 142px;
@@ -178,6 +179,7 @@ input.search {
     border-radius: 0 12px 12px 0;
     border: double;
     outline: none;
+    background: coral;
 }
 
 input.search:hover {
@@ -287,4 +289,146 @@ li.user {
 .tog li:hover {
     background-color: black;
     cursor:pointer;
+}
+.slogan img {
+    height: 101px;
+    position: absolute;
+    top: -47px;
+}
+.collection-amount img {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 1.5px;
+    left: 28px;
+}
+
+.price img {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 1.5px;
+    left: 28px;
+}
+.ex-requires {
+    width: inherit;
+    position: absolute;
+    left: 432px;
+    top: -37px;
+}
+
+.collection-amount {
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    top: 88px;
+    height: 20px;
+    background: white;
+    border: 1px #9e9e9e solid;
+    color: black;
+    width: 47px;
+    left: 0px;
+}
+
+.collection-amount span {
+    position: absolute;
+    left: 2px;
+    font-size: 11px;
+    top: -3px;
+}
+
+.price {
+    position: absolute;
+    top: 88px;
+    height: 20px;
+    background: white;
+    color: black;
+    width: 47px;
+    left: 47px;
+    border-radius: 0 5px 5px 0;
+}
+
+.price span:nth-child(1) {
+    position: absolute;
+    left: 2px;
+    font-size: 11px;
+    top: -3px;
+}
+
+.price input[type="number"]:nth-child(2) {
+    color: black;
+    position: absolute;
+    left: 52px;
+    top: -2px;
+    height: 20px;
+    width: 42px;
+}
+
+.price span:nth-child(3) {
+    color: #a2a2a2;
+    position: absolute;
+    left: 97px;
+    top: -7px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.price input[type="number"]:nth-child(4) {
+    position: absolute;
+    color:black;
+    left: 114px;
+    height: 20px;
+    width: 42px;
+    top: -2px;
+}
+
+.price input[type="button"] {
+    position: absolute;
+    left: 156px;
+    height: 20px;
+    top: -2px;
+    width: 38px;
+    color: black;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.collection-amount:hover {
+    background-color: #e99009;
+    color: white;
+    cursor: pointer;
+}
+
+.dec-price:hover {
+    background-color: #e99009;
+    color: white;
+    cursor: pointer;
+}
+.dec-price {
+    border-radius: 0 5px 5px 0;
+    height: 20px;
+    border: 1px #9e9e9e solid;
+    width: 47px;
+    color: black;
+}
+.imgclick {
+    transform: rotate(0deg);
+}
+.imgenter {
+    transform: rotate(0deg);
+}
+.origin {
+    transform: rotate(180deg);
+}
+a.qq {
+    float: right;
+    position: fixed;
+}
+
+img.QQ {
+    position:fixed;
+    height: 90px;
+}
+.test {
+    position:absolute;
+    top:10000px;
 }
