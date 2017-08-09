@@ -4,7 +4,12 @@ $(function () {
     $("div.top-bar").css(
         {
             "width":String(document.body.offsetWidth)+"px"
-    });
+        });
+    $("div.content").css(
+        {
+            "max-width": String(1226) + "px",
+            "left": String(document.body.offsetWidth / 2 - 613) + "px"
+        });
     $("div.search-bar").css(
         {
             "left": String(document.body.offsetWidth/2-243) + "px"
@@ -25,6 +30,11 @@ $(function () {
             "left": String(document.body.offsetWidth-47.29) + "px"
         });
     window.onresize = function () {
+        $("div.content").css(
+        {
+            "max-width": String(1226) + "px",
+            "left": String(document.body.offsetWidth / 2 - 613) + "px"
+        });
         $("div.ex-requires").css(
         {
             "left": String(document.body.offsetWidth / 2 - 145) + "px"
@@ -185,4 +195,48 @@ $(function () {
         });
         isclick = true;
     });
+    $("img.collection").click(function () {
+        var color = RGBtoHEX($(this).css("background-color"));
+        if ("#FFFFFF" == color)
+            $(this).css("background-color", "yellow");
+        else
+            $(this).css("background-color", "white");
+    });
+    $(document).scroll(function () {
+        if (parseInt(window.pageYOffset) >= 40) {
+            $(".search-box").css({
+                "top": "0px",
+                "position": "fixed"
+            });
+        }
+        else {
+            $(".search-box").css({
+                "top": "40px",
+                "position": "absolute"
+            });
+        }
+    });
 })
+function toHex(N) {
+    if (N == null) return "00";
+    N = parseInt(N); if (N == 0 || isNaN(N)) return "00";
+    N = Math.max(0, N); N = Math.min(N, 255); N = Math.round(N);
+    return "0123456789ABCDEF".charAt((N - N % 16) / 16) + "0123456789ABCDEF".charAt(N % 16);
+}
+
+//Function to convert rgb() format values into normal hex values
+function RGBtoHEX(str) {
+    if (str.substring(0, 3) == 'rgb') {
+        var arr = str.split(",");
+        var r = arr[0].replace('rgb(', '').trim(), g = arr[1].trim(), b = arr[2].replace(')', '').trim();
+        var hex = [
+            toHex(r),
+            toHex(g),
+            toHex(b)
+        ];
+        return "#" + hex.join('');
+    }
+    else {
+        return str;
+    }
+}

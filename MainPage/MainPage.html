@@ -43,7 +43,27 @@
             <div class="price"><div class="dec-price"><span>价格</span><img class="origin" src="Pic/direction.png" /></div><input type="number" placeholder="￥" min="0"/><span>—</span><input placeholder="￥" type="number" max="9999999999"/><input type="button" value="确定"/></div>
         </div>
     </div>
-    <div class="commodity"></div>
+    <div class="blank_"></div>
+    <div class="content" id="content"></div>
+    <script type="text/javascript">
+        var image = ["0001", "0002", "0003","0004"];
+        var description = ["nice", "good", "hard","这是你打的那师傅大手笔擦煞笔擦到哪里玩打完流程"];
+        var likes=[1231,3123,4213,323];
+        for (var k in image)
+        {
+            var strall = "<span class='content-span'>" + description[k] + "</span><p>Likes" + likes[k] + "</p><img class='collection' src='Pic/collection.png'/>";
+            var str = image[k] + ".jpg";
+            var div = document.createElement("div");
+            div.innerHTML = strall;
+            var img = document.createElement("img");
+            img.setAttribute("src", "Pic/"+str);
+            img.setAttribute("class", "content-img");
+            div.setAttribute("class", "content-div");
+            div.appendChild(img);
+            var outer = document.getElementById("content");
+            outer.appendChild(div);
+        }
+    </script>
     <div class="foot">
         <p>COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED.</p>
         <p>komo Studio 版权所有</p>
