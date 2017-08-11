@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>大学生二手交易</title>
+    <link rel="stylesheet" type="text/css" href="PersonalInfo.css" />
+    <link rel="icon" href="Pic/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Pic/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="PersonalInfo.js"></script>
+    <script type="text/javascript" src="Judge.js"></script>
+    <script type="text/javascript" src="school.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+
+    </div>
+    <div class="slogan"><img src="Pic/slogan.png" /></div>
+    <div class="nav-main">
+        <div class="nav-box">
+            <div class="nav">
+                <ul class="nav-ul">
+                    <li><a href="javascript:void(0)" class="home"><div class="logo"><img src="Pic/logo.png" /></div><span>首页</span></a></li>
+                    <li><a href="javascript:void(0)" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person-info">未登录</span></a></li>
+                    <li><a href="javascript:void(0)" class="aboutus"><div class="aboutus"><img src="Pic/b17eca8065380cd7e93f70cfab44ad34598281eb.jpg" /></div><span>关于我们</span></a></li>
+                    <li><a href="javascript:void(0)" class="lab"><div class="lab"><img src="Pic/87Y58PICJFQ.jpg" /></div><span>实验室</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="slidetoggle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="info-black">
+        <div class="basic-info">
+            <h1>基本信息</h1>
+            <div class="part1">
+                <h3>头像</h3>
+                <img src="Pic/2014001313895746404551930294844.jpg" />
+                <input type="file" accept="image/jpeg,image/jpg,image/png" />
+                <br/>
+                <a href="javascript:void(0)">修改</a>
+            </div>
+            <div class="part2">
+                <h3>用户名</h3>
+                <p>KOMO</p>
+                <a href="javascript:void(0)">修改</a>
+            </div>
+            <div class="part3">
+                <h3>学校</h3>
+                <p>uestc</p>
+                <div id="proSchool" class="provinceSchool">
+                    <div class="title"><span>请选择学校</span></div>
+                    <div class="proSelect">
+                        <select></select>
+                        <span>如没找到选择项，请选择其他手动填写</span>
+                        <input type="text" class="input_shchool"/>
+                    </div>
+                    <div class="schoolList">
+                        <ul></ul>
+                    </div>
+                    <div class="button">
+                        <input type="button" flag='0' value="取消" />
+                        <input type="button" flag='1' value="确定" />
+                    </div>
+                </div>
+                <a href="javascript:void(0)">修改</a>
+            </div>
+            <div class="part4">
+                <h3>联系方式</h3>
+                <p>1035844563</p>
+                <a href="javascript:void(0)">修改</a>
+            </div>
+            <div class="part5">
+                <h3>邮箱</h3>
+                <p>mr.tankomo@foxmail.com</p>
+                <div id='emaillist' class='emaillist'></div>
+                <a href="javascript:void(0)">修改</a>
+            </div>
+        </div>
+        <div class="security">
+            <h1>安全信息</h1>
+            <b>如您发现登录异常，请及时更改密码！</b>
+            <div class="loginIP">
+                <h3>登录IP</h3>
+                <ul>
+                    <li>19：44：25.23.164.1--杭州</li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)">修改密码</a>
+        </div>
+        <script type="text/javascript">
+            
+            $(function () {
+                var res = ["A1", "B2", "C3"];
+                var expire = ["2017-8-9", "2017-9-4", "2017-9-6"];
+                var state = ["在售", "成功交易", "成功交易"];
+                for (var i in res) {
+                    var tr = document.createElement("tr");
+                    var str = '<td>' + res[i] + '</td>' + "<td>" + expire[i] + "</td>" + "<td>" + state[i] + "</td>" + "<td><a src='javascript:void(0)'>详细信息</a></td>";
+                    $(tr).html(str);
+                    $(".MyGoods").append(tr);
+                }
+            });
+                  </script>
+        <div class="sale-info">
+            <h1>我的在售</h1>
+            <div class="adjust"></div>
+            <table class="MyGoods">
+                <tr>
+                    <th>物品</th>
+                    <th>到期时间</th>
+                    <th>状态</th>
+                    <th>更多</th>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript">
+            
+            $(function () {
+                var res = ["A1", "B2", "C3"];
+                var expire = ["2017-8-9", "2017-9-4", "2017-9-6"];
+                var state = ["few发", "vw", "打算、"];
+                for (var i in res) {
+                    var tr = document.createElement("tr");
+                    var str = '<td>' + res[i] + '</td>' + "<td>" + expire[i] + "</td>" + "<td>" + state[i] + "</td>" + "<td><a src='javascript:void(0)'>详细信息</a></td>";
+                    $(tr).html(str);
+                    $(".MyPurchase").append(tr);
+                }
+            });
+        </script>
+
+        <div class="purchase-info">
+            <h1>已买物品</h1>
+            <div class="adjust"></div>
+            <table class="MyPurchase">
+                <tr>
+                    <th>物品</th>
+                    <th>时间</th>
+                    <th>卖家</th>
+                    <th>更多</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+      
+    <div class="foot">
+        <p>COPYRIGHT © 2017 – 2017 TENCENT. ALL RIGHTS RESERVED.</p>
+        <p>KOMO Studio 版权所有</p>
+    </div>
+    <a class="qq" href="tencent://message/?uin=1340920662&Site=&menu=yes"><img class="QQ" src="Pic/QQservice.jpg" /></a>
+    <p class="test">test</p>
+</body>
+</html>
