@@ -1,5 +1,4 @@
-﻿
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, textarea {margin: 0;padding: 0;font-size: 14px;line-height: 24px;color: white;font-family: 'microsoft yahei',verdana,Tahoma;}
+﻿html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, textarea {margin: 0;padding: 0;font-size: 14px;line-height: 24px;color: white;font-family: 'microsoft yahei',verdana,Tahoma;}
 ol, ul, li {list-style: none;line-height: 22px;line-height: 37px;border-radius: 12px;}
 a, a:link, a:visited { cursor: pointer; text-decoration: none;}
 a:hover { cursor: pointer; }
@@ -96,7 +95,7 @@ body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial,
     height: 40px;
     position: absolute;
     left: 0px;
-    z-index: 1;
+    z-index: 2;
     top: 0px;
     display: block;
     width: 900px;
@@ -109,7 +108,6 @@ body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial,
     text-align: center;
 }
 .nav-main {
-    position: absolute;
     left: -100px;
     transition: all .5s;
 	-moz-transition: all .5s;
@@ -295,7 +293,8 @@ li.user {
 .slogan img {
     height: 101px;
     position: absolute;
-    top: -47px;
+    top: 0px;
+    z-index: 3;
 }
 .collection-amount img {
     height: 14px;
@@ -487,4 +486,320 @@ span.content-span {
     height: 128px;
     position: relative;
     z-index: 0;
+}
+
+.commodity-detail {
+    height: 351px;
+    position: fixed;
+    background: white;
+    z-index: 99;
+    border-radius: 5px;
+    width: 800px;
+    visibility: hidden;
+    box-shadow: 0 0 9px black;
+}
+.close-table {
+    position:fixed;
+    z-index:99;
+    visibility:hidden;
+}
+.close-table p {
+    position: fixed;
+    border: 1px solid rgba(0, 0, 0, 0.34);
+    width: 35px;
+    height: 35px;
+    z-index: 99;
+    color: black;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 28px;
+    background: white;
+}
+
+.close-table p:hover {
+    border-color: orange;
+    background-color: antiquewhite;
+    color: coral;
+}
+img.content-img:hover {
+    border: orange 2px solid;
+    cursor: pointer;
+}
+.commodity-detail .commodity h1,.commodity-detail .commodity p,.commodity-detail .commodity li {
+    color: black;
+}
+
+.commodity-detail .commodity h1.title {
+    width: 800px;
+    text-align: center;
+    font-size: 37px;
+    margin-top: -10px;
+}
+
+.commodity-detail .commodity p, .commodity-detail .commodity li {
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+.commodity-detail .commodity p {
+    margin-top: 32px;
+    display: inline-block;
+}
+
+.commodity-detail .commodity .pictures {
+    margin-left: 48px;
+    width: 704px;
+    height: 198px;
+    overflow: hidden;
+}
+
+
+.commodity-detail .commodity .pictures img {
+    width: 352px;
+    height: 198px;
+    left: -177.5px;
+    position: relative;
+    display: inline-block;
+}
+.commodity-detail .commodity .before {
+    position: absolute;
+    left:48px;
+    height: 198px;
+    width: 30px;
+    z-index:1;
+    color: rgb(130, 130, 130);
+    margin: 0px;
+    line-height: 198px;
+    font-size: 32px;
+    background-color: rgba(130, 130, 130, 0.5);
+}
+
+.commodity-detail .commodity .after {
+    position: absolute;
+    right: 48px;
+    height: 198px;
+    width: 30px;
+    background-color: rgba(130, 130, 130, 0.5);
+    z-index:1;
+    color: rgb(130, 130, 130);
+    margin: 0px;
+    line-height: 198px;
+    font-size: 32px;
+}
+
+.commodity-detail .commodity p.expire {
+    position: relative;
+    right: -410px;
+}
+.commodity-detail .commodity p.name {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+}
+.commodity-detail .commodity input[type="button"] {
+    width: 79px;
+    height: 79px;
+    border-radius: 50%;
+    border: double;
+    color: chocolate;
+    background: bisque;
+    font-size: 17px;
+    position: absolute;
+    outline: none;
+    top: 256px;
+    left: 362px;
+}
+
+.commodity-detail .commodity input[type="button"]:hover {cursor: pointer;background: burlywood;border: 4px double;font-size: 19px;}
+.commodity-detail .commodity  .before p {
+    color: inherit;
+    margin: inherit;
+    line-height: inherit;
+    font-size: inherit;
+}
+
+.commodity-detail .commodity .after p {
+    color: inherit;
+    margin: inherit;
+    line-height: inherit;
+    font-size: inherit;
+}
+.commodity-detail .commodity .before:hover {
+    background: rgba(130, 130, 130, 0.92);
+    color: aliceblue;
+    cursor:pointer;
+}
+
+.commodity-detail .commodity .after:hover {
+    background-color: rgba(130, 130, 130, 0.92);
+    color: aliceblue;
+    cursor:pointer;
+}
+.commodity-detail .commodity .pictures .picture-container {
+    position: relative;
+    left:0px;
+    transition: all ease-in-out 1s;
+    -moz-transition: all ease-in-out 1s; /* Firefox 4 */
+    -webkit-transition: all ease-in-out 1s; /* Safari 和 Chrome */
+    -o-transition: all ease-in-out 1s; /* Opera */
+}
+#log-info {
+    position: fixed;
+    z-index: 99;
+    transform: scale(0.6);
+    height: 520px;
+    width: 840px;
+    margin-top: -40px;
+    position: fixed;
+    border-radius: 40px 40px 40px 40px;
+    background-color: rgba(155, 151, 151, 0.68);
+}
+#usernamecontain {
+    position: absolute;
+    height: 52px;
+    width: 600px;
+    left: 120px;
+    background-color: white;
+    top: 135px;
+    border-radius: 22px;
+}
+#username {
+    position: absolute;
+    /* margin-left: 50px; */
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 52px;
+    outline: none;
+    width: 500px;
+    font-size: 35px;
+    border-radius: 0%;
+    left: 50px;
+    top: 0px;
+    text-align: center;
+    color:black;
+}
+#passwordcontain{
+    position: absolute;
+    height: 52px;
+    width: 600px;
+    left: 120px;
+    top: 215px;
+    background-color: white;
+    border-radius: 22px;
+}
+#password {
+    position: absolute;
+    height: 52px;
+    width: 500px;
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    /* margin-left: 50px; */
+    font-size: 35px;
+    border-radius: 0%;
+    left: 50px;
+    top: 0px;
+    text-align: center;
+    color:black;
+}
+#check {
+    position: absolute;
+    left: 161px;
+    top: 287px;
+}
+#remmember {
+    height: 22px;
+    width: 22px;
+    position: relative;
+    top: 4px;
+}
+#remLB {
+    font-size: 26px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.74);
+}
+#linkPSW {
+    position: absolute;
+    left: 564px;
+    top: 287px;
+}
+
+#forgetPSW {
+    font-size: 26px;
+    font-family: sans-serif;
+    color: red;
+    text-decoration: none;
+}
+
+#submitcontain {
+    position: absolute;
+    top: 348px;
+    left: 260px;
+    border-radius: 39px;
+    overflow: hidden;
+}
+
+#submit {
+    height: 60px;
+    width: 320px;
+    border: 0px;
+    padding: 0px;
+    background-color: white;
+    background-color: rgba(192, 12, 12, 0.92);
+    font-size: 34px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.86);
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    cursor: pointer;
+}
+hr#cut-line {
+    position: absolute;
+    width: 738px;
+    left: 50px;
+    top: 422px;
+    background-color: black;
+    border-color: rgb(87, 84, 84);
+}
+
+img#login-QQ:hover {
+    cursor: pointer;
+}
+
+img#login-QQ {
+    width: 61px;
+    position: absolute;
+    top: 444px;
+    left: 329px;
+}
+.top-bar input.login,.top-bar input.Reg {
+    position: absolute;
+    height: 48px;
+    width: 72px;
+    outline:none;
+}
+
+.top-bar input.login {
+    right: 72px;
+    background: pink;
+    border: 0px;
+    border-radius: 0 0 10px 10px;
+}
+
+.top-bar input.Reg {
+    right: 0px;
+    height: 40px;
+    border: none;
+    background-color: #f5eddc;
+    color: blue;
+}
+
+.top-bar input.Reg:hover {color: #605039;cursor: pointer;}
+
+.top-bar input.login:hover {
+    cursor: pointer;
+    color: cyan;
+    background: pink;
+    border: double white;
 }

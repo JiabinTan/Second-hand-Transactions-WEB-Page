@@ -1,8 +1,19 @@
 ﻿
 $(function () {
+    $("#log-info").css(
+            {
+                "left": String(window.innerWidth / 2 - 420) + "px",
+                "top": String(window.innerHeight / 2 - 260) + "px"
+            }
+            );
     $("div.top-bar").css(
         {
             "width": String(document.body.offsetWidth) + "px"
+        });
+    $(".sale-detail .MyGoods,.purchase-detail .MyGoods").css(
+        {
+            "left": String(document.body.offsetWidth/2 - 400) + "px",
+            "top": String(window.innerHeight / 2 -26.8) + "px"
         });
     $("div.info-black").css(
         {
@@ -20,6 +31,21 @@ $(function () {
             "left": String(document.body.offsetWidth - 47.29) + "px"
         });
     window.onresize = function () {
+        $(".nav-main .slidetoggle").css(
+       {
+           "top": String(window.innerHeight / 2 - 50) + "px",
+       });
+        $("#log-info").css(
+            {
+                "left": String(window.innerWidth / 2 - 420) + "px",
+                "top": String(window.innerHeight / 2 - 260) + "px"
+            }
+            );
+        $(".sale-detail .MyGoods,.purchase-detail .MyGoods").css(
+        {
+            "left": String(document.body.offsetWidth/2 - 400) + "px",
+            "top": String(window.innerHeight / 2 - 26.8) + "px"
+        });
         $("div.info-black").css(
         {
             "left": String(document.body.offsetWidth / 2 - 457.5) + "px"
@@ -128,4 +154,71 @@ $(function () {
         ele_t.replaceWith(str);
         $(this).remove();
     });
+    $(document).on("click", ".MyGoods tr td a", function () {
+        $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "blur(10px)");
+        var res = "komo";
+        var expire = "2017-8-9";
+        var state = "在售";
+        var buyer = "Tim";
+        var contact = "1035844563"
+        var school = "电子科技大学";
+        var email = "mr.tankomo@foxmail.com";
+        var tr = document.createElement("tr");
+        var str = '<td>' + res + '</td>' + "<td>" + expire + "</td>" + "<td>" + state + "</td>" + '<td>' + buyer + '</td>' + '<td>' + contact + '</td>' + "<td>" + school + "</td>" + "<td>" + email + "</td>";
+        $(tr).html(str);
+        $(".sale-detail .MyGoods").css("visibility", "visible").append(tr);
+        $(".sale-detail .close-table").css(
+       {
+           "visibility":"visible",
+           "left": String(document.body.offsetWidth / 2 + 400-35) + "px",
+           "top": String(window.innerHeight / 2 - 26.8-35) + "px"
+       });
+    });
+    $(".sale-detail .close-table").click(function () {
+        $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "none");
+        //
+        $(".sale-detail .MyGoods").css("visibility", "hidden").find("td").remove();
+        $(".sale-detail .close-table").css("visibility", "hidden");
+    });
+    $(document).on("click", ".purchase-info .MyPurchase  tr td a", function () {
+        $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "blur(10px)");
+        var res = "komo";
+        var expire = "2017-8-9";
+        var buyer = "Tim";
+        var contact = "1035844563"
+        var school = "电子科技大学";
+        var email = "mr.tankomo@foxmail.com";
+        var tr = document.createElement("tr");
+        var str = '<td>' + res + '</td>' + "<td>" + expire + "</td>" + '<td>' + buyer + '</td>' + '<td>' + contact + '</td>' + "<td>" + school + "</td>" + "<td>" + email + "</td>"+"<td>"+" "+"</td>";
+        $(tr).html(str);
+        $(".purchase-detail .MyGoods").css("visibility", "visible").append(tr);
+        $(".purchase-detail .close-table").css(
+       {
+           "visibility": "visible",
+           "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
+           "top": String(window.innerHeight / 2 - 26.8 - 35) + "px"
+       });
+    });
+    $(".purchase-detail .close-table").click(function () {
+        $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "none");
+        //
+        $(".purchase-detail .MyGoods").css("visibility", "hidden").find("td").remove();
+        $(".purchase-detail .close-table").css("visibility", "hidden");
+    });
+    $("#remLB").click(
+            function () {
+                if ($("#remmember").prop("checked"))
+                    $("#remmember").prop("checked", false);
+                else
+                    $("#remmember").prop("checked", true);
+            });
 })
+function UserLog()
+{
+    $("#log-info").show();
+    
+}
+function UserReg() {
+    //js操作文档location
+    //window.open("http://baidu.com");
+}

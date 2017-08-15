@@ -6,10 +6,14 @@ a:hover { cursor: pointer; }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 :after, :before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body{     background-repeat:no-repeat;background-attachment:fixed;background-image: url(Pic/bkground.jpg);font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial, Gotham, "Helvetica Neue", Helvetica, sans-serif; width: 100%; margin: 0 auto; background-color: #313131; overflow-x: hidden; }
-
+body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial, Gotham, "Helvetica Neue", Helvetica, sans-serif; width: 100%; margin: 0 auto; background-color: #313131; overflow-x: hidden; }
+.bkground-image {
+    position: fixed;
+    z-index: 0;
+}
 
 /*一级导航*/
+
 .nav-main{
 	position: fixed;
 	top: 0;
@@ -487,14 +491,14 @@ span.entertext {
     text-align: center;
     color: #999;
 }
-.sale-info .MyGoods tr td {
+.MyGoods tr td {
     color:black;
     border-top: 1px solid #dadada;
     text-align: center;
     border-left: 0px;
     border-right: 0px;
 }
-.sale-info .MyGoods tr th {
+ .MyGoods tr th {
     color:black;
     text-align: center;
     border-left: 0px;
@@ -514,17 +518,250 @@ span.entertext {
 }
 
 .MyGoods tr th {border-top: 1px grey;}
-.purchase-info .MyPurchase tr td {
+ .MyPurchase tr td {
     color:black;
     border-top: 1px solid #dadada;
     text-align: center;
     border-left: 0px;
     border-right: 0px;
 }
-.purchase-info .MyPurchase tr th {
+ .MyPurchase tr th {
     color:black;
     text-align: center;
     border-left: 0px;
     border-right: 0px;
 }
 .MyPurchase tr th {border-top: 1px grey;}
+
+
+.sale-detail .MyGoods th:nth-child(-n+4) {
+    width: 70px;
+}
+
+.sale-detail table.MyGoods {
+    position: fixed;
+    background: white;
+    z-index: 99;
+    width: 800px;
+    visibility:hidden;
+}
+.close-table {
+    position:fixed;
+    z-index:99;
+    visibility:hidden;
+}
+.close-table p {
+    position: fixed;
+    border: 1px solid rgba(0, 0, 0, 0.34);
+    width: 35px;
+    height: 35px;
+    z-index: 99;
+    color: black;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 28px;
+    background: white;
+}
+
+.close-table p:hover {
+    border-color: orange;
+    background-color: antiquewhite;
+    color: coral;
+}
+
+.purchase-detail .MyGoods th:nth-child(-n+4) {
+    width: 70px;
+}
+
+.purchase-detail table.MyGoods {
+    position: fixed;
+    background: white;
+    z-index: 99;
+    width: 800px;
+    visibility:hidden;
+}
+.close-table {
+    position:fixed;
+    z-index:99;
+    visibility:hidden;
+}
+.close-table p {
+    position: fixed;
+    border: 1px solid rgba(0, 0, 0, 0.34);
+    width: 35px;
+    height: 35px;
+    z-index: 99;
+    color: black;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 28px;
+    background: white;
+}
+
+.close-table p:hover {
+    border-color: orange;
+    background-color: antiquewhite;
+    color: coral;
+}
+.top-bar input.login,.top-bar input.Reg {
+    position: absolute;
+    height: 48px;
+    width: 72px;
+    outline:none;
+}
+
+.top-bar input.login {
+    right: 72px;
+    background: pink;
+    border: 0px;
+    border-radius: 0 0 10px 10px;
+}
+
+.top-bar input.Reg {
+    right: 0px;
+    height: 40px;
+    border: none;
+    background-color: #f5eddc;
+    color: blue;
+}
+
+.top-bar input.Reg:hover {color: #605039;cursor: pointer;}
+
+.top-bar input.login:hover {
+    cursor: pointer;
+    color: cyan;
+    background: pink;
+    border: double white;
+}
+
+#log-info {
+    position: fixed;
+    z-index: 99;
+    transform: scale(0.6);
+    height: 520px;
+    width: 840px;
+    margin-top: -40px;
+    position: fixed;
+    border-radius: 40px 40px 40px 40px;
+    background-color: rgba(155, 151, 151, 0.68);
+}
+#usernamecontain {
+    position: absolute;
+    height: 52px;
+    width: 600px;
+    left: 120px;
+    background-color: white;
+    top: 135px;
+    border-radius: 22px;
+}
+#username {
+    position: absolute;
+    /* margin-left: 50px; */
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 52px;
+    outline: none;
+    width: 500px;
+    font-size: 35px;
+    border-radius: 0%;
+    left: 50px;
+    top: 0px;
+    text-align: center;
+    color:black;
+}
+#passwordcontain{
+    position: absolute;
+    height: 52px;
+    width: 600px;
+    left: 120px;
+    top: 215px;
+    background-color: white;
+    border-radius: 22px;
+}
+#password {
+    position: absolute;
+    height: 52px;
+    width: 500px;
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    /* margin-left: 50px; */
+    font-size: 35px;
+    border-radius: 0%;
+    left: 50px;
+    top: 0px;
+    text-align: center;
+    color:black;
+}
+#check {
+    position: absolute;
+    left: 161px;
+    top: 287px;
+}
+#remmember {
+    height: 22px;
+    width: 22px;
+    position: relative;
+    top: 4px;
+}
+#remLB {
+    font-size: 26px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.74);
+}
+#linkPSW {
+    position: absolute;
+    left: 564px;
+    top: 287px;
+}
+
+#forgetPSW {
+    font-size: 26px;
+    font-family: sans-serif;
+    color: red;
+    text-decoration: none;
+}
+
+#submitcontain {
+    position: absolute;
+    top: 348px;
+    left: 260px;
+    border-radius: 39px;
+    overflow: hidden;
+}
+
+#submit {
+    height: 60px;
+    width: 320px;
+    border: 0px;
+    padding: 0px;
+    background-color: white;
+    background-color: rgba(192, 12, 12, 0.92);
+    font-size: 34px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.86);
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    cursor: pointer;
+}
+hr#cut-line {
+    position: absolute;
+    width: 738px;
+    left: 50px;
+    top: 422px;
+    background-color: black;
+    border-color: rgb(87, 84, 84);
+}
+
+img#login-QQ:hover {
+    cursor: pointer;
+}
+
+img#login-QQ {
+    width: 61px;
+    position: absolute;
+    top: 444px;
+    left: 329px;
+}

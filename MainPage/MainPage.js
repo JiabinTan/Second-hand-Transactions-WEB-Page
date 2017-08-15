@@ -1,14 +1,33 @@
 ﻿var state = 0;
-var isclick=false;
+var isclick = false;
+var idx = 1;//图片位置
+var end = 3;//图片数量
 $(function () {
+    $("#log-info").css(
+            {
+                "left": String(window.innerWidth / 2 - 420) + "px",
+                "top": String(window.innerHeight / 2 - 260) + "px"
+            }
+            );
+    $(".commodity-detail .close-table").css(
+       {
+           "visibility": "hidden",
+           "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
+           "top": String(window.innerHeight / 2  - 35) + "px"
+       });
+    $(".commodity-detail").css(
+        {
+            "left": String(document.body.offsetWidth / 2 - 400) + "px",
+            "top": String(window.innerHeight / 2 - 175.5) + "px"
+        });
     $("div.top-bar").css(
         {
             "width":String(document.body.offsetWidth)+"px"
         });
     $("div.content").css(
         {
-            "max-width": String(1226) + "px",
-            "left": String(document.body.offsetWidth / 2 - 613) + "px"
+            "max-width": String(1032) + "px",
+            "left": String(document.body.offsetWidth / 2 - 516) + "px"
         });
     $("div.search-bar").css(
         {
@@ -30,10 +49,31 @@ $(function () {
             "left": String(document.body.offsetWidth-47.29) + "px"
         });
     window.onresize = function () {
+        $(".nav-main .slidetoggle").css(
+           {
+               "top": String(window.innerHeight / 2 - 50) + "px",
+           });
+        $("#log-info").css(
+           {
+               "left": String(window.innerWidth / 2 - 420) + "px",
+               "top": String(window.innerHeight / 2 - 260) + "px"
+           }
+           );
+        $(".commodity-detail .close-table").css(
+       {
+           "visibility": "hiddden",
+           "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
+           "top": String(window.innerHeight / 2 - 35) + "px"
+       });
+        $(".commodity-detail").css(
+        {
+            "left": String(document.body.offsetWidth / 2 - 400) + "px",
+            "top": String(window.innerHeight / 2 - 175.5) + "px"
+        });
         $("div.content").css(
         {
-            "max-width": String(1226) + "px",
-            "left": String(document.body.offsetWidth / 2 - 613) + "px"
+            "max-width": String(1032) + "px",
+            "left": String(document.body.offsetWidth / 2 - 516) + "px"
         });
         $("div.ex-requires").css(
         {
@@ -216,7 +256,119 @@ $(function () {
             });
         }
     });
+    $(document).on("click", ".content div .content-img", function () {
+        $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "blur(10px)");
+        $(".commodity-detail").css("visibility", "visible");
+        $(".commodity-detail .close-table").css("visibility", "visible");
+        var info = {
+            com: "杯子",
+            likes: "100",
+            expire: "2017 - 6 - 5",
+            name: "komo",
+        }
+        $(".commodity-detail .commodity .title").text(info.com);
+        $(".commodity-detail .commodity .likes .amount").text(info.likes);
+        $(".commodity-detail .commodity .expire .expire-time").text(info.expire);
+        $(".commodity-detail .commodity .name").text(info.name);
+        var str1 = "<img src='Pic/fill.png' />";
+        $(str1).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        var str2 = "Pic/2016";
+        for (var i = 1; i <= 3; i++) {
+            var str = str2 + "000" + String(i)+".jpg";
+            var img = document.createElement("img");
+            $(img).attr({"src": str,"title":"点击查看大图"}).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        }
+        $(str1).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        $(".commodity-detail .commodity .pictures .picture-container").css("width", String(352 * 5) + "px");
+        $(".content div .content-img").on("click", evenstop);
+        $(".commodity-detail .commodity .pictures img").eq(1).css("border", "2px orange solid");
+    });
+    $(".commodity-detail .close-table").click(function () {
+        $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "none");
+        //
+        $(".content div .content-img").off("click", evenstop);
+        $(".commodity-detail").css("visibility", "hidden");
+        $(".commodity-detail .close-table").css("visibility", "hidden");
+        $(".commodity-detail .commodity .pictures .picture-container").html("");
+    });
+    $(".commodity-detail .commodity input[type='button']").on('click', function () {
+        if (confirm("是否确认发送购买意愿（以及您的联系方式）至对方邮箱，同时您也将获取对方联系方式？"))
+            alert("信息已发送！\n之后你们可以通过联系确认交易地址，如对该订单存在疑惑请即使客服！");
+    })
+    $(document).on("click",".commodity-detail .commodity .before",
+        function () {;
+            if (1 == idx)
+                return false;
+            else
+            {
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
+                idx--;
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
+                var left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left"))) + 352;
+                $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
+            }
+        }
+        );
+    $(document).on("click", ".commodity-detail .commodity .after",
+        function () {;
+            if (end == idx)
+                return false;
+            else {
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
+                idx++;
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
+                var left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left"))) - 352;
+                $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
+            }
+        }
+        );
+    $(document).on("click", ".commodity-detail .commodity .pictures .picture-container img", function () {
+        var src = $(this).attr("src");
+        var body_img = document.createElement("img");
+        $(body_img).attr({"src": src,"title":"如显示存在问题或者需要对图片进行操作,\n请右键保存至本地操作","id":"bigImgClick"}).appendTo("body");
+        var img_height = $(body_img).height();
+        var img_width = $(body_img).width();
+        if (img_height > 576)
+        {
+            $(body_img).css("height", "576px");
+            img_height = 576;
+        }
+        if(img_width>1024)
+        {
+            $(body_img).css("width", "1024px");
+            img_width=1024;
+        }
+        $(body_img).css({
+            "position": "fixed",
+            "left": String(document.body.offsetWidth / 2 - img_width/2) + "px",
+            "top": String(window.innerHeight / 2 - img_height / 2) + "px",
+            "z-index":99
+        });
+        $(".commodity-detail").css("filter", "blur(10px)");
+        return false;
+    });
+    $(document).click(function (e) {
+        if (e.target.id != 'bigImgClick') {
+            $(".commodity-detail").css("filter", "none");
+            $("body>img#bigImgClick").remove();
+        }
+    });
+    $("#remLB").click(
+            function () {
+                if ($("#remmember").prop("checked"))
+                    $("#remmember").prop("checked", false);
+                else
+                    $("#remmember").prop("checked", true);
+            });
 })
+function UserLog() {
+    $("#log-info").show();
+
+}
+function UserReg() {
+    //js操作文档location
+    //window.open("http://baidu.com");
+}
 function toHex(N) {
     if (N == null) return "00";
     N = parseInt(N); if (N == 0 || isNaN(N)) return "00";
@@ -239,4 +391,12 @@ function RGBtoHEX(str) {
     else {
         return str;
     }
+}
+function evenstop()
+{
+    return false;
+}
+function StringProcess(str)
+{
+    return str.substring(0, str.length - 2);
 }

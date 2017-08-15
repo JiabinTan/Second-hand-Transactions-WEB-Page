@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link type="text/css" href="Commodity-upload.css" rel="stylesheet"/>    
+    <script type="text/javascript" src="../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Commodity-upload.js"></script>
+    <link rel="icon" href="Pic/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Pic/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div id="log-info">
+        <form>
+            <!--action=“” 该处为发送表单至某处 method="post" -->
+            <div id="usernamecontain">
+                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value="">
+            </div>
+            <div id="passwordcontain">
+                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
+            </div>
+            <span id="check">
+                <input type="checkbox" id="remmember" name="RemPSW" tabindex="3" />
+                <label for="RemPSW" id="remLB">记住密码</label>
+            </span>
+            <span id="linkPSW">
+                <a id="forgetPSW" href="http://baidu.com">忘记密码</a>
+            </span>
+            <div id="submitcontain">
+                <input id="submit" tabindex="4" type="button" value="提    交" />
+            </div>
+            <hr id="cut-line" />
+            <a href="http://baidu.com"><img id="login-QQ" src="../Pic/login-QQ.png" /></a>
+        </form>
+    </div>
+    <script>
+    $("#log-info").hide();
+    $("#submit").click(function () {
+        $("#log-info").hide();
+    });
+    </script>
+
+    <div class="top-bar">
+        <input class="login" type="button" value="登录(Log)" onclick="UserLog()" />
+        <a href="../Register Page/Register.html"><input class="Reg" type="button" value="注册(Reg)" onclick="UserReg()" /></a>
+    </div>
+    <div class="slogan"><img src="Pic/slogan.png" /></div>
+    <div class="nav-main">
+        <div class="nav-box">
+            <div class="nav">
+                <ul class="nav-ul">
+                    <li><a href="../MainPage/MainPage.html" class="home"><div class="logo"><img src="Pic/logo.png" /></div><span>首页</span></a></li>
+                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person-info">未登录</span></a></li>
+                    <li><a href="../commodity-publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish-com">发布商品</span></a></li>
+                    <li><a href="javascript:void(0)" class="aboutus" onclick="us_click()"><div class="aboutus"><img src="Pic/b17eca8065380cd7e93f70cfab44ad34598281eb.jpg" /></div><span>关于我们</span></a></li>
+                    <li><a href="javascript:void(0)" class="lab" onclick="lab_click()"><div class="lab"><img src="Pic/87Y58PICJFQ.jpg" /></div><span>实验室</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="slidetoggle"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function us_click() {
+        $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
+        $("body").append(" <img src='' alter='1'/>");
+        $("<h1 class='word'>We're enigmatic.</h1>").css({
+            "text-align": "center",
+            "height": String(window.innerHeight) + "px",
+            "width": String(window.innerWidth) + 'px',
+            "line-height": String(window.innerHeight) + "px",
+            "font-size": "30px"
+        }).appendTo("body");
+        $("<h1 class='word'>You can try to find us...</h1>").css({
+            "text-align": "center",
+            "height": String(window.innerHeight) + "px",
+            "width": String(window.innerWidth) + 'px',
+            "line-height": String(window.innerHeight) + "px",
+            "background-color": "white",
+            "color": "black",
+            "font-size": "30px"
+        }).appendTo("body");
+        $("<h1 class='word'>click the QQ tag to get online service.</h1>").css({
+            "text-align": "center",
+            "height": String(window.innerHeight) + "px",
+            "width": String(window.innerWidth) + 'px',
+            "line-height": String(window.innerHeight) + "px",
+            "background-color": "#313131",
+            "color": "white",
+            "font-size": "30px"
+        }).appendTo("body");
+        $("<img src='../Pic/spy.png' alt='spy'/>").
+        css({
+            "position": "absolute",
+            "left": String(window.innerWidth / 2 - 138) + 'px',
+            "top": String(window.innerHeight - 181.5) + "px"
+        }).appendTo("body");
+        $("<img src='../Pic/logo_pro.png' alt='logo_pro'/>").
+        css({
+            "position": "absolute",
+            "left": String(window.innerWidth / 2 - 179) + 'px',
+            "top": String(window.innerHeight * 2 - 190.5) + "px"
+        }).appendTo("body");
+    }
+    function lab_click() {
+        $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
+        $("<h1 class='word'>暂未开放，敬请等待！</h1>").css({
+            "text-align": "center",
+            "height": String(window.innerHeight) + "px",
+            "width": String(window.innerWidth) + 'px',
+            "line-height": String(window.innerHeight) + "px",
+            "font-size": "30px"
+        }).appendTo("body");
+        $(window).trigger("resize");
+    }
+    </script>
+    <script type="text/javascript">
+        $(".nav-main .slidetoggle").css(
+       {
+           "top": String(window.innerHeight / 2 - 50) + "px",
+        });
+    </script>
+    <div class="outer">
+    <form>
+        <h1>商品上传</h1>
+        <p><span>物品:</span><input type="text" /></p>
+        <p><span>简介:</span><input type="text" /></p>
+        <p><span class="bigWord">详细介绍:</span><textarea placeholder="请尽可能详细的对物品进行描述，比如新旧、大小等方面，以便于他人做出合理的判断。" maxlength="500" class="bigText" type="text"></textarea></p>
+        <p><span class="span_mov">上传图片:</span><input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png"></p>
+    </form>
+</div>
+    <div class="foot">
+        <p>COPYRIGHT © 2017 – 2017 TENCENT. ALL RIGHTS RESERVED.</p>
+        <p>KOMO Studio 版权所有</p>
+    </div>
+    <a class="qq" href="tencent://message/?uin=1340920662&Site=&menu=yes"><img class="QQ" src="Pic/QQservice.jpg" /></a>
+    <p class="test">test</p>
+    
+</body>
+</html>
