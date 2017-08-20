@@ -51,7 +51,6 @@ $(function () {
                 }
             }
             $("div[class='schoolList'] ul").html(schoolUlStr);
-            alert("5");
         }
         else {
             $("div[class='schoolList'] ul").html("<span class='entertext'>请在输入框内手动输入学校！</span>");
@@ -73,14 +72,6 @@ $(function () {
         $("div[class='provinceSchool']").hide();
         $("input#school").trigger("blur");
     });
-    //$("div[class='schoolList'] ul li").on("click", function () {
-    //    alert("1");
-    //    $("#school").val($(this).html());
-    //    alert("2");
-    //    $("div[class='provinceSchool']").hide();
-    //    alert("3");
-    //});
-    //按钮点击事件
     $(document).on('click', "div[class='button'] input", function () {
         var flag = $(this).attr("flag");
         if ("0" == flag) {

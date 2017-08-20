@@ -4,128 +4,93 @@
     overflow:hidden;
 
 }
-@font-face {
- font-family: 'Chinese-Nfont';
- src: url('../../Font/LSSST-1498.ttf');
-} 
-.bkground {
-    border:0px;
-    margin:0px;
-}
-div[class^= "color"] {
-    height:40px;
-    margin:0px;
-    position:relative;
-    
+h1 {
+    position: absolute;
+    left: 323px;
+    top: -52px;
+    font-size: 37px;
 }
 #log-info {
-    height:720px;
-    width:540px;
+    height: 443px;
+    width: 800px;
     position:fixed;
     left:0px;
     top:0px;
-    border-radius:3%;
-    background-color:rgba(155, 151, 151, 0.68);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0px black;
 }
 #usernamecontain {
     position: absolute;
-    height: 30px;
-    width: 500px;
-    left: 20px;
+    height: 25px;
+    width: 300px;
+    left: 212px;
     background-color: white;
-    top: 177px;
-    overflow: hidden;
-    border-radius: 22px;
+    top: 132px;
+    overflow: visible;
+    box-shadow: 0 0 2px black;
 }
 #username {
     position: absolute;
-    /* margin-left: 50px; */
     margin: 0px;
     border: 0px;
     padding: 0px;
-    height: 30px;
+    height: 25px;
     outline: none;
-    width: 500px;
-    font-size: 23px;
-    border-radius: 100%;
+    width: 300px;
     left: 0px;
     top: 0px;
     text-align: center;
 }
 #passwordcontain{
     position: absolute;
-    height: 30px;
-    width: 500px;
-    left: 20px;
-    top: 259px;
+    height: 25px;
+    width: 300px;
+    left: 212px;
     background-color: white;
-    overflow: hidden;
-    border-radius: 22px;
-}
-#password {
-    position: absolute;
-    height: 30px;
-    width: 500px;
-    border: 0px;
-    outline: none;
-    padding: 0px;
-    /* margin-left: 50px; */
-    font-size: 24px;
-    border-radius: 100%;
-    left: 0px;
-    top: 0px;
-    text-align: center;
-}
-#emailcontain {
-    position: absolute;
-    height: 30px;
-    width: 500px;
-    left: 20px;
-    top: 427px;
+    top: 189px;
     overflow: visible;
-    background-color: white;
-    border-radius: 22px;
+    box-shadow: 0 0 2px black;
 }
-#email {
-    position: absolute;
-    /* margin-left: 50px; */
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    height: 30px;
-    outline: none;
-    width: 500px;
-    font-size: 24px;
-    border-radius: 100%;
-    left: 0px;
-    top: 0px;
-    text-align: center;
-}
+#password {position: absolute;margin: 0px;border: 0px;padding: 0px;height: 25px;outline: none;width: 300px;left: 0px;top: 0px;text-align: center;}
+#emailcontain {position: absolute;height: 25px;width: 300px;left: 212px;background-color: white;top: 316px;overflow: visible;box-shadow: 0 0 2px black;}
+#email {position: absolute;margin: 0px;border: 0px;padding: 0px;height: 25px;outline: none;width: 300px;left: 0px;top: 0px;text-align: center;}
 #submitcontain {
+    height: 443px;
     position: absolute;
-    top: 640px;
-    left: 110px;
-    border-radius: 39px;
-    overflow: hidden;
-}
-
-#submit {
-    height: 60px;
-    width: 320px;
+    top: 48px;
+    right: 24px;
+    width: 68px;
     border: 0px;
     padding: 0px;
-    background-color: rgb(161, 28, 28);
-    font-size: 34px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.75);
-    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    background-color: rgb(228, 60, 60);
     cursor: pointer;
+    box-shadow: 0 0 1px black;
 }
-span.check-font-color:nth-child(odd) {
-    color:red;
+#submitcontain span {
+    line-height: 64px;
+    position: absolute;
+    top: 119px;
+    left: 16px;
+    width: 17px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
 }
-span.check-font-color:nth-child(even) {
-    color:green;
+#submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 443px;
+    cursor: pointer;
+    width: 68px;
+    opacity: 0;
+}
+#submitcontain img {
+    height: 45px;
+    position: absolute;
+    top: 286px;
+    left: 13px;
 }
 ul li {
     list-style: none;
@@ -203,9 +168,7 @@ padding: 15px 0;
 }
 p[id^='re']
 {
-	font-size: 18px;
 	font-style: normal;
-	font-weight: bolder;
 	color: rgba(0, 0, 0, 0.74);
 }
 .provinceSchool .schoolList ul li {
@@ -254,39 +217,17 @@ p[id^='re']
 
 p#reusername {
     position: absolute;
-    left: 0px;
-    text-align: center;
+    left: 135px;
     display: block;
-    width: 540px;
+    width: 69px;
     top: 117px;
 }
 
-p#repassword {
-    position: absolute;
-    left: 0px;
-    text-align: center;
-    display: block;
-    width: 540px;
-    top: 200px;
-}
+p#repassword {position: absolute;left: 70px;display: block;width: 131px;top: 173px;}
 
-p#repasswordagain {
-    position: absolute;
-    left: 0px;
-    text-align: center;
-    display: block;
-    width: 540px;
-    top: 285px;
-}
+p#repasswordagain {position: absolute;left: 58px;display: block;width: auto;top: 249px;}
 
-p#reemail {
-    position: absolute;
-    left: 0px;
-    text-align: center;
-    display: block;
-    width: 540px;
-    top: 369px;
-}
+p#reemail {position: absolute;left: 73px;display: block;width: auto;top: 301px;}
 
 p#recontact {
     position: absolute;
@@ -297,68 +238,33 @@ p#recontact {
     top: 90px;
 }
 
-div#password-againcontain {
-    position: absolute;
-    height: 30px;
-    width: 500px;
-    left: 20px;
-    top: 343px;
-    background-color: white;
-    overflow: hidden;
-    border-radius: 22px;
-}
+div#password-againcontain {position: absolute;height: 25px;width: 300px;left: 212px;background-color: white;top: 265px;overflow: visible;box-shadow: 0 0 2px black;}
 
-input#password-again {
-    position: absolute;
-    height: 30px;
-    width: 500px;
-    border: 0px;
-    outline: none;
-    padding: 0px;
-    /* margin-left: 50px; */
-    font-size: 24px;
-    border-radius: 100%;
-    left: 0px;
-    top: 0px;
-    text-align: center;
-}
+input#password-again {position: absolute;margin: 0px;border: 0px;padding: 0px;height: 25px;outline: none;width: 300px;left: 0px;top: 0px;text-align: center;}
 
 center#schoolcontain {
-    top: 476px;
-    left: 167px;
+    top: 436px;
+    left: 115px;
     position: absolute;
 }
 
-p#recontact {
-    position: absolute;
-    left: 0px;
-    text-align: center;
-    display: block;
-    width: 540px;
-    top: 495px;
-}
+p#recontact {position: absolute;left: 49px;display: block;width: auto;top: 362px;}
 
-div#contactcontain {
-    position: absolute;
-    height: 30px;
-    width: 500px;
-    left: 20px;
-    top: 556px;
-    background-color: white;
-    overflow: hidden;
-    border-radius: 22px;
-}
+div#contactcontain {position: absolute;height: 25px;width: 300px;left: 212px;background-color: white;top: 376px;overflow: visible;box-shadow: 0 0 2px black;}
 
+form {
+    top: -48px;
+    position: relative;
+    left: 24px;
+}
 input#contact {
     position: absolute;
-    height: 30px;
-    width: 500px;
+    margin: 0px;
     border: 0px;
-    outline: none;
     padding: 0px;
-    /* margin-left: 50px; */
-    font-size: 24px;
-    border-radius: 100%;
+    height: 25px;
+    outline: none;
+    width: 300px;
     left: 0px;
     top: 0px;
     text-align: center;
@@ -367,178 +273,46 @@ input#contact {
 input#school {
     text-align: center;
     cursor: pointer;
-    border-radius: 28px;
 }
 
 div#proSchool {
     z-index: 99;
 }
-div#head {
-    height: 139px;
-    position: absolute;
-    left: 194px;
-    top: 9px;
-}
 
-img#logo {
-    position: absolute;
-    height: 110px;
-    width: 110px;
-    opacity: .9;
-    left: 23px;
-    transform-origin:50% 50%;
-    animation-name: myrotate;
-    animation-duration:4s;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-}
-@keyframes myrotate{
-    from{
-    transform:rotate(0deg);
-    }
-    to {
-    transform:rotate(360deg);
-    }
-}
-
-span#D {
-    position: absolute;
-    left: -64px;
-    top: 10px;
-    font-size: 74px;
-    font-weight: bold;
-    color: cornsilk;
-    font-family: Chinese-Nfont;
-}
-
-span#L {
-    position: absolute;
-    left: 154px;
-    top: 10px;
-    font-weight: bold;
-    color: cornsilk;
-    font-family: Chinese-Nfont;
-    font-size: 74px;
-}
-img#usernamepass {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 4px;
-    top: 3px;
-    visibility: hidden;
-}
+img#usernamepass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
 
 img#usernamewrong {
     position: absolute;
     z-index: 3;
-    width: 26px;
-    left: 3px;
+    width: 21px;
+    left: 305px;
     top: 2px;
     visibility: hidden;
 }
 
-img#passwordwrong {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 3px;
-    top: 2px;
-    visibility: hidden;
-}
+img#passwordwrong {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
 
-img#passwordpass {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 4px;
-    top: 3px;
-    visibility: hidden;
-}
+img#passwordpass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
 
-img#password-againwrong {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 3px;
-    top: 2px;
-    visibility: hidden;
-}
+img#password-againwrong {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
 
-img#password-againpass {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 4px;
-    top: 3px;
-    visibility: hidden;
-}
+img#password-againpass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
 
 img#emailwrong {
     position: absolute;
     z-index: 3;
-    width: 26px;
-    left: 3px;
+    width: 21px;
+    left: 305px;
     top: 2px;
     visibility: hidden;
 }
 
-img#emailpass {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 4px;
-    top: 3px;
-    visibility: hidden;
-}
+img#emailpass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
 
-img#schoolwrong {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: -34px;
-    top: -3px;
-    visibility: hidden;
-}
+img#schoolwrong {position: absolute;z-index: 3;width: 19px;left: 255px;top: 4px;visibility: hidden;}
 
-img#schoolpass {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: -33px;
-    top: -2px;
-    visibility:hidden;
-}
+img#schoolpass {position: absolute;z-index: 3;width: 19px;left: 255px;top: 4px;visibility: hidden;}
 
-img#contactwrong {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 3px;
-    top: 2px;
-    visibility: hidden;
-}
-
-img#contactpass {
-    position: absolute;
-    z-index: 3;
-    width: 26px;
-    left: 4px;
-    top: 3px;
-    visibility: hidden;
-}
-.TextRed:-moz-placeholder{
-    color:red;
-}
-.TextRed:-ms-input-placeholder{
-    color:red;
-}
-.TextRed::-moz-placeholder{
-    color:red;
-}
-.TextRed::-webkit-input-placeholder{
-    color:red;
-}
 .emaillist p:hover {
     background-color:#999;
 }
@@ -558,4 +332,33 @@ div#emaillist {
     height: 24px;
     margin: 0px;
     border-radius: 22px;
+}
+#usernamecontain img.username-load {
+    height: 22px;
+    position: absolute;
+    right: -26px;
+    top: 2px;
+    visibility: hidden;
+}
+b.important{
+    color:red;
+
+}
+span[class$="-tip"] {
+    font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
+    color: red;
+    left: 330px;
+    width: 202px;
+    position: absolute;
+    font-size: 11px;
+    top: 4px;
+}
+#contactcontain span[class$="-tip"] {
+    font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
+    color: green;
+    left: 305px;
+    width: 202px;
+    position: absolute;
+    font-size: 11px;
+    top: 4px;
 }
