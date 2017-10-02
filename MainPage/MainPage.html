@@ -34,13 +34,16 @@
         <a href="../Register Page/Register.html"><input class="Reg" type="button" value="注册(Reg)" onclick="UserReg()" /></a>
     </div>
     <div id="log-info">
+        <img class="log-logo" src="../Pic/logo.png" />
         <form>
             <!--action=“” 该处为发送表单至某处 method="post" -->
             <div id="usernamecontain">
-                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value="">
+                <label class="log-user" for="username">输入用户名/邮箱/手机号</label>
+                <input id="username" name="username" tabindex="1" placeholder="" class="user-name" type="text" value="" >
             </div>
             <div id="passwordcontain">
-                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
+                <label class="log-password" for="password">输入密码</label>
+                <input id="password" name="password" tabindex="2" placeholder="" class="pass-word" type="password" value="" autocomplete="off">
             </div>
             <span id="check">
                 <input type="checkbox" id="remmember" name="RemPSW" tabindex="3" />
@@ -50,7 +53,7 @@
                 <a id="forgetPSW" href="http://baidu.com">忘记密码</a>
             </span>
             <div id="submitcontain">
-                <input id="submit" tabindex="4" type="button" value="提    交" />
+                <input id="submit" tabindex="4" type="button" value="提    交" /><em>></em>
             </div>
             <hr id="cut-line" />
             <a href="http://baidu.com"><img id="login-QQ" src="../Pic/login-QQ.png" /></a>

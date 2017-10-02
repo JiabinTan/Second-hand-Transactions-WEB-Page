@@ -2,6 +2,7 @@
 var isclick = false;
 var idx = 1;//图片位置
 var end = 3;//图片数量
+var _isOpen = false;
 $(function () {
     $("#log-info").css(
             {
@@ -324,33 +325,53 @@ $(function () {
         );
     $(document).on("click", ".commodity-detail .commodity .pictures .picture-container img", function () {
         var src = $(this).attr("src");
+        if (src == "Pic/fill.png")
+            return;
         var body_img = document.createElement("img");
-        $(body_img).attr({"src": src,"title":"如显示存在问题或者需要对图片进行操作,\n请右键保存至本地操作","id":"bigImgClick"}).appendTo("body");
+        $(body_img).attr({"src": src,"title":"如显示存在问题或者需要对图片进行操作,\n请右键保存至本地操作。(再次点击图片关闭)","id":"bigImgClick"}).appendTo("body");
         var img_height = $(body_img).height();
         var img_width = $(body_img).width();
-        if (img_height > 576)
-        {
-            $(body_img).css("height", "576px");
-            img_height = 576;
+        if (1.20 < parseFloat(img_width) / parseFloat(img_height) < 1.45) {
+            if (img_height > "558") {
+                $(body_img).css("width", img_width + "px");
+                $(body_img).css("height", "558px");
+                img_height = "558";
+            }
+            if (img_width > "744") {
+                $(body_img).css("height", img_height + "px");
+                $(body_img).css("width", "744px");
+                img_width = "744";
+            }
         }
-        if(img_width>1024)
-        {
-            $(body_img).css("width", "1024px");
-            img_width=1024;
+        else {
+            if (img_height > "576") {
+                $(body_img).css("width", img_width + "px");
+                $(body_img).css("height", "576px");
+                img_height = "576";
+            }
+            if (img_width > "1024") {
+                $(body_img).css("height", img_height + "px");
+                $(body_img).css("width", "1024px");
+                img_width = "1024";
+            }
         }
         $(body_img).css({
             "position": "fixed",
-            "left": String(document.body.offsetWidth / 2 - img_width/2) + "px",
-            "top": String(window.innerHeight / 2 - img_height / 2) + "px",
+            "left": String(document.body.offsetWidth / 2 - parseFloat(img_width) / 2) + "px",
+            "top": String(window.innerHeight / 2 - parseFloat(img_height) / 2) + "px",
             "z-index":99
         });
         $(".commodity-detail").css("filter", "blur(10px)");
+        _isOpen = true;
         return false;
     });
     $(document).click(function (e) {
-        if (e.target.id != 'bigImgClick') {
-            $(".commodity-detail").css("filter", "none");
-            $("body>img#bigImgClick").remove();
+        if (_isOpen == true) {
+            if (e.target.id == 'bigImgClick') {
+                $(".commodity-detail").css("filter", "none");
+                $("body>img#bigImgClick").remove();
+                _isOpen = false;
+            }
         }
     });
     $("#remLB").click(
@@ -399,4 +420,8 @@ function evenstop()
 function StringProcess(str)
 {
     return str.substring(0, str.length - 2);
+}
+function stopEvent(e)
+{
+    e.preventDefault();
 }
