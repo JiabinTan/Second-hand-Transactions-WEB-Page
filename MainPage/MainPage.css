@@ -744,13 +744,15 @@ img.content-img:hover {
     width: 840px;
     margin-top: -40px;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.88);
+    background-color: rgba(255, 255, 255, 0.97);
 }
 
 div#log-info {
 }
 
 #usernamecontain {
+    transition-duration: .5s;
+    transition-property: all;
     position: absolute;
     height: 52px;
     width: 600px;
@@ -778,6 +780,8 @@ div#log-info {
 }
 
 #passwordcontain {
+    transition-duration: .5s;
+    transition-property: all;
     position: absolute;
     height: 52px;
     width: 600px;
@@ -920,17 +924,22 @@ div#log-info img.log-logo {
 
 div#log-info form div#usernamecontain label.log-user {
     color: black;
-    font-size: 17px;
+    font-size: 22px;
     position: relative;
     top: -28px;
+    transition-duration: .5s;
+    transition-property: all;
 }
 
 div#log-info form div#passwordcontain label.log-password {
     color: black;
-    font-size: 17px;
+    font-size: 22px;
     position: relative;
     top: -28px;
+    transition-duration: .5s;
+    transition-property: all;
 }
+
 #submitcontain em {
     font-size: 45px;
     position: relative;

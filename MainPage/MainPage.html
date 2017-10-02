@@ -58,6 +58,46 @@
             <hr id="cut-line" />
             <a href="http://baidu.com"><img id="login-QQ" src="../Pic/login-QQ.png" /></a>
         </form>
+        <script>
+           
+            $('#username').focus(function () {
+                $('#usernamecontain').css({
+                    'border-bottom': '2px solid pink'
+                });
+                $('div#log-info form div#usernamecontain label.log-user').css({
+                    'font-size': '18px',
+                    'color': 'red'
+                });
+            });
+            $('#password').focus(function () {
+                $('#passwordcontain').css({
+                    'border-bottom': '2px solid pink'
+                });
+                $('div#log-info form div#passwordcontain label.log-password').css({
+                    'font-size': '18px',
+                    'color': 'red'
+                });
+            });
+            $('#username').blur(function () {
+                $('#usernamecontain').css({
+                    'border-bottom': '2px solid black'
+                });
+                $('div#log-info form div#usernamecontain label.log-user').css({
+                    'font-size': '22px',
+                    'color': 'black'
+                });
+            });
+            
+            $('#password').blur(function () {
+                $('#passwordcontain').css({
+                    'border-bottom': '2px solid black'
+                });
+                $('div#log-info form div#passwordcontain label.log-password').css({
+                    'font-size': '22px',
+                    'color': 'black'
+                });
+            });
+        </script>
     </div>
     <script>
         $("#log-info").hide();

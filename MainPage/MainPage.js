@@ -380,7 +380,8 @@ $(function () {
                     $("#remmember").prop("checked", false);
                 else
                     $("#remmember").prop("checked", true);
-            });
+        });
+   
 })
 function UserLog() {
     $("#log-info").show();
