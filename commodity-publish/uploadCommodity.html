@@ -122,13 +122,17 @@
         });
     </script>
     <div class="outer">
-    <form>
-        <h1>商品上传</h1>
-        <p><span>物品:</span><input type="text" /></p>
-        <p><span>简介:</span><input type="text" /></p>
-        <p><span class="bigWord">详细介绍:</span><textarea placeholder="请尽可能详细的对物品进行描述，比如新旧、大小等方面，以便于他人做出合理的判断。" maxlength="500" class="bigText" type="text"></textarea></p>
-        <p><span class="span_mov">上传图片:</span><input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png"></p>
-    </form>
+        <form>
+            <h1>商品上传</h1>
+            <ul>    
+                <li><span>物品:</span><input type="text" /></li>
+                <li><span>归类:</span><input type="text" placeholder="例如：雨伞、微积分等"/></li>
+                <li><span>简介:</span><input type="text" /></li>
+                <li><span class="bigWord">详细介绍:</span><textarea placeholder="请尽可能详细的对物品进行描述，比如新旧、大小等方面，以便于他人做出合理的判断。" maxlength="500" class="bigText" type="text"></textarea></li>
+                <li><span class="span_mov">上传图片:</span><input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png"></li>
+            </ul>
+            <input type="submit" class="commodity_up" value="提   交" />
+        </form>
 </div>
     <div class="foot">
         <p>COPYRIGHT © 2017 – 2017 TENCENT. ALL RIGHTS RESERVED.</p>
