@@ -23,7 +23,7 @@
         <form>
             <!--action=“” 该处为发送表单至某处 method="post" -->
 
-            <p id="reusername"><b class="important">*</b>用户名:</p>
+            <label id="reusername" for="usernamecontain"><b class="important">*</b>用户名:</label>
             <div id="usernamecontain" >
                 <img src="../Pic/warning.png" id="usernamewrong" />
                 <img src="../Pic/pass.png" id="usernamepass"  />
@@ -31,21 +31,21 @@
                 <img class="username-load" src="../Pic/load.gif"/>
                 <span class="username-tip"></span>
             </div>
-            <p id="repassword"><b class="important">*</b>请输入您的密码:(必须以字母开头)</p>
+            <label for="passwordcontain" id="repassword"><b class="important">*</b>请输入您的密码:(必须以字母开头)</label>
             <div id="passwordcontain">
                 <img src="../Pic/warning.png" id="passwordwrong"  />
                 <img src="../Pic/pass.png" id="passwordpass"  />
                 <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off" flag="1" />
                 <span class="password-tip"></span>
             </div>
-            <p id="repasswordagain"><b class="important">*</b>请再输入您的密码:</p>
+            <label for="password-againcontain" id="repasswordagain"><b class="important">*</b>请再输入您的密码:</label>
             <div id="password-againcontain">
                 <img src="../Pic/warning.png" id="password-againwrong"  />
                 <img src="../Pic/pass.png" id="password-againpass"  />
                 <input id="password-again" name="password-again" tabindex="3" placeholder="两次输入的密码不一致" class="pass-word-again TextRed" type="password" value="" autocomplete="off" flag="0" />
                 <span class="passwordagain-tip"></span>
             </div>
-            <p id="reemail"><b class="important">*</b>请输入您的邮箱:</p>
+            <label for="emailcontain" id="reemail"><b class="important">*</b>请输入您的邮箱:</label>
             <div id="emailcontain">
                 <img src="../Pic/warning.png" id="emailwrong"  />
                 <img src="../Pic/pass.png" id="emailpass"  />
@@ -74,7 +74,7 @@
                 </div>
                 <span class="school-tip"></span>
             </center>
-            <p id="recontact">请输入您的联系方式:</p>
+            <label for="contactcontain" id="recontact">请输入您的联系方式:</label>
             <div id="contactcontain">
                 <input id="contact" name="contact" tabindex="5" placeholder="联系方式(QQ/TEL)" class="contact" type="text" value="" flag="1"  />
                 <span class="contact-tip">（可不填）请勿填写错误信息！</span>

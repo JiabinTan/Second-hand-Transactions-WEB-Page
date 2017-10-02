@@ -1,24 +1,26 @@
 ﻿body {
-    background-color:white;
-    margin:0px;
-    overflow:hidden;
-
+    background-color: white;
+    margin: 0px;
+    overflow: hidden;
 }
+
 h1 {
     position: absolute;
     left: 323px;
     top: -52px;
     font-size: 37px;
 }
+
 #log-info {
     height: 443px;
     width: 800px;
-    position:fixed;
-    left:0px;
-    top:0px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 7px 0px black;
 }
+
 #usernamecontain {
     position: absolute;
     height: 25px;
@@ -29,6 +31,7 @@ h1 {
     overflow: visible;
     box-shadow: 0 0 2px black;
 }
+
 #username {
     position: absolute;
     margin: 0px;
@@ -41,19 +44,55 @@ h1 {
     top: 0px;
     text-align: center;
 }
-#passwordcontain{
+
+#passwordcontain {
     position: absolute;
     height: 25px;
     width: 300px;
     left: 212px;
     background-color: white;
-    top: 189px;
+    top: 191px;
     overflow: visible;
     box-shadow: 0 0 2px black;
 }
-#password {position: absolute;margin: 0px;border: 0px;padding: 0px;height: 25px;outline: none;width: 300px;left: 0px;top: 0px;text-align: center;}
-#emailcontain {position: absolute;height: 25px;width: 300px;left: 212px;background-color: white;top: 316px;overflow: visible;box-shadow: 0 0 2px black;}
-#email {position: absolute;margin: 0px;border: 0px;padding: 0px;height: 25px;outline: none;width: 300px;left: 0px;top: 0px;text-align: center;}
+
+#password {
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 25px;
+    outline: none;
+    width: 300px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+#emailcontain {
+    position: absolute;
+    height: 25px;
+    width: 300px;
+    left: 212px;
+    background-color: white;
+    top: 316px;
+    overflow: visible;
+    box-shadow: 0 0 2px black;
+}
+
+#email {
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 25px;
+    outline: none;
+    width: 300px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
 #submitcontain {
     height: 443px;
     position: absolute;
@@ -66,17 +105,19 @@ h1 {
     cursor: pointer;
     box-shadow: 0 0 1px black;
 }
-#submitcontain span {
-    line-height: 64px;
-    position: absolute;
-    top: 119px;
-    left: 16px;
-    width: 17px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
-}
+
+    #submitcontain span {
+        line-height: 64px;
+        position: absolute;
+        top: 119px;
+        left: 16px;
+        width: 17px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    }
+
 #submit {
     position: absolute;
     top: 0;
@@ -86,12 +127,14 @@ h1 {
     width: 68px;
     opacity: 0;
 }
+
 #submitcontain img {
     height: 45px;
     position: absolute;
     top: 286px;
     left: 13px;
 }
+
 ul li {
     list-style: none;
 }
@@ -115,62 +158,63 @@ ul li {
     border: 1px solid #72B9D7;
 }
 
-.provinceSchool .title {
-    width: 100%;
-    height: 30px;
-    background: #72B9D7;
-    cursor: move;
+    .provinceSchool .title {
+        width: 100%;
+        height: 30px;
+        background: #72B9D7;
+        cursor: move;
+    }
+
+        .provinceSchool .title span {
+            margin-left: 10px;
+            font-weight: 600;
+            color: #FFF;
+            line-height: 30px;
+        }
+
+    .provinceSchool .proSelect {
+        width: 550px;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+        .provinceSchool .proSelect select {
+            width: 136px;
+        }
+
+        .provinceSchool .proSelect span {
+            padding-left: 10px;
+        }
+
+        .provinceSchool .proSelect input {
+            display: none;
+        }
+
+    .provinceSchool .schoolList {
+        width: 550px;
+        height: 180px;
+        padding: 10px 0;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+    }
+
+        .provinceSchool .schoolList ul {
+            width: 510px;
+            clear: both;
+        }
+
+            .provinceSchool .schoolList ul span.entertext {
+                display: block;
+                height: 180px;
+                font: normal 16px/180px 'microsoft yahei';
+                color: #999;
+            }
+
+p[id^='re'] {
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.74);
 }
 
-.provinceSchool .title span {
-    margin-left: 10px;
-    font-weight: 600;
-    color: #FFF;
-    line-height: 30px;
-}
-
-.provinceSchool .proSelect {
-width: 550px;
-text-align: center;
-padding: 15px 0;
-}
-
-.provinceSchool .proSelect select {
-    width: 136px;
-}
-
-.provinceSchool .proSelect span {
-    padding-left: 10px;
-}
-
-.provinceSchool .proSelect input {
-    display: none;
-}
-
-.provinceSchool .schoolList {
-    width: 550px;
-    height: 180px;
-    padding: 10px 0;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-}
-
-.provinceSchool .schoolList ul {
-    width: 510px;
-    clear: both;
-}
-
-.provinceSchool .schoolList ul span.entertext {
-    display: block;
-    height: 180px;
-    font: normal 16px/180px 'microsoft yahei';
-    color: #999;
-}
-p[id^='re']
-{
-	font-style: normal;
-	color: rgba(0, 0, 0, 0.74);
-}
 .provinceSchool .schoolList ul li {
     float: left;
     text-align: center;
@@ -183,14 +227,14 @@ p[id^='re']
     border-radius: 3px;
 }
 
-.provinceSchool .schoolList ul li.DoubleWidthLi {
-    overflow: hidden;
-}
+    .provinceSchool .schoolList ul li.DoubleWidthLi {
+        overflow: hidden;
+    }
 
-.provinceSchool .schoolList ul li:hover {
-    background: #72B9D7;
-    color: #fff;
-}
+    .provinceSchool .schoolList ul li:hover {
+        background: #72B9D7;
+        color: #fff;
+    }
 
 .provinceSchool .button {
     width: 100%;
@@ -198,38 +242,56 @@ p[id^='re']
     margin-top: 8px;
 }
 
-.provinceSchool .button input[type='button']{
-    float: right;
-    height: 30px;
-    margin-right: 15px;
-    padding: 2px 15px;
-    background: #72B9D7;
-    border: none;
-    color: #FFF;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-    .provinceSchool .button input[type='button']:hover {
-        background: #2e90bd;
+    .provinceSchool .button input[type='button'] {
+        float: right;
+        height: 30px;
+        margin-right: 15px;
+        padding: 2px 15px;
+        background: #72B9D7;
+        border: none;
+        color: #FFF;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 3px;
     }
 
-p#reusername {
+        .provinceSchool .button input[type='button']:hover {
+            background: #2e90bd;
+        }
+
+label#reusername {
     position: absolute;
     left: 135px;
     display: block;
     width: 69px;
-    top: 117px;
+    top: 134px;
 }
 
-p#repassword {position: absolute;left: 70px;display: block;width: 131px;top: 173px;}
+label#repassword {
+    position: absolute;
+    left: 70px;
+    display: block;
+    width: 131px;
+    top: 190px;
+}
 
-p#repasswordagain {position: absolute;left: 58px;display: block;width: auto;top: 249px;}
+label#repasswordagain {
+    position: absolute;
+    left: 58px;
+    display: block;
+    width: auto;
+    top: 266px;
+}
 
-p#reemail {position: absolute;left: 73px;display: block;width: auto;top: 301px;}
+label#reemail {
+    position: absolute;
+    left: 73px;
+    display: block;
+    width: auto;
+    top: 317px;
+}
 
-p#recontact {
+label#recontact {
     position: absolute;
     left: 0px;
     text-align: center;
@@ -238,9 +300,29 @@ p#recontact {
     top: 90px;
 }
 
-div#password-againcontain {position: absolute;height: 25px;width: 300px;left: 212px;background-color: white;top: 265px;overflow: visible;box-shadow: 0 0 2px black;}
+div#password-againcontain {
+    position: absolute;
+    height: 25px;
+    width: 300px;
+    left: 212px;
+    background-color: white;
+    top: 265px;
+    overflow: visible;
+    box-shadow: 0 0 2px black;
+}
 
-input#password-again {position: absolute;margin: 0px;border: 0px;padding: 0px;height: 25px;outline: none;width: 300px;left: 0px;top: 0px;text-align: center;}
+input#password-again {
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 25px;
+    outline: none;
+    width: 300px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
 
 center#schoolcontain {
     top: 436px;
@@ -248,15 +330,31 @@ center#schoolcontain {
     position: absolute;
 }
 
-p#recontact {position: absolute;left: 49px;display: block;width: auto;top: 362px;}
+label#recontact {
+    position: absolute;
+    left: 49px;
+    display: block;
+    width: auto;
+    top: 378px;
+}
 
-div#contactcontain {position: absolute;height: 25px;width: 300px;left: 212px;background-color: white;top: 376px;overflow: visible;box-shadow: 0 0 2px black;}
+div#contactcontain {
+    position: absolute;
+    height: 25px;
+    width: 300px;
+    left: 212px;
+    background-color: white;
+    top: 376px;
+    overflow: visible;
+    box-shadow: 0 0 2px black;
+}
 
 form {
     top: -48px;
     position: relative;
     left: 24px;
 }
+
 input#contact {
     position: absolute;
     margin: 0px;
@@ -279,7 +377,14 @@ div#proSchool {
     z-index: 99;
 }
 
-img#usernamepass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
+img#usernamepass {
+    position: absolute;
+    z-index: 3;
+    width: 21px;
+    left: 305px;
+    top: 2px;
+    visibility: hidden;
+}
 
 img#usernamewrong {
     position: absolute;
@@ -290,13 +395,41 @@ img#usernamewrong {
     visibility: hidden;
 }
 
-img#passwordwrong {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
+img#passwordwrong {
+    position: absolute;
+    z-index: 3;
+    width: 21px;
+    left: 305px;
+    top: 2px;
+    visibility: hidden;
+}
 
-img#passwordpass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
+img#passwordpass {
+    position: absolute;
+    z-index: 3;
+    width: 21px;
+    left: 305px;
+    top: 2px;
+    visibility: hidden;
+}
 
-img#password-againwrong {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
+img#password-againwrong {
+    position: absolute;
+    z-index: 3;
+    width: 21px;
+    left: 305px;
+    top: 2px;
+    visibility: hidden;
+}
 
-img#password-againpass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
+img#password-againpass {
+    position: absolute;
+    z-index: 3;
+    width: 21px;
+    left: 305px;
+    top: 2px;
+    visibility: hidden;
+}
 
 img#emailwrong {
     position: absolute;
@@ -307,15 +440,37 @@ img#emailwrong {
     visibility: hidden;
 }
 
-img#emailpass {position: absolute;z-index: 3;width: 21px;left: 305px;top: 2px;visibility: hidden;}
+img#emailpass {
+    position: absolute;
+    z-index: 3;
+    width: 21px;
+    left: 305px;
+    top: 2px;
+    visibility: hidden;
+}
 
-img#schoolwrong {position: absolute;z-index: 3;width: 19px;left: 255px;top: 4px;visibility: hidden;}
+img#schoolwrong {
+    position: absolute;
+    z-index: 3;
+    width: 19px;
+    left: 255px;
+    top: 4px;
+    visibility: hidden;
+}
 
-img#schoolpass {position: absolute;z-index: 3;width: 19px;left: 255px;top: 4px;visibility: hidden;}
+img#schoolpass {
+    position: absolute;
+    z-index: 3;
+    width: 19px;
+    left: 255px;
+    top: 4px;
+    visibility: hidden;
+}
 
 .emaillist p:hover {
-    background-color:#999;
+    background-color: #999;
 }
+
 div#emaillist {
     border-radius: 10px;
     text-align: center;
@@ -333,6 +488,7 @@ div#emaillist {
     margin: 0px;
     border-radius: 22px;
 }
+
 #usernamecontain img.username-load {
     height: 22px;
     position: absolute;
@@ -340,10 +496,11 @@ div#emaillist {
     top: 2px;
     visibility: hidden;
 }
-b.important{
-    color:red;
 
+b.important {
+    color: red;
 }
+
 span[class$="-tip"] {
     font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
     color: red;
@@ -353,6 +510,7 @@ span[class$="-tip"] {
     font-size: 11px;
     top: 4px;
 }
+
 #contactcontain span[class$="-tip"] {
     font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
     color: green;
