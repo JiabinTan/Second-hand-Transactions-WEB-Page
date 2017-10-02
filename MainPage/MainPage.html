@@ -203,10 +203,11 @@
     <script type="text/javascript">
         var image = ["0001", "0002", "0003","0004"];
         var description = ["nice", "good", "hard","这是你打的那师傅大手笔擦煞笔擦到哪里玩打完流程"];
-        var likes=[1231,3123,4213,323];
+        var likes = [1231, 3123, 4213, 323];
+        var price=[2,3,4,5]
         for (var k in image)
         {
-            var strall = "<span class='content-span'>" + description[k] + "</span><p>Likes" + likes[k] + "</p><img class='collection' src='Pic/collection.png'/>";
+            var strall = "<span class='content-span'>Des:" + description[k] + "</span><p class='price'>Price: ￥" + price[k] + "</p><p>Likes:  " + likes[k] + "</p><img class='collection' src='Pic/collection.png'/>";
             var str = image[k] + ".jpg";
             var div = document.createElement("div");
             div.innerHTML = strall;

@@ -947,3 +947,10 @@ div#log-info form div#passwordcontain label.log-password {
     font-style: normal;
     top: 1.8px;
 }
+div.content div.content-div p.price {
+    position: absolute;
+    top: 188px;
+    width: 99px;
+    margin: 0;
+    left: 28px;
+}
