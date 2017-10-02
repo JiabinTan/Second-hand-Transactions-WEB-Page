@@ -1,8 +1,45 @@
 ﻿var state = 0;
+var Page = {
+    MAIN_PAGE: 0,
+    ABOUT_US: 1,
+    LAB:2
+}
+var page = Page.MAIN_PAGE;
 var isclick = false;
 var idx = 1;//图片位置
 var end = 3;//图片数量
 var _isOpen = false;
+var left;//记录相框的位置
+var now,past;//记录不同时刻的滚动条位置
+var _isScrolling = false;//标记是否处于滚动状态
+function GetNowPos()
+{
+    now = document.documentElement.scrollTop;
+    if (now > past) {
+        $("html,body").animate({ scrollTop: (parseInt(now / window.innerHeight) + 1) * window.innerHeight }, 800, function () { _isScrolling = false; });
+    }
+    else if (now < past) {
+        $("html,body").animate({ scrollTop: (parseInt(now / window.innerHeight)) * window.innerHeight }, 800, function () { _isScrolling = false; });
+    }
+    else
+        _isScrolling = false;
+}
+function PageScr()
+{
+    
+    if (page == Page.ABOUT_US) {
+        if (!_isScrolling) {
+            _isScrolling = true;
+            past = document.documentElement.scrollTop;
+            setTimeout(GetNowPos, 50);
+        }
+    }
+}
+$(document).ready(function () {
+    left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left")));
+    $(window).scroll(PageScr);
+    //setTimeout()
+});
 $(function () {
     $("#log-info").css(
             {
@@ -297,7 +334,7 @@ $(function () {
             alert("信息已发送！\n之后你们可以通过联系确认交易地址，如对该订单存在疑惑请即使客服！");
     })
     $(document).on("click",".commodity-detail .commodity .before",
-        function () {;
+        function () {
             if (1 == idx)
                 return false;
             else
@@ -305,20 +342,20 @@ $(function () {
                 $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
                 idx--;
                 $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
-                var left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left"))) + 352;
+                left += 352;
                 $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
             }
         }
         );
     $(document).on("click", ".commodity-detail .commodity .after",
-        function () {;
+        function () {
             if (end == idx)
                 return false;
             else {
                 $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
                 idx++;
                 $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
-                var left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left"))) - 352;
+                left -= 352;
                 $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
             }
         }

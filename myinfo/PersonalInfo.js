@@ -1,4 +1,8 @@
-﻿
+﻿var idx = 1;//图片位置
+var end = 3;//图片数量
+var _isOpen = false;
+var left;//记录相框的位置
+$(document).ready(function () { left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left")));});
 $(function () {
     $("#log-info").css(
             {
@@ -67,7 +71,18 @@ $(function () {
                 "left": "0px",
                 "top": String(window.innerHeight - $("div.foot").height()) + "px"
             }
-            );
+        );
+        $(".commodity-detail .close-table").css(
+            {
+                "visibility": "hiddden",
+                "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
+                "top": String(window.innerHeight / 2 - 35) + "px"
+            });
+        $(".commodity-detail").css(
+            {
+                "left": String(document.body.offsetWidth / 2 - 400) + "px",
+                "top": String(window.innerHeight / 2 - 175.5) + "px"
+            });
     }
     var thisTime;
     $('.nav-ul li').mouseleave(function (even) {
@@ -211,7 +226,135 @@ $(function () {
                     $("#remmember").prop("checked", false);
                 else
                     $("#remmember").prop("checked", true);
-            });
+        });
+
+    $(".commodity-detail .close-table").css(
+        {
+            "visibility": "hidden",
+            "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
+            "top": String(window.innerHeight / 2 - 35) + "px"
+        });
+    $(".commodity-detail").css(
+        {
+            "left": String(document.body.offsetWidth / 2 - 400) + "px",
+            "top": String(window.innerHeight / 2 - 175.5) + "px"
+        });
+    $(document).on("click", "div.purchase-detail table tr th a", function () {
+        $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "blur(10px)");
+        $(".commodity-detail").css("visibility", "visible");
+        $(".commodity-detail .close-table").css("visibility", "visible");
+        var info = {
+            com: "杯子",
+            likes: "100",
+            expire: "2017 - 6 - 5",
+            name: "komo",
+        }
+        $(".commodity-detail .commodity .title").text(info.com);
+        $(".commodity-detail .commodity .likes .amount").text(info.likes);
+        $(".commodity-detail .commodity .expire .expire-time").text(info.expire);
+        $(".commodity-detail .commodity .name").text(info.name);
+        var str1 = "<img src='Pic/fill.png' />";
+        $(str1).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        var str2 = "Pic/2016";
+        for (var i = 1; i <= 3; i++) {
+            var str = str2 + "000" + String(i) + ".jpg";
+            var img = document.createElement("img");
+            $(img).attr({ "src": str, "title": "点击查看大图" }).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        }
+        $(str1).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        $(".commodity-detail .commodity .pictures .picture-container").css("width", String(352 * 5) + "px");
+        $(".content div .content-img").on("click", evenstop);
+        $(".commodity-detail .commodity .pictures img").eq(1).css("border", "2px orange solid");
+    });
+    $(".commodity-detail .close-table").click(function () {
+        $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "none");
+        //
+        $(".content div .content-img").off("click", evenstop);
+        $(".commodity-detail").css("visibility", "hidden");
+        $(".commodity-detail .close-table").css("visibility", "hidden");
+        $(".commodity-detail .commodity .pictures .picture-container").html("");
+    });
+    $(".commodity-detail .commodity input[type='button']").on('click', function () {
+        if (confirm("是否确认发送购买意愿（以及您的联系方式）至对方邮箱，同时您也将获取对方联系方式？"))
+            alert("信息已发送！\n之后你们可以通过联系确认交易地址，如对该订单存在疑惑请即使客服！");
+    })
+    $(document).on("click", ".commodity-detail .commodity .before",
+        function () {
+            if (1 == idx)
+                return false;
+            else {
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
+                idx--;
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
+                left += 352;
+                $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
+            }
+        }
+    );
+    $(document).on("click", ".commodity-detail .commodity .after",
+        function () {
+            if (end == idx)
+                return false;
+            else {
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
+                idx++;
+                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
+                left  -= 352;
+                $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
+            }
+        }
+    );
+    $(document).on("click", ".commodity-detail .commodity .pictures .picture-container img", function () {
+        var src = $(this).attr("src");
+        if (src == "Pic/fill.png")
+            return;
+        var body_img = document.createElement("img");
+        $(body_img).attr({ "src": src, "title": "如显示存在问题或者需要对图片进行操作,\n请右键保存至本地操作。(再次点击图片关闭)", "id": "bigImgClick"}).appendTo("body");
+        var img_height = $(body_img).height();
+        var img_width = $(body_img).width();
+        if (1.20 < parseFloat(img_width) / parseFloat(img_height) < 1.45) {
+            if (img_height > "558") {
+                $(body_img).css("width", img_width + "px");
+                $(body_img).css("height", "558px");
+                img_height = "558";
+            }
+            if (img_width > "744") {
+                $(body_img).css("height", img_height + "px");
+                $(body_img).css("width", "744px");
+                img_width = "744";
+            }
+        }
+        else {
+            if (img_height > "576") {
+                $(body_img).css("width", img_width + "px");
+                $(body_img).css("height", "576px");
+                img_height = "576";
+            }
+            if (img_width > "1024") {
+                $(body_img).css("height", img_height + "px");
+                $(body_img).css("width", "1024px");
+                img_width = "1024";
+            }
+        }
+        $(body_img).css({
+            "position": "fixed",
+            "left": String(document.body.offsetWidth / 2 - parseFloat(img_width) / 2) + "px",
+            "top": String(window.innerHeight / 2 - parseFloat(img_height) / 2) + "px",
+            "z-index": 100
+        });
+        $(".commodity-detail").css("filter", "blur(10px)");
+        _isOpen = true;
+        return false;
+    });
+    $(document).click(function (e) {
+        if (_isOpen == true) {
+            if (e.target.id == 'bigImgClick') {
+                $(".commodity-detail").css("filter", "none");
+                $("body>img#bigImgClick").remove();
+                _isOpen = false;
+            }
+        }
+    });
 })
 function UserLog()
 {
@@ -221,4 +364,10 @@ function UserLog()
 function UserReg() {
     //js操作文档location
     //window.open("http://baidu.com");
+}
+function evenstop() {
+    return false;
+}
+function StringProcess(str) {
+    return str.substring(0, str.length - 2);
 }

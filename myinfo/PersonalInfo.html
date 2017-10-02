@@ -12,6 +12,23 @@
     <script type="text/javascript" src="school.js"></script>
 </head>
 <body>
+    <div class="commodity-detail" >
+        <div class="commodity">
+            <h1 class="title"></h1>
+            <p class="name"></p>
+            <div class='before'><p><</p></div>
+            <div class='after'><p>></p></div>
+            <div class="pictures">
+                <div class="picture-container">
+                </div>
+                <div class="thumbnail"></div>
+            </div>
+            <p class="likes"><span>likes:</span><span class="amount"></span></p>
+            <p class="expire"><span>过期时间:</span><span class="expire-time"></span></p>
+            <input type="button" value="买" />
+        </div>
+        <div class="close-table"><p>×</p></div>
+    </div>
     <div class="bkground-image"><img src="Pic/bkground.jpg"></div>
     <div class="sale-detail">
         <div class="close-table"><p>×</p></div>
@@ -143,7 +160,7 @@
             "font-size": "30px"
         }).appendTo("body");
         $(window).trigger("resize");
-    }
+        }
     </script>
 
     <script type="text/javascript">

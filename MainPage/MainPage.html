@@ -122,6 +122,7 @@
         </div>
     </div>
     <script type="text/javascript">
+        //$("body").animate({ scrolltop: 1000 }, 1000)
     $(".nav-main .slidetoggle").css(
    {
        "top": String(window.innerHeight / 2 - 50) + "px",
@@ -129,6 +130,7 @@
     </script>
     <script type="text/javascript">
         function us_click() {
+            page = Page.ABOUT_US;
             $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
             $("<h1 class='word'>We're enigmatic.</h1>").css({
                 "text-align": "center",
@@ -166,9 +168,15 @@
                 "position": "absolute",
                 "left": String(window.innerWidth / 2 - 179) + 'px',
                 "top": String(window.innerHeight*2 - 190.5) + "px"
-            }).appendTo("body");
+                }).appendTo("body");
+            
+            //window.onscroll = function () {
+            //    var x = document.body.scrollTop;
+            //    $("html,body").animate({ scrolltop: 1000 }, 1000)
+            //}
         }
         function lab_click() {
+            page = Page.LAB;
             $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
             $("<h1 class='word'>暂未开放，敬请等待！</h1>").css({
                 "text-align": "center",
