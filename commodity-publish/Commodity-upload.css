@@ -477,3 +477,50 @@ div.outer input.commodity_up {
     left: 395px;
     top: 370px;
 }
+div.top-bar img.headshot {
+    border-radius: 50%;
+    height: 61px;
+    width: 61px;
+    position: absolute;
+    right: 31px;
+    transition: all .5s ease;
+    z-index: 1;
+    border: grey 1px solid;
+}
+
+div.top-bar .info-block {
+    background: white;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    transition: all .5s ease;
+    right: 10px;
+    color: black;
+    z-index: 0;
+}
+
+
+div.top-bar div.info-block p.name {
+    color: black;
+    text-align: center;
+    position: relative;
+    transition: all .5s ease;
+    bottom: -65px;
+    font-size: 0;
+}
+
+div.top-bar div.info-block p.ID {
+    text-align: center;
+    position: relative;
+    bottom: -63px;
+    transition: all .5s ease;
+    color: #957f7f;
+    font-size: 0;
+}
+
+div.top-bar img.headshot:hover {
+    border: orange 1px solid;
+    width: 65px;
+    right: 29px;
+    height: 65px;
+}

@@ -1,4 +1,89 @@
-﻿
+﻿var Page = {
+    MAIN_PAGE: 0,
+    ABOUT_US: 1,
+    LAB: 2
+}
+var page = Page.MAIN_PAGE;
+var now, past;//记录不同时刻的滚动条位置
+var _isScrolling = false;//标记是否处于滚动状态
+function GetNowPos() {
+    now = document.documentElement.scrollTop;
+    if (now > past) {
+        $("html,body").animate({ scrollTop: (parseInt(now / window.innerHeight) + 1) * window.innerHeight }, 800, function () { _isScrolling = false; });
+    }
+    else if (now < past) {
+        $("html,body").animate({ scrollTop: (parseInt(now / window.innerHeight)) * window.innerHeight }, 800, function () { _isScrolling = false; });
+    }
+    else
+        _isScrolling = false;
+}
+function PageScr() {
+
+    if (page == Page.ABOUT_US) {
+        if (!_isScrolling) {
+            _isScrolling = true;
+            past = document.documentElement.scrollTop;
+            setTimeout(GetNowPos, 50);
+        }
+    }
+}
+$(document).ready(function () {
+    //页面跳转后处理
+    $.post("here is target file", function (data) {
+        //处理函数，去除登录注册，换为头像与用户名
+        if (data == "OK") {
+            $("div.top-bar input , div.top-bar a").remove();
+            var src = "'" + data.src + "'";
+            src = "Pic/1.jpg";
+            $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
+            $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+        }
+    });
+        //处理函数，去除登录注册，换为头像与用户名
+        $("div.top-bar input , div.top-bar a").remove();
+        var src = "'" + data.src + "'";
+        src = "Pic/1.jpg";
+        $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
+        $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+    })
+    //登录处理
+    $("div#log-info form div#submitcontain input#submit").click(function () {
+        
+        //var src = "'" + data.src + "'";
+        src = "'Pic/1.jpg'";
+        $("<img class='headshot' src=" + src + "/>").appendTo("div.top-bar");
+        $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+        var passMsg = $("div#log-info form").serialize();
+        $.post("here is target file", passMsg, function (data) {
+            //$("div.top-bar input , div.top-bar a").remove();
+            //处理函数，去除登录注册，换为头像与用户名
+            $("div.top-bar input , div.top-bar a").remove();
+            var src = "'" + data.src + "'";
+            src = "Pic/1.jpg";
+            $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
+            $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+        })
+    });
+    $(document).on("mouseenter", "div.top-bar img.headshot , div.top-bar div.info-block", function () {
+        $("div.top-bar div.info-block p.name").css("font-size", "14px");
+        $("div.top-bar div.info-block p.ID").css("font-size", "15px");
+        $("div.top-bar .info-block").css({
+            'height': '111px',
+            'width': '108px',
+            'border': 'dotted'
+        });
+    });
+    $(document).on("mouseout", "div.top-bar img.headshot , div.top-bar div.info-block", function () {
+        $("div.top-bar div.info-block p.name").css("font-size", "0px");
+        $("div.top-bar div.info-block p.ID").css("font-size", "0px");
+        $("div.top-bar .info-block").css({
+            'height': '0px',
+            'width': '0px',
+            'border': 'none'
+        });
+    });
+    $(window).scroll(PageScr);
+   });
 $(function () {
     $("#log-info").css(
             {

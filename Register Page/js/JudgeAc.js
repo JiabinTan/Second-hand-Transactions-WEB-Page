@@ -230,13 +230,26 @@ $(function () {
     });
 
     //$("input#submit").on("click", function (e) {
-        $("input#submit").click(function(e){    
+    $("input#submit").click(function (e) {
         var flag = '1' == $("#username").attr("flag") && '1' == $("#password").attr("flag") && '1' == $("#password-again").attr("flag") && '1' == $("#email").attr("flag") && '1' == $("#school").attr("flag");
         if (!flag) {
             alert("请将带星号的信息填补完全后提交！")
             e.preventDefault();
         }
         else {
+            $.post("here is url",
+                $("#log-info form").serialize(),
+                function (data, status) {
+                    if (status == "success")
+                    {
+                        alert("注册成功！即将转跳至首页...");
+                        window.location.href = "../MainPage/MainPage.html";
+                    }
+                    else {
+                        alert("注册失败！请检查你的网络！");
+                        e.preventDefault();
+                    }
+                });
             //提交表单操作
         }
     });

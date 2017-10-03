@@ -109,11 +109,14 @@
         </div>
     </div>
     <script type="text/javascript">
-    function us_click() {
+        function us_click() {
+        page = Page.ABOUT_US;
         $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
         $("body").append(" <img src='' alter='1'/>");
         $("<h1 class='word'>We're enigmatic.</h1>").css({
             "text-align": "center",
+            "position": "absolute",
+            "top": "0px",
             "height": String(window.innerHeight) + "px",
             "width": String(window.innerWidth) + 'px',
             "line-height": String(window.innerHeight) + "px",
@@ -121,6 +124,8 @@
         }).appendTo("body");
         $("<h1 class='word'>You can try to find us...</h1>").css({
             "text-align": "center",
+            "position": "absolute",
+            "top": String(window.innerHeight) + "px",
             "height": String(window.innerHeight) + "px",
             "width": String(window.innerWidth) + 'px',
             "line-height": String(window.innerHeight) + "px",
@@ -130,6 +135,8 @@
         }).appendTo("body");
         $("<h1 class='word'>click the QQ tag to get online service.</h1>").css({
             "text-align": "center",
+            "position": "absolute",
+            "top": String(window.innerHeight*2) + "px",
             "height": String(window.innerHeight) + "px",
             "width": String(window.innerWidth) + 'px',
             "line-height": String(window.innerHeight) + "px",
