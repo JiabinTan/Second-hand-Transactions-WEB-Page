@@ -12,6 +12,8 @@ var _isOpen = false;
 var left;//记录相框的位置
 var now,past;//记录不同时刻的滚动条位置
 var _isScrolling = false;//标记是否处于滚动状态
+var ComNum = 0;//已经加载的商品数量
+var _isLoading=false;//判断是否正在加载新商品
 function GetNowPos() {
     now = document.documentElement.scrollTop;
     if (now > past) {
@@ -43,8 +45,18 @@ $(document).ready(function () {
             src = "Pic/1.jpg";
             $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
             $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+
         }
     });
+        //往内部添加商品目录
+        $.post("here is target file", String(ComNum), function (data)
+            {
+            if ("OK") {
+                //添加目录
+                ComNum += data.num;
+            }
+            });
+    
     //登录处理
     $("div#log-info form div#submitcontain input#submit").click(function () {
         $("div.top-bar input , div.top-bar a").remove();
@@ -120,6 +132,14 @@ $(document).ready(function () {
             "width": String(document.body.offsetWidth) + "px",
             "left": "10px",
         });
+    //alert($("div.foot").offset().left);
+    //alert($("div.content").height());
+    //alert($("div.content").offset().top);
+    if (!_isLoading)
+        $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top, left: $("div.foot").offset().left });
+    else
+        $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top + 32, left: $("div.foot").offset().left });
+   // $("div.foot").offset().top = $("div.content").height() + $("div.content").offset().top;
     $("div.ex-requires").css(
         {
             "left": String(document.body.offsetWidth / 2 - 110) + "px"
@@ -178,10 +198,12 @@ $(document).ready(function () {
         $("div.foot").css(
             {
                 "width": String(document.body.offsetWidth) + "px",
-                "left": "0px",
-                "top": String(window.innerHeight - $("div.foot").height()) + "px"
-            }
-        );
+                "left": "10px",
+            });
+        if (!_isLoading)
+            $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top, left: $("div.foot").offset().left });
+        else
+            $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top + 32, left: $("div.foot").offset().left });
     }
     var thisTime;
     $('.nav-ul li').mouseleave(function (even) {
@@ -323,6 +345,10 @@ $(document).ready(function () {
             $(this).css("background-color", "white");
     });
     $(document).scroll(function () {
+        if (!_isLoading)
+            $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top, left: $("div.foot").offset().left });
+        else
+            $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top+32, left: $("div.foot").offset().left });
         if (parseInt(window.pageYOffset) >= 40) {
             $(".search-box").css({
                 "top": "0px",

@@ -223,10 +223,50 @@
             outer.appendChild(div);
         }
     </script>
+    <script type="text/javascript">
+        function loading()
+        {
+            var WinHeight = document.documentElement.clientHeight;
+            var DocHeight = document.documentElement.scrollHeight;
+            var OffSet = document.documentElement.scrollTop;
+            if (Math.abs(DocHeight - (OffSet + WinHeight)) < 1) {
+                _isLoading = true;
+                $(window).unbind("scroll",loading);
+                var outer = $("#content");
+                $("<img src='Pic/loading.gif' class='loading' />").css({
+                    'border-radius': '50%',
+                    'height': '38px',
+                    'width': '38px',
+                    'position': 'absolute',
+                    'bottom': '-27px',
+                    'left': "497px"
+                }).appendTo(outer);
+               // $("div.foot").css("top", "32px");
+                $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top+32, left: $("div.foot").offset().left });
+                $.post("here is target file", String(ComNum), function (data) {
+                    if ("OK") {
+                        //添加元素
+                        ComNum += data.Num;
+                        _isLoading = false;
+                        $("div.foot").css("top", "0px");
+                        $("#content img.loading").remove();
+                        $(window).bind("scroll", loading);
+                    }
+                });
+            }
+            
+        }
+        $(window).scroll(loading);
+    </script>
     <div class="foot">
-        <p>COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED.</p>
-        <p>komo Studio 版权所有</p>
+        <p>KOMO Studio 版权所有</p>
     </div>
+    <script type="text/javascript">
+        var time = new Date();
+        var yr = time.getFullYear();
+        var str = '<p>COPYRIGHT © 2017 – ' + yr + ' TENCENT. ALL RIGHTS RESERVED.</p>';
+        $("div.foot p").before(str);
+    </script>
     <a  class="qq" href="tencent://message/?uin=1340920662&Site=&menu=yes"><img class="QQ" src="Pic/QQservice.jpg" /></a>
     <p class="test">test<p>
 </body>

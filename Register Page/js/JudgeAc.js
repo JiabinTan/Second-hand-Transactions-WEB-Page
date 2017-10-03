@@ -2,6 +2,7 @@
 var suffix = new Array("@gmail.com","@yahoo.com","@msn.com","@hotmail.com","@qq.com","@163.com","@163.net","@googlemail.com","@mail.com");
 function checking_name()
 {
+    //AJAX处理，纯js操作
     if(xmlhttp.readyState==4&&xmlhttp.status==200)
     {
         if (xmlhttp.responseText == "OK") {
@@ -237,6 +238,7 @@ $(function () {
             e.preventDefault();
         }
         else {
+            //AJAX处理
             $.post("here is url",
                 $("#log-info form").serialize(),
                 function (data, status) {
