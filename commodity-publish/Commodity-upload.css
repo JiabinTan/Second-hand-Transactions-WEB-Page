@@ -266,7 +266,8 @@ img.QQ {
         width: 330px;
         margin-top: 0px;
         top: 12px;
-        left: -12px;
+        left: -9px;
+        resize:none;
     }
 
     .outer ul li span.bigWord {
@@ -523,4 +524,14 @@ div.top-bar img.headshot:hover {
     width: 65px;
     right: 29px;
     height: 65px;
+}
+.outer li input[type="number"] {
+    background-color: #f2f2f2;
+    color: black;
+    border: solid 1px #eee;
+    position: relative;
+    left: 3px;
+    top: -2px;
+    height: 22px;
+    width: 331px;
 }

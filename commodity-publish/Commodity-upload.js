@@ -45,7 +45,6 @@ $(document).ready(function () {
         src = "Pic/1.jpg";
         $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
         $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
-    })
     //登录处理
     $("div#log-info form div#submitcontain input#submit").click(function () {
         
@@ -82,9 +81,14 @@ $(document).ready(function () {
             'border': 'none'
         });
     });
-    $(window).scroll(PageScr);
+    
+    
    });
 $(function () {
+    $(window).scroll(PageScr);
+    $("div.outer form input.commodity_up").click(function () {
+        alert($("div.outer form").serialize());
+    });
     $("#log-info").css(
             {
                 "left": String(window.innerWidth / 2 - 420) + "px",

@@ -223,7 +223,7 @@ $(function () {
             });
         }
     });
-    $(".basic-info a,.basic-info p").click(
+    $(document).on("click",".basic-info a,.basic-info p",
         function () {
             if ($(this).is($(".basic-info a:first"))) {
                 //需要使用AJAX更新头像
@@ -233,26 +233,33 @@ $(function () {
                 var ele = $(this).parent().children("p");
                 var text = ele.text();
                 str = "<input type='text'class='com_input' value=" + text + " />"+"<input type='image'src='Pic/ok.png'/>";
+
                 ele.replaceWith(str);
             }
         });
     $("input[type = 'file']").change(
         function () {
-            alert($(this).val());
+            //alert($(this).val());
         }
-        );
+    );
+    //处理信息更新
     $(document).on("click", "input[type='image']", function () {
         var ele_t = $(this).parent().children("input[type='text']");
         var text = ele_t.val();
-        str = "<p>" +text+ "</p>";
-        ele_t.replaceWith(str);
-        $(this).remove();
+        $.post("url", function (data) {
+            if ("OK") {
+                str = "<p>" + text + "</p>";
+                ele_t.replaceWith(str);
+                $(this).remove();
+            }
+        });
     });
+    //AJAX 点击我在售物品
     $(document).on("click", ".MyGoods tr td a", function () {
         $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "blur(10px)");
-        var res = "komo";
-        var expire = "2017-8-9";
-        var state = "在售";
+        var res = $(this).parent().prevAll().eq(2).text();
+        var expire = $(this).parent().prevAll().eq(1).text();
+        var state = $(this).parent().prevAll().eq(0).text();
         var buyer = "Tim";
         var contact = "1035844563"
         var school = "电子科技大学";
@@ -269,16 +276,18 @@ $(function () {
        });
     });
     $(".sale-detail .close-table").click(function () {
+        $("div.sale-detail table tr").eq(0).siblings().remove();
         $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "none");
         //
         $(".sale-detail .MyGoods").css("visibility", "hidden").find("td").remove();
         $(".sale-detail .close-table").css("visibility", "hidden");
     });
+    //AJAX显示已购买物品
     $(document).on("click", ".purchase-info .MyPurchase  tr td a", function () {
         $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "blur(10px)");
-        var res = "komo";
-        var expire = "2017-8-9";
-        var buyer = "Tim";
+        var res = $(this).parent().prevAll().eq(2).text();
+        var expire = $(this).parent().prevAll().eq(1).text();
+        var buyer = $(this).parent().prevAll().eq(0).text();
         var contact = "1035844563"
         var school = "电子科技大学";
         var email = "mr.tankomo@foxmail.com";
@@ -294,6 +303,7 @@ $(function () {
        });
     });
     $(".purchase-detail .close-table").click(function () {
+        $("div.purchase-detail table tr").eq(0).siblings().remove();
         $(".top-bar ,.bkground-image,.slogan,.nav-main,.info-black,.foot,.qq").css("filter", "none");
         //
         $(".purchase-detail .MyGoods").css("visibility", "hidden").find("td").remove();
@@ -313,11 +323,13 @@ $(function () {
             "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
             "top": String(window.innerHeight / 2 - 35) + "px"
         });
+        
     $(".commodity-detail").css(
         {
             "left": String(document.body.offsetWidth / 2 - 400) + "px",
             "top": String(window.innerHeight / 2 - 175.5) + "px"
         });
+    //AJAX处理商品页
     $(document).on("click", "div.purchase-detail table tr th a", function () {
         $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "blur(10px)");
         $(".commodity-detail").css("visibility", "visible");

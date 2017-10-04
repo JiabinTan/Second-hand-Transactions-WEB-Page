@@ -233,6 +233,7 @@ img.QQ {
 .loginIP ul li {
     text-align: center;
     color: black;
+    white-space:pre;
 }
 
 .info-black {

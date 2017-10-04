@@ -224,31 +224,33 @@
                 <a href="javascript:void(0)">修改</a>
             </div>
         </div>
+        
         <div class="security">
             <h1>安全信息</h1>
             <b>如您发现登录异常，请及时更改密码！</b>
             <div class="loginIP">
                 <h3>登录IP</h3>
                 <ul>
-                    <li>19：44：25.23.164.1--杭州</li>
                 </ul>
             </div>
             <a href="javascript:void(0)">修改密码</a>
         </div>
+        
         <script type="text/javascript">
-            
-            $(function () {
-                var res = ["A1", "B2", "C3"];
-                var expire = ["2017-8-9", "2017-9-4", "2017-9-6"];
-                var state = ["在售", "成功交易", "成功交易"];
-                for (var i in res) {
-                    var tr = document.createElement("tr");
-                    var str = '<td>' + res[i] + '</td>' + "<td>" + expire[i] + "</td>" + "<td>" + state[i] + "</td>" + "<td><a src='javascript:void(0)'>详细信息</a></td>";
-                    $(tr).html(str);
-                    $(".sale-info .MyGoods").append(tr);
-                }
+            $(document).ready(function () {
+                $.post("url", function (data) {
+                    if ("OK")
+                    {
+                        var ip = data.IP;
+                        var time = data.time;
+                        var pos = data.pos;
+                        str = "<li>Time:" + time + "IP:" + ip + "Position:" + pos+"</li>";
+                        $("div.security div.loginIP ul").append(str);
+                    }
+                })
             });
-                  </script>
+        </script>
+        <!--安全信息AJAX-->
         <div class="sale-info">
             <h1>我的在售</h1>
             <div class="adjust"></div>
@@ -261,6 +263,22 @@
                 </tr>
             </table>
         </div>
+        <!--在售商品AJAX-->
+        <script type="text/javascript">
+
+            $(function () {
+                var res = ["A1", "B2", "C3"];
+                var expire = ["2017-8-9", "2017-9-4", "2017-9-6"];
+                var state = ["在售", "成功交易", "成功交易"];
+                for (var i in res) {
+                    var tr = document.createElement("tr");
+                    var str = '<td>' + res[i] + '</td>' + "<td>" + expire[i] + "</td>" + "<td>" + state[i] + "</td>" + "<td><a src='javascript:void(0)'>详细信息</a></td>";
+                    $(tr).html(str);
+                    $(".sale-info .MyGoods").append(tr);
+                }
+            });
+        </script>
+        <!--已买物品AJAX-->
         <script type="text/javascript">
             
             $(function () {

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link type="text/css" href="Commodity-upload.css" rel="stylesheet"/>    
-    <script type="text/javascript" src="../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="Commodity-upload.js"></script>
     <link rel="icon" href="Pic/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="Pic/favicon.ico" type="image/x-icon" />
@@ -132,11 +132,11 @@
         <form>
             <h1>商品上传</h1>
             <ul>    
-                <li><span>物品:</span><input type="text" /></li>
-                <li><span>归类:</span><input type="text" placeholder="例如：雨伞、微积分等"/></li>
-                <li><span>简介:</span><input type="text" /></li>
-                <li><span class="bigWord">详细介绍:</span><textarea placeholder="请尽可能详细的对物品进行描述，比如新旧、大小等方面，以便于他人做出合理的判断。" maxlength="500" class="bigText" type="text"></textarea></li>
-                <li><span class="span_mov">上传图片:</span><input type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png"></li>
+                <li><span>物品:</span><input name="name" type="text" /></li>
+                <li><span>归类:</span><input type="text" name="cate" placeholder="例如：雨伞、微积分等"/></li>
+                <li><span>价格(￥):</span><input type="number"  name="price"/></li>
+                <li><span class="bigWord">详细介绍:</span><textarea name="desc" placeholder="请尽可能详细的对物品进行描述，比如新旧、大小等方面，以便于他人做出合理的判断。" maxlength="500" class="bigText" type="text"></textarea></li>
+                <li><span class="span_mov">上传图片:</span><input type="file" name="pic" multiple="multiple" accept="image/jpg,image/jpeg,image/png"></li>
             </ul>
             <input type="submit" class="commodity_up" value="提   交" />
         </form>
