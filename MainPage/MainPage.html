@@ -12,38 +12,38 @@
     <script type="text/javascript" src="MainPage.js"></script>
 </head>
 <body>
-    <div class="commodity-detail">
+    <div class="commodity_detail">
         <div class="commodity">
             <h1 class="title"></h1>
             <p class="name"></p>
             <div class='before'><p><</p></div>
             <div class='after'><p>></p></div>
             <div class="pictures">
-                <div class="picture-container">
+                <div class="picture_container">
                 </div>
                 <div class="thumbnail"></div>
             </div>
             <p class="likes"><span>likes:</span><span class="amount"></span></p>
-            <p class="expire"><span>过期时间:</span><span class="expire-time"></span></p>
+            <p class="expire"><span>过期时间:</span><span class="expire_time"></span></p>
             <input type="button" value="买"/>
         </div>
-        <div class="close-table"><p>×</p></div>
+        <div class="close_table"><p>×</p></div>
     </div>
-    <div class="top-bar">
+    <div class="top_bar">
         <input class="login" type="button" value="登录(Log)" onclick="UserLog()" />
         <a href="../Register Page/Register.html"><input class="Reg" type="button" value="注册(Reg)" onclick="UserReg()" /></a>
     </div>
-    <div id="log-info">
-        <img class="log-logo" src="../Pic/logo.png" />
+    <div id="log_info">
+        <img class="log_logo" src="../Pic/logo.png" />
         <form>
             <!--action=“” 该处为发送表单至某处 method="post" -->
             <div id="usernamecontain">
-                <label class="log-user" for="username">输入用户名/邮箱/手机号</label>
-                <input id="username" name="username" tabindex="1" placeholder="" class="user-name" type="text" value="" >
+                <label class="log_user" for="username">输入用户名/邮箱/手机号</label>
+                <input id="username" name="username" tabindex="1" placeholder="" class="user_name" type="text" value="" >
             </div>
             <div id="passwordcontain">
-                <label class="log-password" for="password">输入密码</label>
-                <input id="password" name="password" tabindex="2" placeholder="" class="pass-word" type="password" value="" autocomplete="off">
+                <label class="log_password" for="password">输入密码</label>
+                <input id="password" name="password" tabindex="2" placeholder="" class="pass_word" type="password" value="" autocomplete="off">
             </div>
             <span id="check">
                 <input type="checkbox" id="remmember" name="RemPSW" tabindex="3" />
@@ -55,8 +55,8 @@
             <div id="submitcontain">
                 <input id="submit" tabindex="4" type="button" value="提    交" /><em>></em>
             </div>
-            <hr id="cut-line" />
-            <a href="http://baidu.com"><img id="login-QQ" src="../Pic/login-QQ.png" /></a>
+            <hr id="cut_line" />
+            <a href="http://baidu.com"><img id="login_QQ" src="../Pic/login_QQ.png" /></a>
         </form>
         <script>
            
@@ -64,7 +64,7 @@
                 $('#usernamecontain').css({
                     'border-bottom': '2px solid pink'
                 });
-                $('div#log-info form div#usernamecontain label.log-user').css({
+                $('div#log_info form div#usernamecontain label.log_user').css({
                     'font-size': '18px',
                     'color': 'red'
                 });
@@ -73,7 +73,7 @@
                 $('#passwordcontain').css({
                     'border-bottom': '2px solid pink'
                 });
-                $('div#log-info form div#passwordcontain label.log-password').css({
+                $('div#log_info form div#passwordcontain label.log_password').css({
                     'font-size': '18px',
                     'color': 'red'
                 });
@@ -82,7 +82,7 @@
                 $('#usernamecontain').css({
                     'border-bottom': '2px solid black'
                 });
-                $('div#log-info form div#usernamecontain label.log-user').css({
+                $('div#log_info form div#usernamecontain label.log_user').css({
                     'font-size': '22px',
                     'color': 'black'
                 });
@@ -92,7 +92,7 @@
                 $('#passwordcontain').css({
                     'border-bottom': '2px solid black'
                 });
-                $('div#log-info form div#passwordcontain label.log-password').css({
+                $('div#log_info form div#passwordcontain label.log_password').css({
                     'font-size': '22px',
                     'color': 'black'
                 });
@@ -100,18 +100,18 @@
         </script>
     </div>
     <script>
-        $("#log-info").hide();
+        $("#log_info").hide();
         $("#submit").click(function () {
-            $("#log-info").hide();
+            $("#log_info").hide();
         });
     </script>
-    <div class="nav-main">
-        <div class="nav-box">
+    <div class="nav_main">
+        <div class="nav_box">
             <div class="nav">
-                <ul class="nav-ul">
+                <ul class="nav_ul">
                     <li><a href="../MainPage/MainPage.html" class="home"><div class="logo"><img src="Pic/logo.png" /></div><span>首页</span></a></li>
-                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person-info">未登录</span></a></li>
-                    <li><a href="../commodity-publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish-com">发布商品</span></a></li>
+                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person_info">未登录</span></a></li>
+                    <li><a href="../commodity_publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish_com">发布商品</span></a></li>
                     <li><a href="javascript:void(0)" class="aboutus" onclick="us_click()"><div class="aboutus"><img src="Pic/b17eca8065380cd7e93f70cfab44ad34598281eb.jpg" /></div><span>关于我们</span></a></li>
                     <li><a href="javascript:void(0)" class="lab" onclick="lab_click()"><div class="lab"><img src="Pic/87Y58PICJFQ.jpg" /></div><span>实验室</span></a></li>
                 </ul>
@@ -123,7 +123,7 @@
     </div>
     <script type="text/javascript">
         //$("body").animate({ scrolltop: 1000 }, 1000)
-    $(".nav-main .slidetoggle").css(
+    $(".nav_main .slidetoggle").css(
    {
        "top": String(window.innerHeight / 2 - 50) + "px",
    });
@@ -131,7 +131,7 @@
     <script type="text/javascript">
         function us_click() {
             page = Page.ABOUT_US;
-            $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
+            $("body *").not(".nav_main,.nav_box,.nav,.nav_ul,.nav_ul li,.nav_ul li a,.nav_ul li a div,.nav_ul li a div img,.nav_ul li a span,.nav_box div,.nav_box div div,a.qq,a.qq img.QQ").remove();
             $("<h1 class='word'>We're enigmatic.</h1>").css({
                 "text-align": "center",
                 "height":String(window.innerHeight)+"px",
@@ -172,7 +172,7 @@
         }
         function lab_click() {
             page = Page.LAB;
-            $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
+            $("body *").not(".nav_main,.nav_box,.nav,.nav_ul,.nav_ul li,.nav_ul li a,.nav_ul li a div,.nav_ul li a div img,.nav_ul li a span,.nav_box div,.nav_box div div,a.qq,a.qq img.QQ").remove();
             $("<h1 class='word'>暂未开放，敬请等待！</h1>").css({
                 "text-align": "center",
                 "height": String(window.innerHeight) + "px",
@@ -184,21 +184,21 @@
         }
     </script>
     <div class="slogan"><img src="Pic/slogan.png" /></div>
-    <div class="search-box">
+    <div class="search_box">
         
-        <div class="search-bar">
+        <div class="search_bar">
             <div class="category">
             </div>
             <ul class="tog">
                 <li class="good">物品</li>
                 <li class="user">用户</li>
             </ul>
-    <input type="text" class="search-content" placeholder="输入你需要的物品" />
+    <input type="text" class="search_content" placeholder="输入你需要的物品" />
             <input class="search" type="button" value="搜  索" />
         </div>
-        <div class="ex-requires">
-            <div class="collection-amount"><span>热度</span><img class="origin" src="Pic/direction.png" /></div>
-            <div class="price"><div class="dec-price"><span>价格</span><img class="origin" src="Pic/direction.png" /></div><input type="number" placeholder="￥" min="0"/><span>—</span><input placeholder="￥" type="number" max="9999999999"/><input type="button" value="确定"/></div>
+        <div class="ex_requires">
+            <div class="collection_amount"><span>热度</span><img class="origin" src="Pic/direction.png" /></div>
+            <div class="price"><div class="dec_price"><span>价格</span><img class="origin" src="Pic/direction.png" /></div><input type="number" placeholder="￥" min="0"/><span>—</span><input placeholder="￥" type="number" max="9999999999"/><input type="button" value="确定"/></div>
         </div>
     </div>
     <div class="blank_"></div>
@@ -210,14 +210,14 @@
         var price=[2,3,4,5]
         for (var k in image)
         {
-            var strall = "<span class='content-span'>Des:" + description[k] + "</span><p class='price'>Price: ￥" + price[k] + "</p><p>Likes:  " + likes[k] + "</p><img class='collection' src='Pic/collection.png'/>";
+            var strall = "<span class='content_span'>Des:" + description[k] + "</span><p class='price'>Price: ￥" + price[k] + "</p><p>Likes:  " + likes[k] + "</p><img class='collection' src='Pic/collection.png'/>";
             var str = image[k] + ".jpg";
             var div = document.createElement("div");
             div.innerHTML = strall;
             var img = document.createElement("img");
             img.setAttribute("src", "Pic/"+str);
-            img.setAttribute("class", "content-img");
-            div.setAttribute("class", "content-div");
+            img.setAttribute("class", "content_img");
+            div.setAttribute("class", "content_div");
             div.appendChild(img);
             var outer = document.getElementById("content");
             outer.appendChild(div);

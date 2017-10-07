@@ -12,26 +12,26 @@
     <script type="text/javascript" src="school.js"></script>
 </head>
 <body>
-    <div class="commodity-detail" >
+    <div class="commodity_detail" >
         <div class="commodity">
             <h1 class="title"></h1>
             <p class="name"></p>
             <div class='before'><p><</p></div>
             <div class='after'><p>></p></div>
             <div class="pictures">
-                <div class="picture-container">
+                <div class="picture_container">
                 </div>
                 <div class="thumbnail"></div>
             </div>
             <p class="likes"><span>likes:</span><span class="amount"></span></p>
-            <p class="expire"><span>过期时间:</span><span class="expire-time"></span></p>
+            <p class="expire"><span>过期时间:</span><span class="expire_time"></span></p>
             <input type="button" value="买" />
         </div>
-        <div class="close-table"><p>×</p></div>
+        <div class="close_table"><p>×</p></div>
     </div>
-    <div class="bkground-image"><img src="Pic/bkground.jpg"></div>
-    <div class="sale-detail">
-        <div class="close-table"><p>×</p></div>
+    <div class="bkground_image"><img src="Pic/bkground.jpg"></div>
+    <div class="sale_detail">
+        <div class="close_table"><p>×</p></div>
         <table class="MyGoods">
             <tr>
                 <th>物品</th>
@@ -44,8 +44,8 @@
             </tr>
         </table>
     </div>
-    <div class="purchase-detail">
-        <div class="close-table"><p>×</p></div>
+    <div class="purchase_detail">
+        <div class="close_table"><p>×</p></div>
         <table class="MyGoods">
             <tr>
                 <th>物品</th>
@@ -58,18 +58,18 @@
             </tr>
         </table>
     </div>
-    <div class="top-bar">
+    <div class="top_bar">
         <input class="login" type="button" value="登录(Log)" onclick="UserLog()"/>
         <a href="../Register Page/Register.html"><input class="Reg" type="button" value="注册(Reg)" onclick="UserReg()" /></a>
     </div>
-    <div id="log-info">
+    <div id="log_info">
         <form>
             <!--action=“” 该处为发送表单至某处 method="post" -->
             <div id="usernamecontain">
-                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value="">
+                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user_name" type="text" value="">
             </div>
             <div id="passwordcontain">
-                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
+                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass_word" type="password" value="" autocomplete="off">
             </div>
             <span id="check">
                 <input type="checkbox" id="remmember" name="RemPSW" tabindex="3" />
@@ -81,24 +81,24 @@
             <div id="submitcontain">
                 <input id="submit" tabindex="4" type="button" value="提    交"  />
             </div>
-            <hr id="cut-line" />
-            <a href="http://baidu.com"><img id="login-QQ" src="../Pic/login-QQ.png" /></a>
+            <hr id="cut_line" />
+            <a href="http://baidu.com"><img id="login_QQ" src="../Pic/login_QQ.png" /></a>
         </form>
     </div>
     <script>
-        $("#log-info").hide();
+        $("#log_info").hide();
         $("#submit").click(function () {
-            $("#log-info").hide();
+            $("#log_info").hide();
         });
     </script>
     <div class="slogan"><img src="Pic/slogan.png" /></div>
-    <div class="nav-main">
-        <div class="nav-box">
+    <div class="nav_main">
+        <div class="nav_box">
             <div class="nav">
-                <ul class="nav-ul">
+                <ul class="nav_ul">
                     <li><a href="../MainPage/MainPage.html" class="home"><div class="logo"><img src="Pic/logo.png" /></div><span>首页</span></a></li>
-                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person-info">未登录</span></a></li>
-                    <li><a href="../commodity-publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish-com">发布商品</span></a></li>
+                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person_info">未登录</span></a></li>
+                    <li><a href="../commodity_publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish_com">发布商品</span></a></li>
                     <li><a href="javascript:void(0)" class="aboutus" onclick="us_click()"><div class="aboutus"><img src="Pic/b17eca8065380cd7e93f70cfab44ad34598281eb.jpg" /></div><span>关于我们</span></a></li>
                     <li><a href="javascript:void(0)" class="lab" onclick="lab_click()"><div class="lab"><img src="Pic/87Y58PICJFQ.jpg" /></div><span>实验室</span></a></li>
                 </ul>
@@ -111,7 +111,7 @@
     <script type="text/javascript">
         function us_click() {
         page = Page.ABOUT_US;
-        $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
+        $("body *").not(".nav_main,.nav_box,.nav,.nav_ul,.nav_ul li,.nav_ul li a,.nav_ul li a div,.nav_ul li a div img,.nav_ul li a span,.nav_box div,.nav_box div div,a.qq,a.qq img.QQ").remove();
         $("body").append(" <img src='' alter='1'/>");
         $("<h1 class='word'>We're enigmatic.</h1>").css({
             "text-align": "center",
@@ -158,7 +158,7 @@
         }).appendTo("body");
     }
     function lab_click() {
-        $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
+        $("body *").not(".nav_main,.nav_box,.nav,.nav_ul,.nav_ul li,.nav_ul li a,.nav_ul li a div,.nav_ul li a div img,.nav_ul li a span,.nav_box div,.nav_box div div,a.qq,a.qq img.QQ").remove();
         $("<h1 class='word'>暂未开放，敬请等待！</h1>").css({
             "text-align": "center",
             "height": String(window.innerHeight) + "px",
@@ -171,14 +171,14 @@
     </script>
 
     <script type="text/javascript">
-    $(".nav-main .slidetoggle").css(
+    $(".nav_main .slidetoggle").css(
    {
        "top": String(window.innerHeight / 2 - 50) + "px",
    });
     </script>
 
-    <div class="info-black">
-        <div class="basic-info">
+    <div class="info_black">
+        <div class="basic_info">
             <h1>基本信息</h1>
             <div class="part1">
                 <h3>头像</h3>
@@ -251,7 +251,7 @@
             });
         </script>
         <!--安全信息AJAX-->
-        <div class="sale-info">
+        <div class="sale_info">
             <h1>我的在售</h1>
             <div class="adjust"></div>
             <table class="MyGoods">
@@ -274,7 +274,7 @@
                     var tr = document.createElement("tr");
                     var str = '<td>' + res[i] + '</td>' + "<td>" + expire[i] + "</td>" + "<td>" + state[i] + "</td>" + "<td><a src='javascript:void(0)'>详细信息</a></td>";
                     $(tr).html(str);
-                    $(".sale-info .MyGoods").append(tr);
+                    $(".sale_info .MyGoods").append(tr);
                 }
             });
         </script>
@@ -289,12 +289,12 @@
                     var tr = document.createElement("tr");
                     var str = '<td>' + res[i] + '</td>' + "<td>" + expire[i] + "</td>" + "<td>" + state[i] + "</td>" + "<td><a src='javascript:void(0)'>详细信息</a></td>";
                     $(tr).html(str);
-                    $(".purchase-info .MyPurchase").append(tr);
+                    $(".purchase_info .MyPurchase").append(tr);
                 }
             });
         </script>
 
-        <div class="purchase-info">
+        <div class="purchase_info">
             <h1>已买物品</h1>
             <div class="adjust"></div>
             <table class="MyPurchase">

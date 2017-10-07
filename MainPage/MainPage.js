@@ -40,11 +40,11 @@ $(document).ready(function () {
     $.post("here is target file", function (data) {
         if (data == "OK") {
             //处理函数，去除登录注册，换为头像与用户名
-            $("div.top-bar input , div.top-bar a").remove();
+            $("div.top_bar input , div.top_bar a").remove();
             var src = "'" + data.src + "'";
             src = "Pic/1.jpg";
-            $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
-            $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+            $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top_bar");
+            $("<div class='info_block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top_bar");
 
         }
     });
@@ -58,62 +58,62 @@ $(document).ready(function () {
             });
     
     //登录处理
-    $("div#log-info form div#submitcontain input#submit").click(function () {
-        $("div.top-bar input , div.top-bar a").remove();
+    $("div#log_info form div#submitcontain input#submit").click(function () {
+        $("div.top_bar input , div.top_bar a").remove();
         //var src = "'" + data.src + "'";
         src = "'Pic/1.jpg'";
-        $("<img class='headshot' src=" + src + "/>").appendTo("div.top-bar");
-        $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
-        var passMsg = $("div#log-info form").serialize();
+        $("<img class='headshot' src=" + src + "/>").appendTo("div.top_bar");
+        $("<div class='info_block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top_bar");
+        var passMsg = $("div#log_info form").serialize();
         $.post("here is target file", passMsg, function (data) {
 
             //处理函数，去除登录注册，换为头像与用户名
-            $("div.top-bar input , div.top-bar a").remove();
+            $("div.top_bar input , div.top_bar a").remove();
             var src = "'" + data.src + "'";
             src = "Pic/1.jpg";
-            $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top-bar");
-            $("<div class='info-block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top-bar");
+            $("<img class='headshot' src=" + src + "/>").css().appendTo("div.top_bar");
+            $("<div class='info_block'><p class='name'>make</p><p class='ID'>125345</p></div>").appendTo("div.top_bar");
         })
     });
-    $(document).on("mouseenter", "div.top-bar img.headshot , div.top-bar div.info-block", function () {
-        $("div.top-bar div.info-block p.name").css("font-size", "14px");
-        $("div.top-bar div.info-block p.ID").css("font-size", "15px");
-        $("div.top-bar .info-block").css({
+    $(document).on("mouseenter", "div.top_bar img.headshot , div.top_bar div.info_block", function () {
+        $("div.top_bar div.info_block p.name").css("font-size", "14px");
+        $("div.top_bar div.info_block p.ID").css("font-size", "15px");
+        $("div.top_bar .info_block").css({
             'height': '111px',
             'width': '108px',
             'border': 'dotted'
         });
     });
-    $(document).on("mouseout", "div.top-bar img.headshot , div.top-bar div.info-block", function () {
-        $("div.top-bar div.info-block p.name").css("font-size", "0px");
-        $("div.top-bar div.info-block p.ID").css("font-size", "0px");
-        $("div.top-bar .info-block").css({
+    $(document).on("mouseout", "div.top_bar img.headshot , div.top_bar div.info_block", function () {
+        $("div.top_bar div.info_block p.name").css("font-size", "0px");
+        $("div.top_bar div.info_block p.ID").css("font-size", "0px");
+        $("div.top_bar .info_block").css({
             'height': '0px',
             'width': '0px',
             'border': 'none'
         });
     });
-    left = parseInt(StringProcess($(".commodity-detail .commodity .pictures .picture-container").css("left")));
+    left = parseInt(StringProcess($(".commodity_detail .commodity .pictures .picture_container").css("left")));
     $(window).scroll(PageScr);
 
-    $("#log-info").css(
+    $("#log_info").css(
         {
             "left": String(window.innerWidth / 2 - 420) + "px",
             "top": String(window.innerHeight / 2 - 260) + "px"
         }
     );
-    $(".commodity-detail .close-table").css(
+    $(".commodity_detail .close_table").css(
         {
             "visibility": "hidden",
             "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
             "top": String(window.innerHeight / 2 - 35) + "px"
         });
-    $(".commodity-detail").css(
+    $(".commodity_detail").css(
         {
             "left": String(document.body.offsetWidth / 2 - 400) + "px",
             "top": String(window.innerHeight / 2 - 175.5) + "px"
         });
-    $("div.top-bar").css(
+    $("div.top_bar").css(
         {
             "width": String(document.body.offsetWidth) + "px"
         });
@@ -122,7 +122,7 @@ $(document).ready(function () {
             "max-width": String(1032) + "px",
             "left": String(document.body.offsetWidth / 2 - 516) + "px"
         });
-    $("div.search-bar").css(
+    $("div.search_bar").css(
         {
             "left": String(document.body.offsetWidth / 2 - 243) + "px"
         });
@@ -140,7 +140,7 @@ $(document).ready(function () {
     else
         $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top + 32, left: $("div.foot").offset().left });
    // $("div.foot").offset().top = $("div.content").height() + $("div.content").offset().top;
-    $("div.ex-requires").css(
+    $("div.ex_requires").css(
         {
             "left": String(document.body.offsetWidth / 2 - 110) + "px"
         });
@@ -150,23 +150,23 @@ $(document).ready(function () {
             "left": String(document.body.offsetWidth - 47.29) + "px"
         });
     window.onresize = function () {
-        $(".nav-main .slidetoggle").css(
+        $(".nav_main .slidetoggle").css(
             {
                 "top": String(window.innerHeight / 2 - 50) + "px",
             });
-        $("#log-info").css(
+        $("#log_info").css(
             {
                 "left": String(window.innerWidth / 2 - 420) + "px",
                 "top": String(window.innerHeight / 2 - 260) + "px"
             }
         );
-        $(".commodity-detail .close-table").css(
+        $(".commodity_detail .close_table").css(
             {
                 "visibility": "hiddden",
                 "left": String(document.body.offsetWidth / 2 + 400 - 35) + "px",
                 "top": String(window.innerHeight / 2 - 35) + "px"
             });
-        $(".commodity-detail").css(
+        $(".commodity_detail").css(
             {
                 "left": String(document.body.offsetWidth / 2 - 400) + "px",
                 "top": String(window.innerHeight / 2 - 175.5) + "px"
@@ -176,7 +176,7 @@ $(document).ready(function () {
                 "max-width": String(1032) + "px",
                 "left": String(document.body.offsetWidth / 2 - 516) + "px"
             });
-        $("div.ex-requires").css(
+        $("div.ex_requires").css(
             {
                 "left": String(document.body.offsetWidth / 2 - 145) + "px"
             });
@@ -185,12 +185,12 @@ $(document).ready(function () {
                 "left": String(document.body.offsetWidth - 47.29) + "px",
                 "top": String(window.innerHeight / 2 + 90) + "px"
             });
-        $("div.top-bar").css(
+        $("div.top_bar").css(
             {
                 "width": String(document.body.offsetWidth) + "px"
             }
         );
-        $("div.search-bar").css(
+        $("div.search_bar").css(
             {
                 "left": String(document.body.offsetWidth / 2 - 243) + "px"
             }
@@ -206,54 +206,54 @@ $(document).ready(function () {
             $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top + 32, left: $("div.foot").offset().left });
     }
     var thisTime;
-    $('.nav-ul li').mouseleave(function (even) {
+    $('.nav_ul li').mouseleave(function (even) {
         thisTime = setTimeout(thisMouseOut, 1000);
     })
 
-    $('.nav-ul li').mouseenter(function () {
+    $('.nav_ul li').mouseenter(function () {
         clearTimeout(thisTime);
-        var thisUB = $('.nav-ul li').index($(this));
-        if ($.trim($('.nav-slide-o').eq(thisUB).html()) != "") {
-            $('.nav-slide').addClass('hover');
-            $('.nav-slide-o').hide();
-            $('.nav-slide-o').eq(thisUB).show();
+        var thisUB = $('.nav_ul li').index($(this));
+        if ($.trim($('.nav_slide_o').eq(thisUB).html()) != "") {
+            $('.nav_slide').addClass('hover');
+            $('.nav_slide_o').hide();
+            $('.nav_slide_o').eq(thisUB).show();
         }
         else {
-            $('.nav-slide').removeClass('hover');
+            $('.nav_slide').removeClass('hover');
         }
 
     })
 
     function thisMouseOut() {
-        $('.nav-slide').removeClass('hover');
+        $('.nav_slide').removeClass('hover');
     }
 
-    $('.nav-slide').mouseenter(function () {
+    $('.nav_slide').mouseenter(function () {
         clearTimeout(thisTime);
-        $('.nav-slide').addClass('hover');
+        $('.nav_slide').addClass('hover');
     })
-    $('.nav-slide').mouseleave(function () {
-        $('.nav-slide').removeClass('hover');
+    $('.nav_slide').mouseleave(function () {
+        $('.nav_slide').removeClass('hover');
     })
-    $(".nav-ul a.myinfo").click(
+    $(".nav_ul a.myinfo").click(
 
         function () {
 
-            $(".nav-ul li a span.person-info").text("个人主页");
-            $(".nav-ul li a .headshot img").attr("src", "Pic/2014001313895746404551930294844.jpg");
+            $(".nav_ul li a span.person_info").text("个人主页");
+            $(".nav_ul li a .headshot img").attr("src", "Pic/2014001313895746404551930294844.jpg");
         }
     );
 
-    $(".nav-box ").on("mouseenter", function () {
-        $(".nav-main").css("left", "0px");
+    $(".nav_box ").on("mouseenter", function () {
+        $(".nav_main").css("left", "0px");
     });
-    $(".nav-box").on("mouseleave", function () {
-        $(".nav-main").css("left", "-100px");
+    $(".nav_box").on("mouseleave", function () {
+        $(".nav_main").css("left", "-100px");
     });
-    $(".search-bar .category , ul.tog").on("mouseenter", function () {
-        $(".search-bar .category").empty();
-        $(".search-bar .category").append("<style>.category::after{visibility:visible}</style>");
-        $(".search-bar .category").append("<style>.category::before{visibility:hidden}</style>");
+    $(".search_bar .category , ul.tog").on("mouseenter", function () {
+        $(".search_bar .category").empty();
+        $(".search_bar .category").append("<style>.category::after{visibility:visible}</style>");
+        $(".search_bar .category").append("<style>.category::before{visibility:hidden}</style>");
         $("ul.tog .good").css("border-radius", "12px 12px 0 0");
         $("ul.tog .user").css({
             "border-radius": "0 0 12px 12px",
@@ -261,10 +261,10 @@ $(document).ready(function () {
             "top": "40px"
         });
     });
-    $(".search-bar .category , ul.tog").on("mouseleave", function () {
-        $(".search-bar .category").empty();
-        $(".search-bar .category").append("<style>.category::after{visibility:hidden}</style>");
-        $(".search-bar .category").append("<style>.category::before{visibility:visible}</style>");
+    $(".search_bar .category , ul.tog").on("mouseleave", function () {
+        $(".search_bar .category").empty();
+        $(".search_bar .category").append("<style>.category::after{visibility:hidden}</style>");
+        $(".search_bar .category").append("<style>.category::before{visibility:visible}</style>");
         $("ul.tog li").css("border-radius", "12px");
         $("ul.tog .user").css({
             "visibility": "hidden",
@@ -277,72 +277,72 @@ $(document).ready(function () {
             if ('物品' == str) {
                 $("ul.tog .good").text("物品");
                 $("ul.tog .user").text("用户");
-                $("input.search-content").attr("placeholder", "输入你需要的物品");
+                $("input.search_content").attr("placeholder", "输入你需要的物品");
             }
             else {
                 $("ul.tog .good").text("用户");
                 $("ul.tog .user").text("物品");
-                $("input.search-content").attr("placeholder", "输入你寻找的卖家的用户名");
+                $("input.search_content").attr("placeholder", "输入你寻找的卖家的用户名");
             }
         });
-    $(".collection-amount").mouseenter(function () {
-        $(".collection-amount img").addClass("imgenter").removeClass("origin");
+    $(".collection_amount").mouseenter(function () {
+        $(".collection_amount img").addClass("imgenter").removeClass("origin");
     });
-    $(".collection-amount").mouseleave(function () {
+    $(".collection_amount").mouseleave(function () {
         if (!isclick) {
-            $(".collection-amount img").removeClass("imgenter").addClass("origin");
+            $(".collection_amount img").removeClass("imgenter").addClass("origin");
         }
         isclick = false;
     });
-    $(".dec-price").mouseenter(function () {
-        $(".dec-price img").addClass("imgenter").removeClass("origin");
+    $(".dec_price").mouseenter(function () {
+        $(".dec_price img").addClass("imgenter").removeClass("origin");
     });
-    $(".dec-price").mouseleave(function () {
+    $(".dec_price").mouseleave(function () {
         if (!isclick) {
-            $(".dec-price img").removeClass("imgenter").addClass("origin");
+            $(".dec_price img").removeClass("imgenter").addClass("origin");
         }
         isclick = false;
     });
-    $(".collection-amount").click(function () {
+    $(".collection_amount").click(function () {
         if (1 == state) {
-            $(".dec-price img").removeClass("imgenter").removeClass("imgclick").addClass("origin");
-            $(".dec-price").css({
-                "background-color": "white",
+            $(".dec_price img").removeClass("imgenter").removeClass("imgclick").addClass("origin");
+            $(".dec_price").css({
+                "background_color": "white",
                 "color": "black"
             });
         }
         state = 0;
-        $(".collection-amount img").addClass("imgclick").removeClass("imgenter").removeClass("origin");
-        $(".collection-amount").css({
-            "background-color": "#e99009",
+        $(".collection_amount img").addClass("imgclick").removeClass("imgenter").removeClass("origin");
+        $(".collection_amount").css({
+            "background_color": "#e99009",
             "color": "white",
             "cursor": "pointer"
         });
         isclick = true;
     });
-    $(".dec-price").click(function () {
+    $(".dec_price").click(function () {
         if (0 == state) {
-            $(".collection-amount img").removeClass("imgenter").removeClass("imgclick").addClass("origin");
-            $(".collection-amount").css({
-                "background-color": "white",
+            $(".collection_amount img").removeClass("imgenter").removeClass("imgclick").addClass("origin");
+            $(".collection_amount").css({
+                "background_color": "white",
                 "color": "black"
             });
         }
         state = 1;
-        $(".dec-price img").addClass("imgclick").removeClass("imgenter").removeClass("origin");
-        $(".dec-price").css({
-            "background-color": "#e99009",
+        $(".dec_price img").addClass("imgclick").removeClass("imgenter").removeClass("origin");
+        $(".dec_price").css({
+            "background_color": "#e99009",
             "color": "white",
             "cursor": "pointer"
         });
         isclick = true;
     });
     $("img.collection").click(function () {
-        var color = RGBtoHEX($(this).css("background-color"));
+        var color = RGBtoHEX($(this).css("background_color"));
         if ("#FFFFFF" == color)
-            $(this).css("background-color", "yellow");
+            $(this).css("background_color", "yellow");
         else
-            $(this).css("background-color", "white");
+            $(this).css("background_color", "white");
     });
     $(document).scroll(function () {
         if (!_isLoading)
@@ -350,84 +350,84 @@ $(document).ready(function () {
         else
             $("div.foot").offset({ top: $("div.content").height() + $("div.content").offset().top+32, left: $("div.foot").offset().left });
         if (parseInt(window.pageYOffset) >= 40) {
-            $(".search-box").css({
+            $(".search_box").css({
                 "top": "0px",
                 "position": "fixed"
             });
         }
         else {
-            $(".search-box").css({
+            $(".search_box").css({
                 "top": "40px",
                 "position": "absolute"
             });
         }
     });
-    $(document).on("click", ".content div .content-img", function () {
-        $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "blur(10px)");
-        $(".commodity-detail").css("visibility", "visible");
-        $(".commodity-detail .close-table").css("visibility", "visible");
+    $(document).on("click", ".content div .content_img", function () {
+        $(".top_bar ,.search_box,.blank_,.content,.slogan,.nav_main,.foot,.qq").css("filter", "blur(10px)");
+        $(".commodity_detail").css("visibility", "visible");
+        $(".commodity_detail .close_table").css("visibility", "visible");
         var info = {
             com: "杯子",
             likes: "100",
             expire: "2017 - 6 - 5",
             name: "komo",
         }
-        $(".commodity-detail .commodity .title").text(info.com);
-        $(".commodity-detail .commodity .likes .amount").text(info.likes);
-        $(".commodity-detail .commodity .expire .expire-time").text(info.expire);
-        $(".commodity-detail .commodity .name").text(info.name);
+        $(".commodity_detail .commodity .title").text(info.com);
+        $(".commodity_detail .commodity .likes .amount").text(info.likes);
+        $(".commodity_detail .commodity .expire .expire_time").text(info.expire);
+        $(".commodity_detail .commodity .name").text(info.name);
         var str1 = "<img src='Pic/fill.png' />";
-        $(str1).appendTo(".commodity-detail .commodity .pictures .picture-container");
+        $(str1).appendTo(".commodity_detail .commodity .pictures .picture_container");
         var str2 = "Pic/2016";
         for (var i = 1; i <= 3; i++) {
             var str = str2 + "000" + String(i) + ".jpg";
             var img = document.createElement("img");
-            $(img).attr({ "src": str, "title": "点击查看大图" }).appendTo(".commodity-detail .commodity .pictures .picture-container");
+            $(img).attr({ "src": str, "title": "点击查看大图" }).appendTo(".commodity_detail .commodity .pictures .picture_container");
         }
-        $(str1).appendTo(".commodity-detail .commodity .pictures .picture-container");
-        $(".commodity-detail .commodity .pictures .picture-container").css("width", String(352 * 5) + "px");
-        $(".content div .content-img").on("click", evenstop);
-        $(".commodity-detail .commodity .pictures img").eq(1).css("border", "2px orange solid");
+        $(str1).appendTo(".commodity_detail .commodity .pictures .picture_container");
+        $(".commodity_detail .commodity .pictures .picture_container").css("width", String(352 * 5) + "px");
+        $(".content div .content_img").on("click", evenstop);
+        $(".commodity_detail .commodity .pictures img").eq(1).css("border", "2px orange solid");
     });
-    $(".commodity-detail .close-table").click(function () {
-        $(".top-bar ,.search-box,.blank_,.content,.slogan,.nav-main,.foot,.qq").css("filter", "none");
+    $(".commodity_detail .close_table").click(function () {
+        $(".top_bar ,.search_box,.blank_,.content,.slogan,.nav_main,.foot,.qq").css("filter", "none");
         //
-        $(".content div .content-img").off("click", evenstop);
-        $(".commodity-detail").css("visibility", "hidden");
-        $(".commodity-detail .close-table").css("visibility", "hidden");
-        $(".commodity-detail .commodity .pictures .picture-container").html("");
+        $(".content div .content_img").off("click", evenstop);
+        $(".commodity_detail").css("visibility", "hidden");
+        $(".commodity_detail .close_table").css("visibility", "hidden");
+        $(".commodity_detail .commodity .pictures .picture_container").html("");
     });
-    $(".commodity-detail .commodity input[type='button']").on('click', function () {
+    $(".commodity_detail .commodity input[type='button']").on('click', function () {
         if (confirm("是否确认发送购买意愿（以及您的联系方式）至对方邮箱，同时您也将获取对方联系方式？"))
             alert("信息已发送！\n之后你们可以通过联系确认交易地址，如对该订单存在疑惑请即使客服！");
     })
-    $(document).on("click", ".commodity-detail .commodity .before",
+    $(document).on("click", ".commodity_detail .commodity .before",
         function () {
             if (1 == idx)
                 return false;
             else {
-                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
+                $(".commodity_detail .commodity .pictures img").eq(idx).css("border", "0px");
                 idx--;
-                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
+                $(".commodity_detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
                 left += 352;
-                $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
+                $(".commodity_detail .commodity .pictures .picture_container").css("left", String(left) + 'px');
             }
         }
     );
-    $(document).on("click", ".commodity-detail .commodity .after",
+    $(document).on("click", ".commodity_detail .commodity .after",
         function () {
             if (end == idx)
                 return false;
             else {
-                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "0px");
+                $(".commodity_detail .commodity .pictures img").eq(idx).css("border", "0px");
                 idx++;
-                $(".commodity-detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
+                $(".commodity_detail .commodity .pictures img").eq(idx).css("border", "2px orange solid");
                 left -= 352;
-                $(".commodity-detail .commodity .pictures .picture-container").css("left", String(left) + 'px');
+                $(".commodity_detail .commodity .pictures .picture_container").css("left", String(left) + 'px');
             }
         }
     );
-    $(document).on("click", ".commodity-detail .commodity .pictures .picture-container img", function () {
+    $(document).on("click", ".commodity_detail .commodity .pictures .picture_container img", function () {
         var src = $(this).attr("src");
         if (src == "Pic/fill.png")
             return;
@@ -465,14 +465,14 @@ $(document).ready(function () {
             "top": String(window.innerHeight / 2 - parseFloat(img_height) / 2) + "px",
             "z-index": 99
         });
-        $(".commodity-detail").css("filter", "blur(10px)");
+        $(".commodity_detail").css("filter", "blur(10px)");
         _isOpen = true;
         return false;
     });
     $(document).click(function (e) {
         if (_isOpen == true) {
             if (e.target.id == 'bigImgClick') {
-                $(".commodity-detail").css("filter", "none");
+                $(".commodity_detail").css("filter", "none");
                 $("body>img#bigImgClick").remove();
                 _isOpen = false;
             }
@@ -490,7 +490,7 @@ $(document).ready(function () {
 
     //setTimeout()
 function UserLog() {
-    $("#log-info").show();
+    $("#log_info").show();
 
 }
 function UserReg() {

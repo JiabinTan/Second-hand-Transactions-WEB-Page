@@ -46,7 +46,7 @@ body {
 
 
 /*一级导航*/
-.nav-main {
+.nav_main {
     position: fixed;
     top: 0;
     z-index: 12;
@@ -56,11 +56,11 @@ body {
     background: #111213;
 }
 
-    .nav-main a {
+    .nav_main a {
         color: #fff;
     }
 
-.nav-box {
+.nav_box {
     position: relative;
     perspective: 200px;
     -webkit-perspective: 200px;
@@ -70,7 +70,7 @@ body {
     z-index: 99;
 }
 
-.nav-ul li a {
+.nav_ul li a {
     display: block;
     width: 100px;
     height: 100px;
@@ -83,7 +83,7 @@ body {
     -o-transition: all .5s;
 }
 
-    .nav-ul li a:before {
+    .nav_ul li a:before {
         content: '';
         position: absolute;
         left: -240px;
@@ -103,15 +103,15 @@ body {
         -o-transition: all .5s;
     }
 
-    .nav-ul li a:hover {
+    .nav_ul li a:hover {
         background: #357dd7;
     }
 
-        .nav-ul li a:hover:before {
+        .nav_ul li a:hover:before {
             left: -30px;
         }
 
-    .nav-ul li a:after {
+    .nav_ul li a:after {
         content: '';
         position: absolute;
         width: 100%;
@@ -121,7 +121,7 @@ body {
         z-index: 1;
     }
 
-    .nav-ul li a span {
+    .nav_ul li a span {
         display: block;
         margin-top: 60px;
         left: -5px;
@@ -129,7 +129,7 @@ body {
         z-index: 1;
     }
 
-    .nav-ul li a div {
+    .nav_ul li a div {
         height: 45px;
         overflow: hidden;
         position: absolute;
@@ -140,12 +140,12 @@ body {
         top: 6px;
     }
 
-    .nav-ul li a img {
+    .nav_ul li a img {
         height: 45px;
         width: 45px;
     }
 
-.top-bar {
+.top_bar {
     height: 40px;
     position: absolute;
     left: 0px;
@@ -163,7 +163,7 @@ body {
     text-align: center;
 }
 
-.nav-main {
+.nav_main {
     left: -100px;
     transition: all .5s;
     -moz-transition: all .5s;
@@ -196,7 +196,7 @@ body {
         left: -2px;
     }
 
-.search-box {
+.search_box {
     width: inherit;
     height: 77px;
     top: 40px;
@@ -214,7 +214,7 @@ body {
     border-radius: 12px;
 }
 
-.search-bar {
+.search_bar {
     height: 40px;
     position: absolute;
     width: 486px;
@@ -276,7 +276,7 @@ input.search：hover {
     text-align: center;
 }
 
-input.search-content {
+input.search_content {
     position: absolute;
     width: 320px;
     left: 80px;
@@ -361,7 +361,7 @@ li.user {
     z-index: 3;
 }
 
-.collection-amount img {
+.collection_amount img {
     height: 14px;
     width: 14px;
     position: absolute;
@@ -377,14 +377,14 @@ li.user {
     left: 28px;
 }
 
-.ex-requires {
+.ex_requires {
     width: inherit;
     position: absolute;
     left: 432px;
     top: -37px;
 }
 
-.collection-amount {
+.collection_amount {
     border-radius: 5px 0 0 5px;
     position: absolute;
     top: 88px;
@@ -396,7 +396,7 @@ li.user {
     left: 0px;
 }
 
-    .collection-amount span {
+    .collection_amount span {
         position: absolute;
         left: 2px;
         font-size: 11px;
@@ -460,19 +460,19 @@ li.user {
         font-weight: 500;
     }
 
-.collection-amount:hover {
+.collection_amount:hover {
     background-color: #e99009;
     color: white;
     cursor: pointer;
 }
 
-.dec-price:hover {
+.dec_price:hover {
     background-color: #e99009;
     color: white;
     cursor: pointer;
 }
 
-.dec-price {
+.dec_price {
     border-radius: 0 5px 5px 0;
     height: 20px;
     border: 1px #9e9e9e solid;
@@ -511,7 +511,7 @@ img.QQ {
     position: relative;
 }
 
-.content-div {
+.content_div {
     display: inline-block;
     height: 323px;
     box-shadow: 0 1px 2px 0 rgba(158,158,158,.2);
@@ -532,7 +532,7 @@ img.collection {
     background-color: white;
 }
 
-img.content-img {
+img.content_img {
     position: absolute;
     width: 240px;
     height: 180px;
@@ -540,7 +540,7 @@ img.content-img {
     top: 0px;
 }
 
-span.content-span {
+span.content_span {
     color: black;
     position: absolute;
     top: 215px;
@@ -549,7 +549,7 @@ span.content-span {
     width: 184px;
 }
 
-.content-div p {
+.content_div p {
     color: black;
     position: absolute;
     top: 286px;
@@ -564,7 +564,7 @@ span.content-span {
     z-index: 0;
 }
 
-.commodity-detail {
+.commodity_detail {
     height: 351px;
     position: fixed;
     background: white;
@@ -575,13 +575,13 @@ span.content-span {
     box-shadow: 0 0 9px black;
 }
 
-.close-table {
+.close_table {
     position: fixed;
     z-index: 99;
     visibility: hidden;
 }
 
-    .close-table p {
+    .close_table p {
         position: fixed;
         border: 1px solid rgba(0, 0, 0, 0.34);
         width: 35px;
@@ -595,39 +595,39 @@ span.content-span {
         background: white;
     }
 
-        .close-table p:hover {
+        .close_table p:hover {
             border-color: orange;
             background-color: antiquewhite;
             color: coral;
         }
 
-img.content-img:hover {
+img.content_img:hover {
     border: orange 2px solid;
     cursor: pointer;
 }
 
-.commodity-detail .commodity h1, .commodity-detail .commodity p, .commodity-detail .commodity li {
+.commodity_detail .commodity h1, .commodity_detail .commodity p, .commodity_detail .commodity li {
     color: black;
 }
 
-    .commodity-detail .commodity h1.title {
+    .commodity_detail .commodity h1.title {
         width: 800px;
         text-align: center;
         font-size: 37px;
         margin-top: -10px;
     }
 
-.commodity-detail .commodity p, .commodity-detail .commodity li {
+.commodity_detail .commodity p, .commodity_detail .commodity li {
     margin-left: 48px;
     margin-right: 48px;
 }
 
-.commodity-detail .commodity p {
+.commodity_detail .commodity p {
     margin-top: 32px;
     display: inline-block;
 }
 
-.commodity-detail .commodity .pictures {
+.commodity_detail .commodity .pictures {
     margin-left: 48px;
     width: 704px;
     height: 198px;
@@ -635,7 +635,7 @@ img.content-img:hover {
 }
 
 
-    .commodity-detail .commodity .pictures img {
+    .commodity_detail .commodity .pictures img {
         width: 352px;
         height: 198px;
         left: -177.5px;
@@ -643,7 +643,7 @@ img.content-img:hover {
         display: inline-block;
     }
 
-.commodity-detail .commodity .before {
+.commodity_detail .commodity .before {
     position: absolute;
     left: 48px;
     height: 198px;
@@ -656,7 +656,7 @@ img.content-img:hover {
     background-color: rgba(130, 130, 130, 0.5);
 }
 
-.commodity-detail .commodity .after {
+.commodity_detail .commodity .after {
     position: absolute;
     right: 48px;
     height: 198px;
@@ -669,18 +669,18 @@ img.content-img:hover {
     font-size: 32px;
 }
 
-.commodity-detail .commodity p.expire {
+.commodity_detail .commodity p.expire {
     position: relative;
     right: -410px;
 }
 
-.commodity-detail .commodity p.name {
+.commodity_detail .commodity p.name {
     display: block;
     text-align: center;
     margin-top: 16px;
 }
 
-.commodity-detail .commodity input[type="button"] {
+.commodity_detail .commodity input[type="button"] {
     width: 79px;
     height: 79px;
     border-radius: 50%;
@@ -694,40 +694,40 @@ img.content-img:hover {
     left: 362px;
 }
 
-    .commodity-detail .commodity input[type="button"]:hover {
+    .commodity_detail .commodity input[type="button"]:hover {
         cursor: pointer;
         background: burlywood;
         border: 4px double;
         font-size: 19px;
     }
 
-.commodity-detail .commodity .before p {
+.commodity_detail .commodity .before p {
     color: inherit;
     margin: inherit;
     line-height: inherit;
     font-size: inherit;
 }
 
-.commodity-detail .commodity .after p {
+.commodity_detail .commodity .after p {
     color: inherit;
     margin: inherit;
     line-height: inherit;
     font-size: inherit;
 }
 
-.commodity-detail .commodity .before:hover {
+.commodity_detail .commodity .before:hover {
     background: rgba(130, 130, 130, 0.92);
     color: aliceblue;
     cursor: pointer;
 }
 
-.commodity-detail .commodity .after:hover {
+.commodity_detail .commodity .after:hover {
     background-color: rgba(130, 130, 130, 0.92);
     color: aliceblue;
     cursor: pointer;
 }
 
-.commodity-detail .commodity .pictures .picture-container {
+.commodity_detail .commodity .pictures .picture_container {
     position: relative;
     left: 0px;
     transition: all ease-in-out 1s;
@@ -736,7 +736,7 @@ img.content-img:hover {
     -o-transition: all ease-in-out 1s; /* Opera */
 }
 
-#log-info {
+#log_info {
     position: fixed;
     z-index: 99;
     transform: scale(0.55);
@@ -747,7 +747,7 @@ img.content-img:hover {
     background-color: rgba(255, 255, 255, 0.97);
 }
 
-div#log-info {
+div#log_info {
 }
 
 #usernamecontain {
@@ -860,7 +860,7 @@ div#log-info {
     text-align: center;
 }
 
-hr#cut-line {
+hr#cut_line {
     position: absolute;
     width: 738px;
     left: 50px;
@@ -869,32 +869,32 @@ hr#cut-line {
     border-color: rgb(87, 84, 84);
 }
 
-img#login-QQ:hover {
+img#login_QQ:hover {
     cursor: pointer;
 }
 
-img#login-QQ {
+img#login_QQ {
     width: 61px;
     position: absolute;
     top: 531px;
     left: 329px;
 }
 
-.top-bar input.login, .top-bar input.Reg {
+.top_bar input.login, .top_bar input.Reg {
     position: absolute;
     height: 48px;
     width: 72px;
     outline: none;
 }
 
-.top-bar input.login {
+.top_bar input.login {
     right: 72px;
     background: pink;
     border: 0px;
     border-radius: 0 0 10px 10px;
 }
 
-.top-bar input.Reg {
+.top_bar input.Reg {
     right: 0px;
     height: 40px;
     border: none;
@@ -902,19 +902,19 @@ img#login-QQ {
     color: blue;
 }
 
-    .top-bar input.Reg:hover {
+    .top_bar input.Reg:hover {
         color: #605039;
         cursor: pointer;
     }
 
-.top-bar input.login:hover {
+.top_bar input.login:hover {
     cursor: pointer;
     color: cyan;
     background: pink;
     border: double white;
 }
 
-div#log-info img.log-logo {
+div#log_info img.log_logo {
     height: 70px;
     width: 70px;
     position: absolute;
@@ -922,7 +922,7 @@ div#log-info img.log-logo {
     top: 13px;
 }
 
-div#log-info form div#usernamecontain label.log-user {
+div#log_info form div#usernamecontain label.log_user {
     color: black;
     font-size: 22px;
     position: relative;
@@ -931,7 +931,7 @@ div#log-info form div#usernamecontain label.log-user {
     transition-property: all;
 }
 
-div#log-info form div#passwordcontain label.log-password {
+div#log_info form div#passwordcontain label.log_password {
     color: black;
     font-size: 22px;
     position: relative;
@@ -954,7 +954,7 @@ div.content div.content-div p.price {
     margin: 0;
     left: 28px;
 }
-div.top-bar img.headshot {
+div.top_bar img.headshot {
     border-radius: 50%;
     height: 61px;
     width: 61px;
@@ -965,7 +965,7 @@ div.top-bar img.headshot {
     border: grey 1px solid;
 }
 
-div.top-bar .info-block {
+div.top_bar .info_block {
     background: white;
     height: 0px;
     width: 0px;
@@ -977,7 +977,7 @@ div.top-bar .info-block {
 }
 
 
-div.top-bar div.info-block p.name {
+div.top_bar div.info_block p.name {
     color: black;
     text-align: center;
     position: relative;
@@ -986,7 +986,7 @@ div.top-bar div.info-block p.name {
     font-size: 0;
 }
 
-div.top-bar div.info-block p.ID {
+div.top_bar div.info_block p.ID {
     text-align: center;
     position: relative;
     bottom: -63px;
@@ -995,7 +995,7 @@ div.top-bar div.info-block p.ID {
     font-size: 0;
 }
 
-div.top-bar img.headshot:hover {
+div.top_bar img.headshot:hover {
     border: orange 1px solid;
     width: 65px;
     right: 29px;
