@@ -1,7 +1,7 @@
 ﻿
 $(document).ready(
     function () {
-        $("#log_info").css(
+        $("#log-info").css(
             {
                 "left": String(window.innerWidth / 2 - 400) + "px",
                 "top": String(window.innerHeight / 2 - 222) + "px"
@@ -16,7 +16,7 @@ $(document).ready(
             });
 	window.onresize=function()
 	{
-		$("#log_info").css(
+		$("#log-info").css(
             {
                 "left": String(window.innerWidth / 2 -400 ) + "px",
                 "top":String(window.innerHeight/2-222)+"px"

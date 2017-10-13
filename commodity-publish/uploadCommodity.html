@@ -10,14 +10,14 @@
     <link rel="shortcut icon" href="Pic/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <div id="log_info">
+    <div id="log-info">
         <form>
             <!--action=“” 该处为发送表单至某处 method="post" -->
             <div id="usernamecontain">
-                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user_name" type="text" value="">
+                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value="">
             </div>
             <div id="passwordcontain">
-                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass_word" type="password" value="" autocomplete="off">
+                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off">
             </div>
             <span id="check">
                 <input type="checkbox" id="remmember" name="RemPSW" tabindex="3" />
@@ -29,29 +29,29 @@
             <div id="submitcontain">
                 <input id="submit" tabindex="4" type="button" value="提    交" />
             </div>
-            <hr id="cut_line" />
-            <a href="http://baidu.com"><img id="login_QQ" src="../Pic/login-QQ.png" /></a>
+            <hr id="cut-line" />
+            <a href="http://baidu.com"><img id="login-QQ" src="../Pic/login-QQ.png" /></a>
         </form>
     </div>
     <script>
-    $("#log_info").hide();
+    $("#log-info").hide();
     $("#submit").click(function () {
-        $("#log_info").hide();
+        $("#log-info").hide();
     });
     </script>
 
-    <div class="top_bar">
+    <div class="top-bar">
         <input class="login" type="button" value="登录(Log)" onclick="UserLog()" />
         <a href="../Register Page/Register.html"><input class="Reg" type="button" value="注册(Reg)" onclick="UserReg()" /></a>
     </div>
     <div class="slogan"><img src="Pic/slogan.png" /></div>
-    <div class="nav_main">
-        <div class="nav_box">
+    <div class="nav-main">
+        <div class="nav-box">
             <div class="nav">
-                <ul class="nav_ul">
+                <ul class="nav-ul">
                     <li><a href="../MainPage/MainPage.html" class="home"><div class="logo"><img src="Pic/logo.png" /></div><span>首页</span></a></li>
-                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person_info">未登录</span></a></li>
-                    <li><a href="../commodity_publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish_com">发布商品</span></a></li>
+                    <li><a href="../myinfo/PersonalInfo.html" class="myinfo"><div class="headshot"><img src="Pic/1.jpg" /></div><span class="person-info">未登录</span></a></li>
+                    <li><a href="../commodity-publish/uploadCommodity.html" class="commodity"><div class="goods"><img src="Pic/goods.jpg" /></div><span class="publish-com">发布商品</span></a></li>
                     <li><a href="javascript:void(0)" class="aboutus" onclick="us_click()"><div class="aboutus"><img src="Pic/b17eca8065380cd7e93f70cfab44ad34598281eb.jpg" /></div><span>关于我们</span></a></li>
                     <li><a href="javascript:void(0)" class="lab" onclick="lab_click()"><div class="lab"><img src="Pic/87Y58PICJFQ.jpg" /></div><span>实验室</span></a></li>
                 </ul>
@@ -64,7 +64,7 @@
     <script type="text/javascript">
         function us_click() {
         page = Page.ABOUT_US;
-        $("body *").not(".nav_main,.nav_box,.nav,.nav_ul,.nav_ul li,.nav_ul li a,.nav_ul li a div,.nav_ul li a div img,.nav_ul li a span,.nav_box div,.nav_box div div,a.qq,a.qq img.QQ").remove();
+        $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
         $("body").append(" <img src='' alter='1'/>");
         $("<h1 class='word'>We're enigmatic.</h1>").css({
             "text-align": "center",
@@ -111,7 +111,7 @@
         }).appendTo("body");
     }
     function lab_click() {
-        $("body *").not(".nav_main,.nav_box,.nav,.nav_ul,.nav_ul li,.nav_ul li a,.nav_ul li a div,.nav_ul li a div img,.nav_ul li a span,.nav_box div,.nav_box div div,a.qq,a.qq img.QQ").remove();
+        $("body *").not(".nav-main,.nav-box,.nav,.nav-ul,.nav-ul li,.nav-ul li a,.nav-ul li a div,.nav-ul li a div img,.nav-ul li a span,.nav-box div,.nav-box div div,a.qq,a.qq img.QQ").remove();
         $("<h1 class='word'>暂未开放，敬请等待！</h1>").css({
             "text-align": "center",
             "height": String(window.innerHeight) + "px",
@@ -123,7 +123,7 @@
     }
     </script>
     <script type="text/javascript">
-        $(".nav_main .slidetoggle").css(
+        $(".nav-main .slidetoggle").css(
        {
            "top": String(window.innerHeight / 2 - 50) + "px",
         });

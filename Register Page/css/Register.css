@@ -11,7 +11,7 @@ h1 {
     font-size: 37px;
 }
 
-#log_info {
+#log-info {
     height: 443px;
     width: 800px;
     position: fixed;
@@ -311,7 +311,7 @@ div#password-againcontain {
     box-shadow: 0 0 2px black;
 }
 
-input#password_again {
+input#password-again {
     position: absolute;
     margin: 0px;
     border: 0px;
@@ -413,7 +413,7 @@ img#passwordpass {
     visibility: hidden;
 }
 
-img#password_againwrong {
+img#password-againwrong {
     position: absolute;
     z-index: 3;
     width: 21px;
@@ -422,7 +422,7 @@ img#password_againwrong {
     visibility: hidden;
 }
 
-img#password_againpass {
+img#password-againpass {
     position: absolute;
     z-index: 3;
     width: 21px;
@@ -489,7 +489,7 @@ div#emaillist {
     border-radius: 22px;
 }
 
-#usernamecontain img.username_load {
+#usernamecontain img.username-load {
     height: 22px;
     position: absolute;
     right: -26px;
@@ -501,7 +501,7 @@ b.important {
     color: red;
 }
 
-span[class$="_tip"] {
+span[class$="-tip"] {
     font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
     color: red;
     left: 330px;
@@ -511,7 +511,7 @@ span[class$="_tip"] {
     top: 4px;
 }
 
-#contactcontain span[class$="_tip"] {
+#contactcontain span[class$="-tip"] {
     font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
     color: green;
     left: 305px;

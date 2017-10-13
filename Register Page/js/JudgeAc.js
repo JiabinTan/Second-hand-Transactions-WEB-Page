@@ -8,15 +8,15 @@ function checking_name()
         if (xmlhttp.responseText == "OK") {
             document.getElementById("usernamepass").style.visibility = "visible";
             document.getElementById("usernamewrong").style.visibility = "hidden";
-            $("#usernamecontain .username_load").css("visibility", "hidden");
-            $("#usernamecontain .username_tip").text("");
+            $("#usernamecontain .username-load").css("visibility", "hidden");
+            $("#usernamecontain .username-tip").text("");
             $(this).attr("flag", "1");
         }
         else if (xmlhttp == "NO") {
             document.getElementById("usernamepass").style.visibility = "hidden";
             document.getElementById("usernamewrong").style.visibility = "visible";
-            $("#usernamecontain .username_load").css("visibility", "hidden");
-            $("#usernamecontain .username_tip").text("用户名已存在!");
+            $("#usernamecontain .username-load").css("visibility", "hidden");
+            $("#usernamecontain .username-tip").text("用户名已存在!");
             $(this).attr("flag", "0");
         }
         else {
@@ -34,15 +34,15 @@ $(function () {
                 if ("" == username) {
                     document.getElementById("usernamepass").style.visibility = "hidden";
                     document.getElementById("usernamewrong").style.visibility = "visible";
-                    $("#usernamecontain .username_load").css("visibility", "hidden");
-                    $("#usernamecontain .username_tip").text("请输入非空用户名!");
+                    $("#usernamecontain .username-load").css("visibility", "hidden");
+                    $("#usernamecontain .username-tip").text("请输入非空用户名!");
                     $(this).attr("flag","0");
                 }
                 else {
                     document.getElementById("usernamepass").style.visibility = "hidden";
                     document.getElementById("usernamewrong").style.visibility = "hidden";
-                    $("#usernamecontain .username_load").css("visibility", "visible");
-                    $("#usernamecontain .username_tip").text("正在检查用户名是否可用...").css("color","orange");
+                    $("#usernamecontain .username-load").css("visibility", "visible");
+                    $("#usernamecontain .username-tip").text("正在检查用户名是否可用...").css("color","orange");
                     var xmlhttp=null;
                     if (window.XMLHttpRequest) {// code for Firefox, Opera, IE7, etc.
                         xmlhttp = new XMLHttpRequest();
@@ -71,48 +71,48 @@ $(function () {
                 if (h >= 'A' && h <= 'Z' || h >= 'a' && h <= 'z') {
                     document.getElementById("passwordpass").style.visibility = "visible";
                     document.getElementById("passwordwrong").style.visibility = "hidden";
-                    $("#passwordcontain .password_tip").text("");
+                    $("#passwordcontain .password-tip").text("");
                     $(this).attr("flag", "1");
                 }
                 else if (h == '') {
                     document.getElementById("passwordpass").style.visibility = "hidden";
                     document.getElementById("passwordwrong").style.visibility = "visible";
-                    $("#passwordcontain .password_tip").text("请输入有效的密码!");
+                    $("#passwordcontain .password-tip").text("请输入有效的密码!");
                     $(this).attr("flag", "0");
                 }
                 else {
                     $(this).val("");
                     document.getElementById("passwordpass").style.visibility = "hidden";
                     document.getElementById("passwordwrong").style.visibility = "visible";
-                    $("#passwordcontain .password_tip").text("请输入有效的密码!");
+                    $("#passwordcontain .password-tip").text("请输入有效的密码!");
                     $(this).attr("flag", "0");
                 }
             });
         }
     );
-    $("#password_again").focus(
+    $("#password-again").focus(
         function () {
-            $("#password_again").blur(
+            $("#password-again").blur(
             function () {
 
                 passwordagain = $(this).val();
                 if (password != passwordagain) {
-                    document.getElementById("password_againpass").style.visibility = "hidden";
-                    document.getElementById("password_againwrong").style.visibility = "visible";
-                    $("#password_againcontain .passwordagain_tip").text("输入的两次密码不同！");
+                    document.getElementById("password-againpass").style.visibility = "hidden";
+                    document.getElementById("password-againwrong").style.visibility = "visible";
+                    $("#password-againcontain .passwordagain-tip").text("输入的两次密码不同！");
                     $(this).attr("flag", "0");
                     $(this).val("");
                 }
                 else if (passwordagain == '') {
-                    document.getElementById("password_againpass").style.visibility = "hidden";
-                    document.getElementById("password_againwrong").style.visibility = "visible";
-                    $("#password_againcontain .passwordagain_tip").text("密码不能为空！");
+                    document.getElementById("password-againpass").style.visibility = "hidden";
+                    document.getElementById("password-againwrong").style.visibility = "visible";
+                    $("#password-againcontain .passwordagain-tip").text("密码不能为空！");
                     $(this).attr("flag", "0");
                 }
                 else {
-                    document.getElementById("password_againpass").style.visibility = "visible";
-                    document.getElementById("password_againwrong").style.visibility = "hidden";
-                    $("#password_againcontain .passwordagain_tip").text("");
+                    document.getElementById("password-againpass").style.visibility = "visible";
+                    document.getElementById("password-againwrong").style.visibility = "hidden";
+                    $("#password-againcontain .passwordagain-tip").text("");
                     $(this).attr("flag", "1");
                     //增加提示
                 }
@@ -127,13 +127,13 @@ $(function () {
         if (!isok) {
             document.getElementById("emailwrong").style.visibility = "visible";
             document.getElementById("emailpass").style.visibility = "hidden";
-            $("#emailcontain .email_tip").text("请输入正确的邮箱！");
+            $("#emailcontain .email-tip").text("请输入正确的邮箱！");
             $("#email").attr("flag", "0");
         }
         else {
             document.getElementById("emailpass").style.visibility = "visible";
             document.getElementById("emailwrong").style.visibility = "hidden";
-            $("#emailcontain .email_tip").text("");
+            $("#emailcontain .email-tip").text("");
             $("#email").attr("flag", "1");
             //增加提示
         }
@@ -205,13 +205,13 @@ $(function () {
             if ("" == school) {
                 document.getElementById("schoolpass").style.visibility = "hidden";
                 document.getElementById("schoolwrong").style.visibility = "visible";
-                $("schoolcontain .school_tip").text("请输入正确的校名！");
+                $("schoolcontain .school-tip").text("请输入正确的校名！");
                 $(this).attr("flag", "0");
             }
             else {
                 document.getElementById("schoolpass").style.visibility = "visible";
                 document.getElementById("schoolwrong").style.visibility = "hidden";
-                $("schoolcontain .school_tip").text("");
+                $("schoolcontain .school-tip").text("");
                 $(this).attr("flag", "1");
                 //增加提示
             }
@@ -232,7 +232,7 @@ $(function () {
 
     //$("input#submit").on("click", function (e) {
     $("input#submit").click(function (e) {
-        var flag = '1' == $("#username").attr("flag") && '1' == $("#password").attr("flag") && '1' == $("#password_again").attr("flag") && '1' == $("#email").attr("flag") && '1' == $("#school").attr("flag");
+        var flag = '1' == $("#username").attr("flag") && '1' == $("#password").attr("flag") && '1' == $("#password-again").attr("flag") && '1' == $("#email").attr("flag") && '1' == $("#school").attr("flag");
         if (!flag) {
             alert("请将带星号的信息填补完全后提交！")
             e.preventDefault();
@@ -240,7 +240,7 @@ $(function () {
         else {
             //AJAX处理
             $.post("here is url",
-                $("#log_info form").serialize(),
+                $("#log-info form").serialize(),
                 function (data, status) {
                     if (status == "success")
                     {

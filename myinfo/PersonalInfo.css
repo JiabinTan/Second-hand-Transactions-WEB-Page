@@ -14,7 +14,7 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
 
 /*一级导航*/
 
-.nav_main{
+.nav-main{
 	position: fixed;
 	top: 0;
 	z-index: 12;
@@ -23,8 +23,8 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
 	color: #fff;
 	background: #111213;
 }
-.nav_main a{color: #fff;}
-.nav_box{
+.nav-main a{color: #fff;}
+.nav-box{
 	position: relative;
 	perspective: 200px;
 	-webkit-perspective: 200px;
@@ -33,7 +33,7 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
 	height: 100%;
 	z-index: 99;
 }
-.nav_ul li a{
+.nav-ul li a{
 	display: block;
 	width: 100px;
 	height: 100px;
@@ -45,7 +45,7 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
 	-webkit-transition: all .5s;
 	-o-transition: all .5s;
 }
-.nav_ul li a:before{
+.nav-ul li a:before{
 	content: '';
 	position: absolute;
 	left: -240px;
@@ -64,9 +64,9 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
 	-webkit-transition: all .5s;
 	-o-transition: all .5s;
 }
-.nav_ul li a:hover{background: #357dd7;}
-.nav_ul li a:hover:before{left: -30px;}
-.nav_ul li a:after{
+.nav-ul li a:hover{background: #357dd7;}
+.nav-ul li a:hover:before{left: -30px;}
+.nav-ul li a:after{
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -75,14 +75,14 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
 	top: 20px;
 	z-index: 1;
 }
-.nav_ul li a span{
+.nav-ul li a span{
 	display: block;
 	margin-top: 60px;
     left: -5px;
 	position: relative;
 	z-index: 1;
 }
-    .nav_ul li a div {
+    .nav-ul li a div {
     height: 45px;
     overflow: hidden;
     position: absolute;
@@ -92,11 +92,11 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
     z-index: 1;
     top: 6px;
     }
-    .nav_ul li a img {
+    .nav-ul li a img {
     height: 45px;
     width: 45px;
 }
-.top_bar {
+.top-bar {
     height: 40px;
     position: absolute;
     left: 0px;
@@ -112,7 +112,7 @@ body{     background-repeat:no-repeat;background-attachment:fixed;font-size: 14p
     z-index: 0;
     text-align: center;
 }
-.nav_main {
+.nav-main {
     position: fixed;
     left: -100px;
     transition: all .5s;
@@ -163,7 +163,7 @@ img.QQ {
     position:absolute;
     top:10000px;
 }
-.info_black
+.info-black
  >div {
     float: left;
     box-sizing: border-box;
@@ -185,7 +185,7 @@ img.QQ {
     margin-top: 7px;
 }
 
-.basic_info {
+.basic-info {
     color: black;
     width: 420px;
     height:auto!important;
@@ -194,7 +194,7 @@ img.QQ {
     margin-top: 25px;
 }
 
-.basic_info h1 {
+.basic-info h1 {
     color: black;
     position: absolute;
     text-align: center;
@@ -204,15 +204,15 @@ img.QQ {
 }
 
 
-.info_black h3, .info_black h1, .info_black p, .info_black a ,.info_black b {
+.info-black h3, .info-black h1, .info-black p, .info-black a ,.info-black b {
     color: black;
     text-align: center;
 }
 
 
-.basic_info h3 {margin-top: 20px;}
+.basic-info h3 {margin-top: 20px;}
 
-.basic_info a {position: relative;left: 0px;display: block;}
+.basic-info a {position: relative;left: 0px;display: block;}
 
 .part1 a {
     position: relative;
@@ -236,7 +236,7 @@ img.QQ {
     white-space:pre;
 }
 
-.info_black {
+.info-black {
     position: relative;
     top: 40px;
     width:890px;
@@ -252,13 +252,13 @@ img.QQ {
     margin-top: -13px;
 }
 
-.sale_info {
+.sale-info {
     width: 420px;
     height: auto!important;
     margin-top: 25px;
 }
 
-.purchase_info {
+.purchase-info {
     width: 420px;
     height: auto!important;
     margin-top: 25px;
@@ -272,7 +272,7 @@ img.QQ {
     margin-top: 20px;
 }
 
-.sale_info h1 {
+.sale-info h1 {
     color: black;
     position: absolute;
     text-align: center;
@@ -281,7 +281,7 @@ img.QQ {
     margin-top: -13px;
 }
 
-.purchase_info h1 {
+.purchase-info h1 {
     color: black;
     position: absolute;
     text-align: center;
@@ -290,11 +290,11 @@ img.QQ {
     margin-top: -13px;
 }
 
-.info_black a {
+.info-black a {
     color: red;
 }
 
-.basic_info h1:after {
+.basic-info h1:after {
     content: "";
     display: block;
     width: 260px;
@@ -318,7 +318,7 @@ img.QQ {
     box-shadow: 0px 0px 1px black;
 }
 
-.sale_info h1:after {
+.sale-info h1:after {
     content: "";
     display: block;
     width: 260px;
@@ -330,7 +330,7 @@ img.QQ {
     box-shadow: 0px 0px 1px black;
 }
 
-.purchase_info h1:after {
+.purchase-info h1:after {
     content: "";
     display: block;
     width: 260px;
@@ -341,7 +341,7 @@ img.QQ {
     top: 33px;
     box-shadow: 0px 0px 1px black;
 }
-.info_black table {
+.info-black table {
     min-height: 120px;
 }
 input[type="file"] {
@@ -349,7 +349,7 @@ input[type="file"] {
     left: 47px;
     position: relative;
 }
-.basic_info input.com_input {
+.basic-info input.com_input {
     width: 200px;
     position: relative;
     left: 106px;
@@ -399,7 +399,7 @@ div#emaillist {
     top: 561px;
     background-color: floralwhite;
 }
-div.info_black div.basic_info p:hover {
+div.info-black div.basic-info p:hover {
     background: antiquewhite;
 }
 
@@ -505,7 +505,7 @@ span.entertext {
     border-left: 0px;
     border-right: 0px;
 }
-.info_black table {
+.info-black table {
     border-collapse: collapse;
     width: 416px;
     min-height: 120px;
@@ -535,23 +535,23 @@ span.entertext {
 .MyPurchase tr th {border-top: 1px grey;}
 
 
-.sale_detail .MyGoods th:nth-child(-n+4) {
+.sale-detail .MyGoods th:nth-child(-n+4) {
     width: 70px;
 }
 
-.sale_detail table.MyGoods {
+.sale-detail table.MyGoods {
     position: fixed;
     background: white;
     z-index: 99;
     width: 800px;
     visibility:hidden;
 }
-.close_table {
+.close-table {
     position:fixed;
     z-index:99;
     visibility:hidden;
 }
-.close_table p {
+.close-table p {
     position: fixed;
     border: 1px solid rgba(0, 0, 0, 0.34);
     width: 35px;
@@ -565,29 +565,29 @@ span.entertext {
     background: white;
 }
 
-.close_table p:hover {
+.close-table p:hover {
     border-color: orange;
     background-color: antiquewhite;
     color: coral;
 }
 
-.purchase_detail .MyGoods th:nth-child(-n+4) {
+.purchase-detail .MyGoods th:nth-child(-n+4) {
     width: 70px;
 }
 
-.purchase_detail table.MyGoods {
+.purchase-detail table.MyGoods {
     position: fixed;
     background: white;
     z-index: 99;
     width: 800px;
     visibility:hidden;
 }
-.close_table {
+.close-table {
     position:fixed;
     z-index:99;
     visibility:hidden;
 }
-.close_table p {
+.close-table p {
     position: fixed;
     border: 1px solid rgba(0, 0, 0, 0.34);
     width: 35px;
@@ -601,26 +601,26 @@ span.entertext {
     background: white;
 }
 
-.close_table p:hover {
+.close-table p:hover {
     border-color: orange;
     background-color: antiquewhite;
     color: coral;
 }
-.top_bar input.login,.top_bar input.Reg {
+.top-bar input.login,.top-bar input.Reg {
     position: absolute;
     height: 48px;
     width: 72px;
     outline:none;
 }
 
-.top_bar input.login {
+.top-bar input.login {
     right: 72px;
     background: pink;
     border: 0px;
     border-radius: 0 0 10px 10px;
 }
 
-.top_bar input.Reg {
+.top-bar input.Reg {
     right: 0px;
     height: 40px;
     border: none;
@@ -628,16 +628,16 @@ span.entertext {
     color: blue;
 }
 
-.top_bar input.Reg:hover {color: #605039;cursor: pointer;}
+.top-bar input.Reg:hover {color: #605039;cursor: pointer;}
 
-.top_bar input.login:hover {
+.top-bar input.login:hover {
     cursor: pointer;
     color: cyan;
     background: pink;
     border: double white;
 }
 
-#log_info {
+#log-info {
     position: fixed;
     z-index: 99;
     transform: scale(0.6);
@@ -747,7 +747,7 @@ span.entertext {
     font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
     cursor: pointer;
 }
-hr#cut_line {
+hr#cut-line {
     position: absolute;
     width: 738px;
     left: 50px;
@@ -756,17 +756,17 @@ hr#cut_line {
     border-color: rgb(87, 84, 84);
 }
 
-img#login_QQ:hover {
+img#login-QQ:hover {
     cursor: pointer;
 }
 
-img#login_QQ {
+img#login-QQ {
     width: 61px;
     position: absolute;
     top: 444px;
     left: 329px;
 }
-.commodity_detail {
+.commodity-detail {
     height: 351px;
     position: fixed;
     background: white;
@@ -777,13 +777,13 @@ img#login_QQ {
     box-shadow: 0 0 9px black;
 }
 
-.close_table {
+.close-table {
     position: fixed;
     z-index: 99;
     visibility: hidden;
 }
 
-    .close_table p {
+    .close-table p {
         position: fixed;
         border: 1px solid rgba(0, 0, 0, 0.34);
         width: 35px;
@@ -797,39 +797,39 @@ img#login_QQ {
         background: white;
     }
 
-        .close_table p:hover {
+        .close-table p:hover {
             border-color: orange;
             background-color: antiquewhite;
             color: coral;
         }
 
-img.content_img:hover {
+img.content-img:hover {
     border: orange 2px solid;
     cursor: pointer;
 }
 
-.commodity_detail .commodity h1, .commodity_detail .commodity p, .commodity_detail .commodity li {
+.commodity-detail .commodity h1, .commodity-detail .commodity p, .commodity-detail .commodity li {
     color: black;
 }
 
-    .commodity_detail .commodity h1.title {
+    .commodity-detail .commodity h1.title {
         width: 800px;
         text-align: center;
         font-size: 37px;
         margin-top: -10px;
     }
 
-.commodity_detail .commodity p, .commodity_detail .commodity li {
+.commodity-detail .commodity p, .commodity-detail .commodity li {
     margin-left: 48px;
     margin-right: 48px;
 }
 
-.commodity_detail .commodity p {
+.commodity-detail .commodity p {
     margin-top: 32px;
     display: inline-block;
 }
 
-.commodity_detail .commodity .pictures {
+.commodity-detail .commodity .pictures {
     margin-left: 48px;
     width: 704px;
     height: 198px;
@@ -837,7 +837,7 @@ img.content_img:hover {
 }
 
 
-    .commodity_detail .commodity .pictures img {
+    .commodity-detail .commodity .pictures img {
         width: 352px;
         height: 198px;
         left: -177.5px;
@@ -845,7 +845,7 @@ img.content_img:hover {
         display: inline-block;
     }
 
-.commodity_detail .commodity .before {
+.commodity-detail .commodity .before {
     position: absolute;
     left: 48px;
     height: 198px;
@@ -858,7 +858,7 @@ img.content_img:hover {
     background-color: rgba(130, 130, 130, 0.5);
 }
 
-.commodity_detail .commodity .after {
+.commodity-detail .commodity .after {
     position: absolute;
     right: 48px;
     height: 198px;
@@ -871,18 +871,18 @@ img.content_img:hover {
     font-size: 32px;
 }
 
-.commodity_detail .commodity p.expire {
+.commodity-detail .commodity p.expire {
     position: relative;
     right: -410px;
 }
 
-.commodity_detail .commodity p.name {
+.commodity-detail .commodity p.name {
     display: block;
     text-align: center;
     margin-top: 16px;
 }
 
-.commodity_detail .commodity input[type="button"] {
+.commodity-detail .commodity input[type="button"] {
     width: 79px;
     height: 79px;
     border-radius: 50%;
@@ -896,40 +896,40 @@ img.content_img:hover {
     left: 362px;
 }
 
-    .commodity_detail .commodity input[type="button"]:hover {
+    .commodity-detail .commodity input[type="button"]:hover {
         cursor: pointer;
         background: burlywood;
         border: 4px double;
         font-size: 19px;
     }
 
-.commodity_detail .commodity .before p {
+.commodity-detail .commodity .before p {
     color: inherit;
     margin: inherit;
     line-height: inherit;
     font-size: inherit;
 }
 
-.commodity_detail .commodity .after p {
+.commodity-detail .commodity .after p {
     color: inherit;
     margin: inherit;
     line-height: inherit;
     font-size: inherit;
 }
 
-.commodity_detail .commodity .before:hover {
+.commodity-detail .commodity .before:hover {
     background: rgba(130, 130, 130, 0.92);
     color: aliceblue;
     cursor: pointer;
 }
 
-.commodity_detail .commodity .after:hover {
+.commodity-detail .commodity .after:hover {
     background-color: rgba(130, 130, 130, 0.92);
     color: aliceblue;
     cursor: pointer;
 }
 
-.commodity_detail .commodity .pictures .picture_container {
+.commodity-detail .commodity .pictures .picture-container {
     position: relative;
     left: 0px;
     transition: all ease-in-out 1s;
@@ -937,7 +937,7 @@ img.content_img:hover {
     -webkit-transition: all ease-in-out 1s; /* Safari 和 Chrome */
     -o-transition: all ease-in-out 1s; /* Opera */
 }
-div.top_bar img.headshot {
+div.top-bar img.headshot {
     border-radius: 50%;
     height: 61px;
     width: 61px;
@@ -948,7 +948,7 @@ div.top_bar img.headshot {
     border: grey 1px solid;
 }
 
-div.top_bar .info_block {
+div.top-bar .info-block {
     background: white;
     height: 0px;
     width: 0px;
@@ -960,7 +960,7 @@ div.top_bar .info_block {
 }
 
 
-div.top_bar div.info_block p.name {
+div.top-bar div.info-block p.name {
     color: black;
     text-align: center;
     position: relative;
@@ -969,7 +969,7 @@ div.top_bar div.info_block p.name {
     font-size: 0;
 }
 
-div.top_bar div.info_block p.ID {
+div.top-bar div.info-block p.ID {
     text-align: center;
     position: relative;
     bottom: -63px;
@@ -978,7 +978,7 @@ div.top_bar div.info_block p.ID {
     font-size: 0;
 }
 
-div.top_bar img.headshot:hover {
+div.top-bar img.headshot:hover {
     border: orange 1px solid;
     width: 65px;
     right: 29px;
